@@ -1,0 +1,16 @@
+common: &common
+  adapter: postgresql
+  username: mylunchin
+  password: mylunchin # from psql setup, see Postgresql
+
+development:
+  <<: *common
+  database: mylunchin_development
+
+test:
+  <<: *common
+  database: mylunchin_test
+
+production:
+  <<: *common
+  database: mylunchin_production
