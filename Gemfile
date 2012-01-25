@@ -3,8 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 
 gem 'unicorn'
-gem 'spree', :git => 'git://github.com/spree/spree.git'
-
+gem 'spree', :git => 'git://github.com/seth-macpherson/spree.git'
+gem 'spree_gateway', :git => "git://github.com/seth-macpherson/spree_gateway.git"
 gem 'pg'
 
 
