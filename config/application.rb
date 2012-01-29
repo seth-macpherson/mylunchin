@@ -11,16 +11,18 @@ end
 
 module Mylunchin
   class Application < Rails::Application
-  
+    config.middleware.use "SeoAssist"
+    config.middleware.use "RedirectLegacyProductUrl"
+
     config.to_prepare do
-      # Load application's model / class decorators
+      #loads application's model / class decorators
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
 
-      # Load application's view overrides
+      #loads application's deface view overrides
       Dir.glob(File.join(File.dirname(__FILE__), "../app/overrides/*.rb")) do |c|
-        Rails.configuration.cache_classes ? require(c) : load(c)
+        Rails.application.config.cache_classes ? require(c) : load(c)
       end
     end
 

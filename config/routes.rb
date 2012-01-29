@@ -1,9 +1,4 @@
 Mylunchin::Application.routes.draw do
-
-  # root :to => 'home#index'
-
-  # Mount Spree's routes
-  mount Spree::Core::Engine, :at => '/'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
