@@ -1,3 +1,147 @@
+function number_with_delimiter(number, delimiter, separator) {
+  try {
+    var delimiter = delimiter || ",";
+    var separator = separator || ".";
+
+    var parts = number.toString().split('.');
+    parts[0] = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1" + delimiter);
+    formatted_number = parts.join(separator);
+
+    if(formatted_number.length>=6 && formatted_number.length<=9){
+      var arr = formatted_number.split(",");
+      return arr[0] + " k";
+    }else if(formatted_number.length==10){
+      var arr = formatted_number.split(",");
+      return arr[0] + " m";
+    }else{
+      return formatted_number
+    }
+  } catch(e) {
+    return number
+  }
+}
+
+function handle_orders_by_day(r){
+  var new_points = eval(r);
+
+  if(new_points[0].length>0){
+    orders_by_day_settings.axes.xaxis.min = new_points[0][0][0].replace(/-/g, "/");
+    orders_by_day_settings.axes.xaxis.max = new_points[0][new_points[0].length -1][0].replace(/-/g, "/");
+  }
+
+  orders_by_day_settings.axes.yaxis.label = jQuery("#orders_by_day_value :selected").val();
+
+  jQuery("#order_by_day_title").text(orders + " " + jQuery("#orders_by_day_value :selected").val() + " " + by_day + " (" + jQuery("#orders_by_day_reports :selected").text() + ")");
+
+  jQuery('#orders_by_day').empty();
+  jQuery.jqplot('orders_by_day', new_points, orders_by_day_settings);
+
+}
+
+function handle_orders_total(r){
+  var values = eval(r);
+  
+  jQuery('#orders_total').text(number_with_delimiter(values[0].orders_total));
+  jQuery('#orders_line_total').text(number_with_delimiter(values[0].orders_line_total));
+  jQuery('#orders_adjustment_total').text(number_with_delimiter(values[0].orders_adjustment_total));
+  jQuery('#orders_adjustment_total').text(number_with_delimiter(values[0].orders_adjustment_total));
+}
+
+jQuery(document).ready(function(){  
+
+  if(typeof(orders_by_day_points)=="object"){
+    orders_by_day_settings = {
+      title: {
+        textColor: '#476D9B',
+        fontSize: '12pt',
+      }, 
+      grid: {background:'#fff', gridLineColor:'#fff',borderColor: '#476D9B'},
+      axes:{
+        yaxis:{
+          label:'Order (Count)',
+          labelRenderer: jQuery.jqplot.CanvasAxisLabelRenderer,						
+          autoscale:true, 
+          tickOptions:{
+            formatString:'%d',
+            fontSize: '10pt',
+            textColor: '#476D9B'
+          },
+          min: 0
+        },	
+        xaxis:{	 
+          renderer:jQuery.jqplot.DateAxisRenderer,
+          rendererOptions:{tickRenderer:jQuery.jqplot.CanvasAxisTickRenderer},
+          tickOptions:{
+            formatString:'%b %#d, %y',
+            angle: -30,
+            fontSize: '10pt',
+            textColor: '#476D9B'
+          },
+          min: orders_by_day_points[0][0][0].replace(/-/g, "/"), 
+          max: orders_by_day_points[0][orders_by_day_points[0].length -1][0].replace(/-/g, "/")//,
+          //tickInterval: '1 day'
+        }
+      },
+      series:[{lineWidth:3, color: '#0095DA', fillAndStroke: true, fill: true, fillColor: '#E6F7FF'}],
+      highlighter: {
+        formatString: "Date: %s <br />Value: %s ",
+        sizeAdjust: 7.5
+      }
+    };
+
+
+    jQuery.jqplot('orders_by_day', orders_by_day_points, orders_by_day_settings);
+
+    jQuery("div#orders_by_day_options select").change(function(){
+      var report = jQuery("#orders_by_day_reports :selected").val();
+      var value = jQuery("#orders_by_day_value :selected").val();
+
+      jQuery.ajax({
+           type: 'GET',
+           url: 'admin/overview/get_report_data',
+           data: ({report: 'orders_by_day', name: report, value: value, authenticity_token: AUTH_TOKEN}),
+           success: handle_orders_by_day
+      });
+
+      jQuery.ajax({
+           type: 'GET',
+           url: 'admin/overview/get_report_data',
+           data: ({report: 'orders_totals', name: report, authenticity_token: AUTH_TOKEN}),
+           success: handle_orders_total
+      });
+    });
+
+    best_selling_variants = jQuery.jqplot('best_selling_products', [best_selling_variants_points], {
+      grid: {background:'#fff',borderWidth: 0, borderColor: '#fff', shadow: false},
+      seriesDefaults:{
+        renderer:jQuery.jqplot.PieRenderer, 
+        rendererOptions:{padding:6,sliceMargin:0}
+      },
+      seriesColors: pie_colors
+    });
+
+
+    top_grossing_variants = jQuery.jqplot('top_grossing_products', [top_grossing_variants_points], {
+      grid: {background:'#fff',borderWidth: 0, borderColor: '#fff', shadow: false},
+      seriesDefaults:{
+        renderer:jQuery.jqplot.PieRenderer, 
+        rendererOptions:{padding:6,sliceMargin:0}
+      },
+
+      seriesColors: pie_colors
+    });
+
+    tbest_selling_taxons = jQuery.jqplot('best_selling_taxons', [best_selling_taxons_points], {
+      grid: {background:'#fff',borderWidth: 0, borderColor: '#fff', shadow: false},
+      seriesDefaults:{
+        renderer:jQuery.jqplot.PieRenderer, 
+        rendererOptions:{padding:6,sliceMargin:0}
+      },
+
+      seriesColors: pie_colors
+    });
+  }
+});
 /*!
  * jQuery JavaScript Library v1.7.1
  * http://jquery.com/
@@ -27939,150 +28083,6 @@ var show_zone = function() {
   $('#zone_members').show();
 };
 
-function number_with_delimiter(number, delimiter, separator) {
-  try {
-    var delimiter = delimiter || ",";
-    var separator = separator || ".";
-
-    var parts = number.toString().split('.');
-    parts[0] = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1" + delimiter);
-    formatted_number = parts.join(separator);
-
-    if(formatted_number.length>=6 && formatted_number.length<=9){
-      var arr = formatted_number.split(",");
-      return arr[0] + " k";
-    }else if(formatted_number.length==10){
-      var arr = formatted_number.split(",");
-      return arr[0] + " m";
-    }else{
-      return formatted_number
-    }
-  } catch(e) {
-    return number
-  }
-}
-
-function handle_orders_by_day(r){
-  var new_points = eval(r);
-
-  if(new_points[0].length>0){
-    orders_by_day_settings.axes.xaxis.min = new_points[0][0][0].replace(/-/g, "/");
-    orders_by_day_settings.axes.xaxis.max = new_points[0][new_points[0].length -1][0].replace(/-/g, "/");
-  }
-
-  orders_by_day_settings.axes.yaxis.label = jQuery("#orders_by_day_value :selected").val();
-
-  jQuery("#order_by_day_title").text(orders + " " + jQuery("#orders_by_day_value :selected").val() + " " + by_day + " (" + jQuery("#orders_by_day_reports :selected").text() + ")");
-
-  jQuery('#orders_by_day').empty();
-  jQuery.jqplot('orders_by_day', new_points, orders_by_day_settings);
-
-}
-
-function handle_orders_total(r){
-  var values = eval(r);
-  
-  jQuery('#orders_total').text(number_with_delimiter(values[0].orders_total));
-  jQuery('#orders_line_total').text(number_with_delimiter(values[0].orders_line_total));
-  jQuery('#orders_adjustment_total').text(number_with_delimiter(values[0].orders_adjustment_total));
-  jQuery('#orders_adjustment_total').text(number_with_delimiter(values[0].orders_adjustment_total));
-}
-
-jQuery(document).ready(function(){  
-
-  if(typeof(orders_by_day_points)=="object"){
-    orders_by_day_settings = {
-      title: {
-        textColor: '#476D9B',
-        fontSize: '12pt',
-      }, 
-      grid: {background:'#fff', gridLineColor:'#fff',borderColor: '#476D9B'},
-      axes:{
-        yaxis:{
-          label:'Order (Count)',
-          labelRenderer: jQuery.jqplot.CanvasAxisLabelRenderer,						
-          autoscale:true, 
-          tickOptions:{
-            formatString:'%d',
-            fontSize: '10pt',
-            textColor: '#476D9B'
-          },
-          min: 0
-        },	
-        xaxis:{	 
-          renderer:jQuery.jqplot.DateAxisRenderer,
-          rendererOptions:{tickRenderer:jQuery.jqplot.CanvasAxisTickRenderer},
-          tickOptions:{
-            formatString:'%b %#d, %y',
-            angle: -30,
-            fontSize: '10pt',
-            textColor: '#476D9B'
-          },
-          min: orders_by_day_points[0][0][0].replace(/-/g, "/"), 
-          max: orders_by_day_points[0][orders_by_day_points[0].length -1][0].replace(/-/g, "/")//,
-          //tickInterval: '1 day'
-        }
-      },
-      series:[{lineWidth:3, color: '#0095DA', fillAndStroke: true, fill: true, fillColor: '#E6F7FF'}],
-      highlighter: {
-        formatString: "Date: %s <br />Value: %s ",
-        sizeAdjust: 7.5
-      }
-    };
-
-
-    jQuery.jqplot('orders_by_day', orders_by_day_points, orders_by_day_settings);
-
-    jQuery("div#orders_by_day_options select").change(function(){
-      var report = jQuery("#orders_by_day_reports :selected").val();
-      var value = jQuery("#orders_by_day_value :selected").val();
-
-      jQuery.ajax({
-           type: 'GET',
-           url: 'admin/overview/get_report_data',
-           data: ({report: 'orders_by_day', name: report, value: value, authenticity_token: AUTH_TOKEN}),
-           success: handle_orders_by_day
-      });
-
-      jQuery.ajax({
-           type: 'GET',
-           url: 'admin/overview/get_report_data',
-           data: ({report: 'orders_totals', name: report, authenticity_token: AUTH_TOKEN}),
-           success: handle_orders_total
-      });
-    });
-
-    best_selling_variants = jQuery.jqplot('best_selling_products', [best_selling_variants_points], {
-      grid: {background:'#fff',borderWidth: 0, borderColor: '#fff', shadow: false},
-      seriesDefaults:{
-        renderer:jQuery.jqplot.PieRenderer, 
-        rendererOptions:{padding:6,sliceMargin:0}
-      },
-      seriesColors: pie_colors
-    });
-
-
-    top_grossing_variants = jQuery.jqplot('top_grossing_products', [top_grossing_variants_points], {
-      grid: {background:'#fff',borderWidth: 0, borderColor: '#fff', shadow: false},
-      seriesDefaults:{
-        renderer:jQuery.jqplot.PieRenderer, 
-        rendererOptions:{padding:6,sliceMargin:0}
-      },
-
-      seriesColors: pie_colors
-    });
-
-    tbest_selling_taxons = jQuery.jqplot('best_selling_taxons', [best_selling_taxons_points], {
-      grid: {background:'#fff',borderWidth: 0, borderColor: '#fff', shadow: false},
-      seriesDefaults:{
-        renderer:jQuery.jqplot.PieRenderer, 
-        rendererOptions:{padding:6,sliceMargin:0}
-      },
-
-      seriesColors: pie_colors
-    });
-  }
-});
 /**
  * Copyright (c) 2009 Chris Leonello
  * jqPlot is currently available for use in all personal or commercial projects 
@@ -28194,140 +28194,4 @@ jQuery(document).ready(function(){
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-;
-
-var initProductRuleSourceField = function(){
-
-  $products_source_field = jQuery('.products_rule_products_source_field input');
-  $products_source_field.click(function() {
-    $rule_container = jQuery(this).parents('.promotion-rule');
-    if(this.checked){
-      if(this.value == 'manual'){
-        $rule_container.find('.products_rule_products').show();
-        $rule_container.find('.products_rule_product_group').hide();
-      } else {
-        $rule_container.find('.products_rule_products').hide();
-        $rule_container.find('.products_rule_product_group').show();
-      }
-    }
-  });
-  $products_source_field.each(function() {
-    $(this).triggerHandler('click');
-  });
-
-};
-
-var initProductActions = function(){
-
-  $('.calculator-fields').each(function(){
-    var $fields_container = $(this);
-    var $type_select = $fields_container.find('.type-select');
-    var $settings = $fields_container.find('.settings');
-    var $warning = $fields_container.find('.warning');
-    var originalType = $type_select.val();
-
-    $warning.hide();
-    $type_select.change(function(){
-      if( $(this).val() == originalType ){
-        $warning.hide();
-        $settings.show();
-        $settings.find('input').removeAttr('disabled');
-      } else {
-        $warning.show();
-        $settings.hide();
-        $settings.find('input').attr('disabled', 'disabled');
-      }
-    });
-  });
-
-
-  //
-  // CreateLineItems Promotion Action
-  //
-  ( function(){
-    // Autocomplete product and populate variant select
-    if($('.promotion_action.create_line_items ').is('*')){
-      $(".promotion_action.create_line_items input[name='add_product_name']").autocomplete("/admin/products.json?authenticity_token=" + $('meta[name=csrf-token]').attr("content"), {
-        parse: prep_product_autocomplete_data,
-        formatItem: function(item) {
-          return format_product_autocomplete(item);
-        }
-      }).result(function(event, data, formatted) {
-        if(data){
-          if(data['variant']==undefined){
-            // product
-            $('#add_line_item_variant_id').val(data['product']['master']['id']);
-          }else{
-            // variant
-            $('#add_line_item_variant_id').val(data['variant']['id']);
-          }
-        }
-      });
-    }
-
-    var hideOrShowItemTables = function(){
-      $('.promotion_action table').each(function(){
-        if($(this).find('td').length == 0){
-          $(this).hide();
-        } else {
-          $(this).show();
-        }
-      });
-    };
-    hideOrShowItemTables();
-
-    // Remove line item
-    var setupRemoveLineItems = function(){
-      $(".promotion_action.create_line_items table img").unbind('click').click(function(){
-        var $container = $(this).parents('.promotion_action');
-        var $hiddenField = $container.find("input[type='hidden']");
-        var $row = $(this).parents('tr');
-        var index = $row.parents('table').find('tr').index($row.get(0));
-        // Remove variant_id quantity pair from the string
-        var items = _($hiddenField.val().split(',')).compact();
-        items.splice(index - 1, 1);
-        $hiddenField.val(items.join(','));
-        $(this).parents('tr').remove();
-        hideOrShowItemTables();
-      });
-    };
-    setupRemoveLineItems();
-    // Add line item to list
-    $(".promotion_action.create_line_items button.add").live('click',function(){
-      var $container = $(this).parents('.promotion_action');
-      var product_name = $container.find("input[name='add_product_name']").val();
-      var variant_id = $container.find("input[name='add_line_item_variant_id']").val();
-      var quantity = $container.find("input[name='add_quantity']").val();
-      if(variant_id){
-        // Add to the table
-        var newRow = "<tr><td>" + product_name + "</td><td>" + quantity + "</td><td><img src='/assets/admin/icons/cross.png' /></td></tr>";
-        $container.find('table').append(newRow);
-        // Add to serialized string in hidden text field
-        var $hiddenField = $container.find("input[type='hidden']");
-        $hiddenField.val($hiddenField.val() + "," + variant_id + "x" + quantity);
-        setupRemoveLineItems();
-        hideOrShowItemTables();
-      }
-      return false;
-    });
-
-  } )();
-
-}
-
-$(document).ready(function() {
-  initProductRuleSourceField();
-  initProductActions();
-});
-
-
-
-// This is a manifest file that'll be compiled into including all the files listed below.
-// Add new JavaScript/Coffee code in separate files in this directory and they'll automatically
-// be included in the compiled file accessible from http://example.com/assets/application.js
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// the compiled file.
-//
-
-
 ;
