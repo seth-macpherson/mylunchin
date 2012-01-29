@@ -7,9 +7,9 @@ gem 'pg'
 gem 'rmagick'
 gem 'carrierwave'
 
-gem 'spree', :git => 'git://github.com/seth-macpherson/spree.git'
-gem 'spree_gateway', :git => "git://github.com/seth-macpherson/spree_gateway.git"
+gem 'spree', :git => 'git://github.com/seth-macpherson/spree.git', :branch => '0-70-stable'
 gem 'spree_flexi_variants', :git => "git://github.com/seth-macpherson/spree_flexi_variants.git"
+
 
 # Gems used only for assets and not required
 # in production environments by default.
