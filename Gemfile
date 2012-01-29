@@ -3,10 +3,13 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 
 gem 'unicorn'
+gem 'pg'
+gem 'rmagick'
+gem 'carrierwave'
+
 gem 'spree', :git => 'git://github.com/seth-macpherson/spree.git'
 gem 'spree_gateway', :git => "git://github.com/seth-macpherson/spree_gateway.git"
-gem 'pg'
-
+gem 'spree_flexi_variants', :git => "git://github.com/seth-macpherson/spree_flexi_variants.git"
 
 # Gems used only for assets and not required
 # in production environments by default.
