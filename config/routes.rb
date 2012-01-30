@@ -1,6 +1,5 @@
 Mylunchin::Application.routes.draw do
 
-  match "/" => "home#splat"
   # root :to => 'home#index'
   match "/about" => "home#about", :as => "about"
   match "/pending" => "home#pending", :as => "pending"

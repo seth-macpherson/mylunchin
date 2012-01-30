@@ -1,0 +1,32 @@
+<div class="sidebar sidebar_left">
+<!--
+  <div class="sidebar_item">
+    <div class="search">
+      <input class="search_submit" type="submit" value="" />
+      <input class="search_box" onblur = "if (this.value == '') {this.value = 'Sign';}" />
+    </div>
+  </div>
+-->
+  <div class="sidebar_item recent-posts">
+    <h5>On the blog</h5>
+    <ul>
+      <% unless @feed.nil? %>
+        <% @feed.entries[0..3].each do |entry| %>
+          <li>
+            <a :href => entry.url>
+              <%= image_tag("icons/pages.png") %>
+              <span>
+                <strong>#{entry.title}</strong>
+                by #{entry.author} on #{entry.published.strftime("%b %d, %Y")}
+              </span>
+            </a>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <div class="sidebar_item">
+    <h5>Custom text</h5>
+    <p>You can put any text content here or, if you prefer, another list containing your recent posts, works or useful links.</p>
+  </div>
+</div>

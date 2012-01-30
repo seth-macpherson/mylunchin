@@ -1,9 +1,4 @@
 --- 
-League_Gothic-webfont.eot: League_Gothic-webfont.eot
-League_Gothic-webfont.svg: League_Gothic-webfont.svg
-League_Gothic-webfont.ttf: League_Gothic-webfont.ttf
-League_Gothic-webfont.woff: League_Gothic-webfont.woff
-League_Gothic-webfontd41d.eot: League_Gothic-webfontd41d.eot
 avatar_unknown.png: avatar_unknown.png
 button.png: button.png
 checklist.png: checklist.png
@@ -119,8 +114,10 @@ table.png: table.png
 toggle.png: toggle.png
 twitter_quote.png: twitter_quote.png
 admin/all.js: admin/all.js
+application.js: application.js
 store/all.js: store/all.js
 admin/all.css: admin/all.css
+application.css: application.css
 spree/application.css: spree/application.css
 store/all.css: store/all.css
 store/social/facebook_128.png: store/social/facebook_128.png

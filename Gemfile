@@ -2,6 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 
+gem 'haml'
+gem 'haml-rails', :group => :development
+
 gem 'unicorn'
 gem 'pg'
 gem 'rmagick'
@@ -9,7 +12,7 @@ gem 'carrierwave'
 
 gem 'spree', :git => 'git://github.com/seth-macpherson/spree.git', :branch => '0-70-stable'
 gem 'spree_flexi_variants', :git => 'git://github.com/seth-macpherson/spree_flexi_variants.git'
-gem 'spree_social', :path => '../spree_social'
+gem 'spree_social', :path => './vendor/extensions/spree_social'
 
 # Gems used only for assets and not required
 # in production environments by default.
