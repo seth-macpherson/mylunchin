@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Lunch In : <%= controller.controller_name + '.' + controller.action_name %></title>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <div class="inner">
+          <div class="logo">
+            <%= link_to root_url do %>
+              <%= image_tag("table.png") %>
+            <% end %>
+            <h1>My Lunch In</h1>
+            <h5>Today @ Nora's Table</h5>
+          </div>
+          <%= render :partial => "layouts/navigation" %>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <%= yield %>
+      <%= render :template => "layouts/footer" %>
+    </div>
+  </body>
+</html>
