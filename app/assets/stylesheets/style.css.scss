@@ -1151,34 +1151,34 @@ a {
 /*========================*/
 /*===  8.2. Buttons    ===*/
 /*========================*/
-
-.button, .big_button {
-  border: 1px solid #ccc;
-  line-height: 20px;
-  background: url(../img/button.png) repeat-x 0 0;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  color: #fff;
-  cursor: pointer;
-  margin: 0px 5px 18px 0px;
-  display: -moz-inline-stack;
-  -moz-margin-start: 20px;
-  display: inline-block;
-  font-weight: bold;
-  overflow: hidden; 
-  -moz-transition: color 0.1s linear;
-  -webkit-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  a:hover {
-    color: #d16f4e;
-    .bold {
-      color: #d16f4e; } } }
-
-.button {
-  padding: 5px 12px;
-  margin-bottom: 18px; 
-}
+//
+//.button, .big_button {
+//  border: 1px solid #ccc;
+//  line-height: 20px;
+//  background: url(../img/button.png) repeat-x 0 0;
+//  -webkit-border-radius: 3px;
+//  -moz-border-radius: 3px;
+//  border-radius: 3px;
+//  color: #fff;
+//  cursor: pointer;
+//  margin: 0px 5px 18px 0px;
+//  display: -moz-inline-stack;
+//  -moz-margin-start: 20px;
+//  display: inline-block;
+//  font-weight: bold;
+//  overflow: hidden; 
+//  -moz-transition: color 0.1s linear;
+//  -webkit-transition: color 0.1s linear;
+//  -o-transition: color 0.1s linear;
+//  a:hover {
+//    color: #d16f4e;
+//    .bold {
+//      color: #d16f4e; } } }
+//
+//.button {
+//  padding: 5px 12px;
+//  margin-bottom: 18px; 
+//}
 .cta {
 	margin: 10px 0 0 0;
 }

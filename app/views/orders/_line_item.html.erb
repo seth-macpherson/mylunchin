@@ -7,7 +7,10 @@
     <% end %>
   </td>
   <td data-hook="cart_item_description">
-    <h4><%= link_to variant.product.name, product_path(variant.product) %></h4>
+    <!-- 
+    <h4><%#= link_to variant.product.name, product_path(variant.product) %></h4>
+     -->
+    <h4><%= link_to variant.product.name, root_url %></h4>
     <%= variant.options_text %>
     <% if @order.insufficient_stock_lines.include? line_item %>
       <span class="out-of-stock">

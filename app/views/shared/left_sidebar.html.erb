@@ -10,10 +10,11 @@
   <div class="sidebar_item recent-posts">
     <h5>On the blog</h5>
     <ul>
-      <% unless @blog_feed.nil? %>
-        <% @blog_feed.entries[0..3].each do |entry| %>
+      <% cache do %>
+        <% blog_feed = Feedzirra::Feed.fetch_and_parse("http://norastable.wordpress.com/feed/") %>
+        <% blog_feed.entries[0..3].each do |entry| %>
           <li>
-            <%= link_to entry.url do %>
+            <%= link_to entry.url, :target => "_blank" do %>
               <%= image_tag("icons/pages.png") %>
               <span>
                 <strong><%= entry.title %></strong>

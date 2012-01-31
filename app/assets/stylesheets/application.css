@@ -5,8 +5,8 @@
  *= require_self
  *= require style
  *= require custom
- *= require ./plugins/nivo-slider
+ *= require classy
+ *  require ./plugins/nivo-slider
  *= require ./plugins/prettyPhoto
- *= require switcher
 
 */
