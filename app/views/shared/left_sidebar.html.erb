@@ -13,13 +13,13 @@
       <% unless @blog_feed.nil? %>
         <% @blog_feed.entries[0..3].each do |entry| %>
           <li>
-            <a :href => entry.url>
+            <%= link_to entry.url do %>
               <%= image_tag("icons/pages.png") %>
               <span>
-                <strong>#{entry.title}</strong>
-                by #{entry.author} on #{entry.published.strftime("%b %d, %Y")}
+                <strong><%= entry.title %></strong>
+                by <%= entry.author %> on <%= entry.published.strftime("%b %d, %Y") %>
               </span>
-            </a>
+            <% end %>
           </li>
         <% end %>
       <% end %>
