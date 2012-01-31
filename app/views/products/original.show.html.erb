@@ -1,0 +1,108 @@
+<% @body_id = 'product-details' %>
+<h1><%= accurate_title %></h1>
+<%= @product.inspect %>
+
+<div id="product-images" data-hook="product_images">
+  <div id="main-image">
+    <%= render 'products/image' %>
+  </div>
+  <div id="thumbnails">
+    <%= render 'products/thumbnails', :product => @product %>
+  </div>
+</div>
+
+<div id="product-description" data-hook="product_description">
+  <%= product_description(@product) rescue t("product_has_no_description") %>
+  <div data-hook="product_properties">
+    <%= render 'properties' %>
+  </div>
+</div>
+
+<% if Spree::FlexiVariants::Config[:use_separate_customizations_page] %>
+  <% if @product.price %>
+  <div data-hook="product_price">
+    <dl id="product-price">
+      <dt><%= t("price") %></dt>
+      <dd><span class="price selling"><%= product_price(@product) %></span></dd>
+    </dl>
+    <%= link_to "Customize", customize_path(@product) %>
+  </div>
+  <% end %>
+<% else %>
+  <div id="cart-form" data-hook="cart_form">
+    <%= render 'cart_form' %>
+  </div>
+<% end %>
+
+<%= render 'taxons' %>
+
+<div class="post relative">
+  <div class="post-image gallery clearfix" data-hook="product_images">
+      <div id="main-image">
+        <%= render 'image' %>
+      </div>
+      <div id="thumbnails">
+        <%= render 'thumbnails', :product => @product %>
+      </div>
+    </div>
+    
+    
+    <a :href => asset_path("plates/#{plate.id}! .jpg"), :rel => "gallery[gallery#{plate.id}]">
+      <img :alt => plate.name, :height => "120", :src => asset_path("plates/#{plate.id}! .jpg")>
+      </img>
+    </a>
+    <span class="date">
+      <span class="bold">
+        <div plate.created_at.strftime("%b %d")>
+        </div>
+      </span>
+      <div plate.created_at.year>
+      </div>
+    </span>
+    <span class="comments-nr">
+      <a :href => asset_path("plates/#{plate.id}! .jpg"), :rel => "gallery[gallery#{plate.id}]">
+        <span class="bold">#{number_to_currency(plate.price, :unit => "$")}</span>
+        lunch
+      </a>
+    </span>
+    / %span.comments-nr
+    /   %a{:href => "#"}
+    /     %span.bold #{rand(20)}
+    /     remaining
+  </div>
+  <div class="post-entry">
+    <h1 class="title line">
+      <div plate.name>
+      </div>
+    </h1>
+    <div class="divider line short">
+    </div>
+    <p class="plate-description">#{plate.description}</p>
+      <span class="highlight-light dietary">Vegetarian</span>
+      <span class="highlight-light dietary">Gluten Free</span>
+    <ul class="plate-variations">
+      <% #plate.variations.each do |v| %>
+        <li class="variation-label">
+          <span>
+            <div v.label>:</div>
+          </span>
+          <ul>
+            <% # v.selections.each do |s| %>
+              <li class="plate-selection">
+                <div class="clear">
+                </div>
+              </li>
+              <% #end %>
+          </ul>
+        </li>
+    </ul>
+    <div class="button-row cta">
+      / %input.quantity{:type => "number", :value => 1}
+      / %input.classy.customize{:type => "button", :value => "Customize Meal"}
+      / %br
+      / %br
+
+      <input class="classy add-item" :type => "submit", :value => "Add to Lunch Box" />
+    </div>
+  </div>
+</div>

@@ -10,8 +10,8 @@
   <div class="sidebar_item recent-posts">
     <h5>On the blog</h5>
     <ul>
-      <% unless @feed.nil? %>
-        <% @feed.entries[0..3].each do |entry| %>
+      <% unless @blog_feed.nil? %>
+        <% @blog_feed.entries[0..3].each do |entry| %>
           <li>
             <a :href => entry.url>
               <%= image_tag("icons/pages.png") %>

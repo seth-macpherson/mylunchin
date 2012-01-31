@@ -7,3 +7,4 @@
 //= require jquery
 //= require jquery-ui
 //= require_directory ./core
+//= require ./store/all
