@@ -8,10 +8,9 @@
 
     <% if @product.has_stock? || Spree::Config[:allow_backorders] %>
       <%= hidden_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"), 1 %>
-      <input class="classy add-item" type="submit" value="Add to Lunch Box" />
-        <%#= button_tag :class => 'large primary', :id => 'add-to-cart-button' do %>
-        <%#= image_tag('icons/add-to-cart.png') + t(:add_to_cart) %>
-        <%# end %>
+      <%= button_tag :class => 'button classy add-item', :id => 'update-button', :type => "submit" do %>
+        <span>Add to lunch box</span>
+      <% end %>
     <% else %>
       <%= content_tag('strong', t(:out_of_stock)) %>
     <% end %>

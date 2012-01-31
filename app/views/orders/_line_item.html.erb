@@ -29,6 +29,8 @@
     <%= format_price(product_price(line_item.variant, :format_as_currency => false) * line_item.quantity) unless line_item.quantity.nil? %>
   </td>
   <td data-hook="cart_item_delete">
-    <%= link_to image_tag('icons/delete.png'), '#', :class => 'delete', :id => "delete_#{dom_id(line_item)}" %>
+    <%= link_to '#', :class => 'button classy danger minibtn', :id => "delete_#{dom_id(line_item)}", :confirm => "Remove this lunch?" do %>
+      <span>x</span>
+    <% end %>
   </td>
 </tr>

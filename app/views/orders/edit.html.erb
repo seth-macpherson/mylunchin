@@ -1,48 +1,52 @@
 <% @body_id = 'cart' %>
 
 <h1>Your Lunchbox</h1>
+<div class="divider line short"></div>
 
 <% if @order.line_items.empty? %>
 
   <div data-hook="empty_cart">
     <p>Your lunchbox is empty!</p>
-    <p><%= link_to "Pick out lunch", root_path, :class => 'classy button' %></p>
+    <p><%= link_to root_path, :class => 'classy button' do %>
+        <span>See lunch options</span>
+        <% end %>
+    </p>
   </div>
 
 <% else %>
   <div data-hook="outside_cart_form">
     <%= form_for @order, :url => update_cart_path, :html => {:id => 'update-cart'} do |order_form| %>
       <div data-hook="inside_cart_form">
-
         <div data-hook="cart_items">
           <%= render :partial => 'form', :locals => {:order_form => order_form} %>
         </div>
+        <div class="divider line short"></div>
         <div id="subtotal" data-hook>
           <h3><%= "#{t(:subtotal)}: #{order_price(@order)}" %></h3>
         </div>
-        <div id="empty-cart" data-hook>
-        <%= form_tag empty_cart_path, :method => :put do %>
-          <p id="clear_cart_link" data-hook>
-            <%= button_tag :type => "submit", :class => 'button classy danger', :id => 'update-button' do %>
-              <span><%= t(:empty_cart) %></span>
-            <% end %>
-            <%= t(:or) %>
-            <%= link_to "Add another lunch", products_path, :class => 'continue' %>
-          </p>
-        <% end %>
-        </div>
-        <div class="links" id="cart-buttons" data-hook="cart_buttons">
-          <%= button_tag :class => 'button classy', :id => 'update-button' do %>
-            <span><%= t(:update) %></span>
-          <% end %>
-          <%= link_to checkout_path, :class => 'button classy primary' do %>
-          <span><%= t(:checkout) %></span>
-          <% end %>
-          <%#= link_to image_tag('icons/checkout.png') + t(:checkout), checkout_path, :class => 'button checkout primary', :id => 'checkout-link' %>
-        </div>
-        <div class="clear"></div>
-
       </div>
     <% end %>
+    <div id="empty-cart" data-hook>
+    <%= form_tag empty_cart_path, :method => :put do %>
+      <p id="clear_cart_link" data-hook>
+        <%= button_tag :type => "submit", :class => 'button classy danger', :id => 'empty-button' do %>
+          <span>Empty lunch box</span>
+        <% end %>
+      </p>
+    <% end %>
+    </div>
+    <div class="links" id="cart-buttons" data-hook="cart_buttons">
+      <%= link_to root_path, :class => 'button classy' do %>
+        <span>Add another lunch</span>
+      <% end %>
+      <%= button_tag :class => 'button classy', :id => 'update-button' do %>
+        <span>Update quantity</span>
+      <% end %>
+      <%= link_to checkout_path, :class => 'button classy primary' do %>
+        <span>Checkout</span>
+      <% end %>
+      <%#= link_to image_tag('icons/checkout.png') + t(:checkout), checkout_path, :class => 'button checkout primary', :id => 'checkout-link' %>
+    </div>
+    <div class="clear"></div>
   </div>
 <% end %>
