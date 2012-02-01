@@ -375,7 +375,7 @@ blockquote {
   .logo {
     float: left;
     margin-top: 32px; 
-		width: 500px;
+		width: 300px;
 		.table {
 			float: left;
 		}
@@ -1348,11 +1348,11 @@ a {
 /*===  8.5. Lists      ===*/
 /*========================*/
 
-ol, .list {
+ol, .list, .progress_steps {
   list-style: inside none;
   margin-bottom: 30px; }
 
-ol li, .list li {
+ol li, .list li, .progress_steps li {
   color: #888;
   line-height: 20px; }
 

@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
+gem 'rake'
 
 gem 'haml'
 gem 'haml-rails', :group => :development
@@ -13,6 +14,8 @@ gem 'carrierwave'
 gem 'spree', :git => 'git://github.com/seth-macpherson/spree.git', :branch => '0-70-stable'
 gem 'spree_flexi_variants', :git => 'git://github.com/seth-macpherson/spree_flexi_variants.git'
 gem 'spree_social', :path => './vendor/extensions/spree_social'
+gem 'spree_schedule_delivery', :path => '../spree_schedule_delivery'
+
 gem 'feedzirra'
 
 # Gems used only for assets and not required

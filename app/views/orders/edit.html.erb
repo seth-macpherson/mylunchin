@@ -1,12 +1,11 @@
 <% @body_id = 'cart' %>
-
-<h1>Your Lunchbox</h1>
+<h1>Your Lunch Box</h1>
 <div class="divider line short"></div>
 
 <% if @order.line_items.empty? %>
 
   <div data-hook="empty_cart">
-    <p>Your lunchbox is empty!</p>
+    <p>Your lunch box is empty!</p>
     <p><%= link_to root_path, :class => 'classy button' do %>
         <span>See lunch options</span>
         <% end %>

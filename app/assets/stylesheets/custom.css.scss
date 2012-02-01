@@ -19,6 +19,9 @@
 	width: 100%;
 }
 
+#existing-customer .authentication img{
+	display:none;
+}
 
 @mixin linear-gradient($from, $to) {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
@@ -38,12 +41,12 @@ a.button.classy.minibtn, a.button.classy.minibtn span  {
 	padding: 1px 2px;
 }
 
-button.classy.add-item {
-	$border-color: #E1E1E1;
-	$font-color: #333333;
-	border-color: darken($border-color,20%);
-	@include linear-gradient(lighten($border-color, 10%), $border-color);
-}
+//button.classy.add-item {
+//	$border-color: #E1E1E1;
+//	$font-color: #333333;
+//	border-color: darken($border-color,20%);
+//	@include linear-gradient(lighten($border-color, 10%), $border-color);
+//}
 
 
 //input.classy, button.classy, button.classy.pseudo-class-disabled, button.classy.disabled, a.button.classy.pseudo-class-disabled, a.button.classy.disabled, button.classy.pseudo-class-disabled.pseudo-class-hover, button.classy.disabled.pseudo-class-disabled.pseudo-class-hover, a.button.classy.disabled.pseudo-class-hover.pseudo-class-disabled, a.button.classy.disabled.pseudo-class-hover, a.button.classy, button.classy.pseudo-class-disabled.pseudo-class-hover, button.classy.disabled.pseudo-class-disabled.pseudo-class-hover, a.button.classy.pseudo-class-disabled.pseudo-class-hover, a.button.classy.disabled.pseudo-class-disabled.pseudo-class-hover, a.button.classy.disabled.pseudo-class-hover {
