@@ -8,6 +8,7 @@ gem 'haml-rails', :group => :development
 
 gem 'unicorn'
 gem 'pg'
+gem 'yaml_db'
 gem 'rmagick'
 gem 'carrierwave'
 
