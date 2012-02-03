@@ -1,10 +1,10 @@
 <%
   # I wanted to put this in the hooks file but apparently the hooks get loaded so early in the process that the db connection hasn't yet been established
-  if Spree::FlexiVariants::Config[:use_javascript_pricing_updates]
+  if Spree::FlexiVariants::Config[:use_javascript_pricing_updates] 
 %>
 
 <%= content_for :head do %>
-  <%= javascript_include_tag 'jquery.formatCurrency-1.4.0.min.js', 'i18n/jquery.formatCurrency.all.js' %>
+<%= javascript_include_tag 'javascripts/jquery.formatCurrency' %>
   <%# didn't use javascript_tag here so we don't confuse deface %>
   <script type="text/javascript">
     //<![CDATA[

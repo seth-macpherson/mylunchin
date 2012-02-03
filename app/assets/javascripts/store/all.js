@@ -12,5 +12,3 @@
 //= require store/spree_promo
 
 //= require_tree .
-//= require store/exclusions
-//= require jquery.formatCurrency-1.4.0.min

@@ -1066,7 +1066,7 @@ a {
   .quote {
     font-size: 11px;
     text-decoration: none;
-    background: url(../img/twitter_quote.png) no-repeat right top;
+    background: url(asset-path('twitter_quote.png','image')) no-repeat right top;
     width: 198px;
     height: 30px;
     a {

@@ -23,6 +23,14 @@
 	display:none;
 }
 
+#account, #guest-checkout {
+  float: left;
+  width: 360px;
+}
+
+
+
+
 @mixin linear-gradient($from, $to) {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
   background-image: -webkit-linear-gradient(top, $from, $to);
@@ -39,6 +47,11 @@ a.button.classy.minibtn, a.button.classy.minibtn span  {
 	height: 16px;
 	line-height: 16px;
 	padding: 1px 2px;
+}
+
+input.primary {
+  @extend .classy;
+  color: orange;
 }
 
 //button.classy.add-item {
