@@ -28,8 +28,13 @@
   width: 360px;
 }
 
+a.button.classy.minibtn, a.button.classy.minibtn span {
+	height: 16px;
+	line-height: 16px;
+	padding: 1px 2px;
+}
 
-
+/*
 
 @mixin linear-gradient($from, $to) {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
@@ -37,76 +42,8 @@
   background-image:    -moz-linear-gradient(top, $from, $to);
   background-image:     -ms-linear-gradient(top, $from, $to);
   background-image:      -o-linear-gradient(top, $from, $to);
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=$from, endColorstr=$to)"; /* IE8+ */
-	background: linear-gradient($from, $to); /* the standard */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=$from, endColorstr=$to)";
+  background: linear-gradient($from, $to);
 }
 
-
-
-a.button.classy.minibtn, a.button.classy.minibtn span  {
-	height: 16px;
-	line-height: 16px;
-	padding: 1px 2px;
-}
-
-input.primary {
-  @extend .classy;
-  color: orange;
-}
-
-//button.classy.add-item {
-//	$border-color: #E1E1E1;
-//	$font-color: #333333;
-//	border-color: darken($border-color,20%);
-//	@include linear-gradient(lighten($border-color, 10%), $border-color);
-//}
-
-
-//input.classy, button.classy, button.classy.pseudo-class-disabled, button.classy.disabled, a.button.classy.pseudo-class-disabled, a.button.classy.disabled, button.classy.pseudo-class-disabled.pseudo-class-hover, button.classy.disabled.pseudo-class-disabled.pseudo-class-hover, a.button.classy.disabled.pseudo-class-hover.pseudo-class-disabled, a.button.classy.disabled.pseudo-class-hover, a.button.classy, button.classy.pseudo-class-disabled.pseudo-class-hover, button.classy.disabled.pseudo-class-disabled.pseudo-class-hover, a.button.classy.pseudo-class-disabled.pseudo-class-hover, a.button.classy.disabled.pseudo-class-disabled.pseudo-class-hover, a.button.classy.disabled.pseudo-class-hover {
-//	line-height: 20px;
-//	border-color: darken($border-color,20%);
-//	border-radius: 3px;
-//	border-style: none none solid;
-//	border-width: medium medium 1px;
-//	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-//	color: $font-color;
-//	cursor: pointer;
-//	font-family: Helvetica,arial,freesans,clean,sans-serif;
-//	font-size: 12px;
-//	font-weight: bold;
-//	height: 24px;
-//	overflow: visible;
-//	padding: 0 4px;
-//	position: relative;
-//	text-shadow: 1px 1px 0 #FFFFFF;
-//	top: 1px;
-//	white-space: nowrap;
-//	@include linear-gradient(lighten($border-color, 10%), $border-color);
-//}
-//
-//input.classy:hover, input.classy:hover:disabled, button.classy:hover, button.classy:hover:disabled, button.classy.disabled:hover, a.button.classy:hover:disabled, a.button.classy.disabled:hover, button.classy.disabled:hover:disabled, a.button.classy.disabled:hover:disabled, a.button.classy:hover, button.classy:disabled:hover:hover, button.classy.disabled:disabled:hover:hover, a.button.classy:disabled:hover:hover, a.button.classy.disabled:disabled:hover:hover, a.button.classy.disabled:hover:hover {
-//	$start: #0CA6DD;
-//	$end: #0770A0;
-////	$end: #D16F4E;
-//	@include linear-gradient(lighten($end, 10%), $end);
-//	border-bottom-color: lighten($end, 5%);
-//	color: #FFFFFF;
-//	text-decoration: none;
-//	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-//}
-//
-//input.quantity {
-//	margin: 0 10px 0 0;
-//	border-color: darken($border-color,20%);
-//	border-radius: 3px;
-//	border-style: none none solid;
-//	border-width: medium medium 1px;
-// 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-// 	color: $font-color;
-//  float: left;
-//  font-size: 12px;
-//	font-weight: ;
-//  padding: 5px 2px;
-//  width: 30px;
-//	text-align: center;
-//}
+*/
