@@ -1,11 +1,6 @@
-<% content_for :head do %>
-  <%= javascript_include_tag '/states' %>
-<% end %>
-<%= params.inspect %>
-
 <div id="checkout" data-hook>
-  <h1><%= t(:checkout) %></h1>
-  <%= checkout_progress %>
+  <!-- <h1><%#= t(:checkout) %></h1> -->
+  <%#= checkout_progress %>
   <br clear="left" />
   <%= render 'shared/error_messages', :target => @order %>
   <% if @order.state != 'confirm' %>

@@ -13,7 +13,7 @@
   </div>
 
 <% else %>
-  <div data-hook="outside_cart_form">
+  <div data-hook="outside_cart_form" style="position: relative">
     <%= form_for @order, :url => update_cart_path, :html => {:id => 'update-cart'} do |order_form| %>
       <div data-hook="inside_cart_form">
         <div data-hook="cart_items">
@@ -24,6 +24,21 @@
           <h3><%= "#{t(:subtotal)}: #{order_price(@order)}" %></h3>
         </div>
       </div>
+      <div class="links" id="cart-buttons" data-hook="cart_buttons">
+        <!--
+          These float right, so place each element in the opposite order you expect them to render
+        -->
+        <%= link_to checkout_path, :class => 'button classy primary' do %>
+          <span>Checkout</span>
+        <% end %>
+        <button type="submit" name="button" id="update-button" class="large button classy">
+          <span>Update quantity</span>
+        </button>
+        <%= link_to root_path, :class => 'button classy' do %>
+          <span>Add another lunch</span>
+        <% end %>
+      </div>
+      <div class="clear"></div>
     <% end %>
     <div id="empty-cart" data-hook>
     <%= form_tag empty_cart_path, :method => :put do %>
@@ -34,18 +49,5 @@
       </p>
     <% end %>
     </div>
-    <div class="links" id="cart-buttons" data-hook="cart_buttons">
-      <%= link_to root_path, :class => 'button classy' do %>
-        <span>Add another lunch</span>
-      <% end %>
-      <%= button_tag :class => 'button classy', :id => 'update-button' do %>
-        <span>Update quantity</span>
-      <% end %>
-      <%= link_to checkout_path, :class => 'button classy primary' do %>
-        <span>Checkout</span>
-      <% end %>
-      <%#= link_to image_tag('icons/checkout.png') + t(:checkout), checkout_path, :class => 'button checkout primary', :id => 'checkout-link' %>
-    </div>
-    <div class="clear"></div>
   </div>
 <% end %>

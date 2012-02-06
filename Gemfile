@@ -14,7 +14,8 @@ gem 'carrierwave'
 gem 'spree', :git                    => 'git://github.com/seth-macpherson/spree.git', :branch => '0-70-stable'
 gem 'spree_flexi_variants', :git     => 'git://github.com/seth-macpherson/spree_flexi_variants.git'
 gem 'spree_social', :path            => './vendor/ruby/1.9.1/bundler/gems/spree_social'
-gem 'spree_schedule_delivery', :path => './vendor/ruby/1.9.1/bundler/gems/spree_schedule_delivery'
+# incomplete - taking too long to implement
+# gem 'spree_schedule_delivery', :path => './vendor/ruby/1.9.1/bundler/gems/spree_schedule_delivery'
 
 gem 'feedzirra'
 

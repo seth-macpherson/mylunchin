@@ -108,35 +108,6 @@ jQuery(document).ready(function () {
 		}, 250);
 	});
 
-
-	/*
-	 * ---------------------------------------------------------------- 
-	 *  Simple codes
-	 * ----------------------------------------------------------------  
-	 */
-
-	// Tabs
-	$('.tabs > ul').tabs();
-
-
-	// Toggles
-	$('.toggle-view li').click(function () {
-		var text = $(this).children('p');
-
-		if (text.is(':hidden')) {
-			text.slideDown('fast');
-			$(this).children('h6').addClass('active');
-		} else {
-			text.slideUp('fast');
-			$(this).children('h6').removeClass('active');
-		}
-	});
-	
-	$('input.add-item').click(function(event) {
-		console.log('clicked');
-	});
-
-
 	/*
 	 * ---------------------------------------------------------------- 
 	 *  Quicksand (Sortable Portfolio)

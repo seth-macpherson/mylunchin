@@ -10,10 +10,15 @@
 #cart-buttons {
 	float: right;
 	width: 367px;
+  a,button {
+    float:right;
+  }
 }
 #empty-cart {
-	float: left;
-	width: 100px;
+	position: absolute;
+  left: -10px;
+  bottom: -20px;
+	width: 140px;
 }
 #cart-detail {
 	width: 100%;
@@ -33,6 +38,43 @@ a.button.classy.minibtn, a.button.classy.minibtn span {
 	line-height: 16px;
 	padding: 1px 2px;
 }
+
+$field-width: 320px;
+.edit_order {
+  li {
+    clear: both;
+  }
+  .field {
+    float: left;
+    width: $field-width;
+  	input, textarea, select {
+      width: $field-width - 30;
+    	height: 25px;
+  		$shadow-props: 2px 2px 3px #e3e3e3 inset;
+  		-webkit-box-shadow: $shadow-props;
+  		-moz-box-shadow: $shadow-props;
+  		box-shadow: $shadow-props;
+  		border: 1px solid #ccc;
+  		font-size: 12px;
+  		padding-left: 4px;
+    	margin: 2px;
+  	}
+    input[type="radio"], textarea, select {
+      height: inherit;
+  		padding-left: inherit;
+    }
+  	label.error {
+      width:$field-width - 38;
+      display:block;
+      border: 1px solid #CD0A0A;
+  		line-height: 1.5em;
+  		padding: 5px;
+  		margin-left: 2px;
+  		border-width: 1px 1px 1px 3px;
+  	}
+  }
+}
+
 
 /*
 
