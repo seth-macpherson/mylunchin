@@ -47,7 +47,30 @@ jQuery(document).ready(function () {
 
 	mainmenu();
 
-
+  /*
+   * ---------------------------------------------------------------- 
+   *  Simple codes
+   * ----------------------------------------------------------------  
+   */
+	
+  	// Tabs
+    // $('#choose_pickup').tabs();
+	
+  	// Toggles
+	
+    // $('.toggle-view li').click(function () {
+    //   var text = $(this).children('p');
+    //     
+    //   if (text.is(':hidden')) {
+    //     text.slideDown('fast');
+    //     $(this).children('h6').addClass('active');    
+    //   } else {
+    //     text.slideUp('fast');
+    //     $(this).children('h6').removeClass('active');    
+    //   }    
+    // });
+	
+	
 	/*
 	 * ---------------------------------------------------------------- 
 	 *  Image hover effect

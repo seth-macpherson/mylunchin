@@ -2,9 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 
-gem 'haml'
-gem 'haml-rails', :group => :development  
-
 gem 'unicorn'
 gem 'pg'
 gem 'yaml_db'

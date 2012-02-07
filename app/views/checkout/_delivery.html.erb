@@ -1,18 +1,112 @@
-  <div class="inner" data-hook="shipping_method_inner">
-    <div id="methods">
-      <p class="field radios">
-        <% @order.rate_hash.each do |shipping_method| %>
-          <label>
-            <%= radio_button(:order, :shipping_method_id, shipping_method[:id]) %>
-            <% if Spree::Config[:shipment_inc_vat] %>
-              <%= shipping_method[:name] %> <%= format_price (1 + TaxRate.default) * shipping_method[:cost] %>
-            <% else %>
-            <%= shipping_method[:name] %> <%= number_to_currency shipping_method[:cost] %>
-            <% end %>
-          </label><br />
-        <% end %>
-      </p>
+  <%= javascript_include_tag '/javascripts/jquery-ui-1.8.17.custom.min.js' %>
+  <%#= javascript_include_tag '/calendar/fullcalendar.min.js' %>
+  <%#= stylesheet_link_tag '/calendar/fullcalendar.css' %>
+  <!--   <script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+  
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+    
+    $('.calendar').fullCalendar({
+      editable: false,
+      allDaySlot: false,
+      defaultView: 'agendaDay',
+      weekends: false,
+      minTime: 8.0,
+      maxTime: 17.0,
+      events: [
+        {
+          title: 'Outside of delivery window',
+          start: new Date(y, m, d, 8, 0),
+          end: new Date(y, m, d, 11, 30),
+          allDay: false
+        },
+        {
+          title: 'Outside of delivery window',
+          start: new Date(y, m, d, 14, 0),
+          end: new Date(y, m, d, 17, 0),
+          allDay: false
+        }
+      ],
+      eventClick: function(calEvent, jsEvent, view) {
+
+          alert('Event: ' + calEvent.title);
+          alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+          alert('View: ' + view.name);
+
+          // change the border color just for fun
+          $(this).css('border-color', 'red');
+
+      }
+      //       selectable: true,
+      // selectHelper: true,
+      // select: function(start, end, allDay) {
+      //   calendar.fullCalendar('renderEvent',
+      //     {
+      //       title: "Pickup",
+      //       start: start,
+      //       end: end
+      //     },
+      //     true // make the event "stick"
+      //   );
+      //   calendar.fullCalendar('unselect');
+      // }      
+    });
+    
+  });
+  </script> -->
+  <% 
+    cutoff_hour = 12
+    start_date = Date.today
+    start_date += 1.day if Time.now.hour > cutoff_hour
+    end_date = start_date + 9.days
+  %>
+  <div class="tabs" id="choose_pickup" data-hook="shipping_method_inner">
+    <% if Time.now.hour > cutoff_hour %>
+    <div class="box box-orange">
+      Your lunch order will be available for pickup tomorrow because we are past the today's delivery window of 11:30AM - 2PM.
     </div>
+    <% end %>
+
+    <h3 style="float:left;width:200px">Choose Pickup Date/Time:</h3>
+    <select id="pickup_date" style="float:left">
+      <% (start_date..end_date).to_a.each do |slot| %>
+        <% case slot.wday when 0, 6 then next end  %>
+        <option><%= slot.to_formatted_s(:long_ordinal) %></option>
+      <% end%>
+    </select>
+    <div class="clear"></div>
+    <ul class="tabnav">
+      <% @order.rate_hash.each do |shipping_method| %>
+        <li>  
+          <a href="#location-<%= shipping_method[:id] %>"><%= shipping_method[:name] %></a>
+        </li>
+      <% end %>
+    </ul>
+    <% @order.rate_hash.each do |shipping_method| %>
+    <div id="location-<%= shipping_method[:id].to_s %>" class="tabdiv" title="<%= shipping_method[:name] %>">
+      <strong>Pickup options are limited to availability and preparation time</strong>
+      <ul>
+        <% (Time.new(2001,1,1, 11,30,0).to_i..Time.new(2001,1,1, 14,0,0).to_i).to_a.in_groups_of(30.minutes).collect(&:first).collect do |slot| %>
+          <li style="height:30px;font-size: 13px">
+            <p class="field">
+              <label>
+                <%= radio_button(:order, :special_instructions, shipping_method[:name] + " at " Time.at(slot).strftime("%l:%M %p")) %>
+              <%= Time.at(slot).strftime("%l:%M %p") %>
+              </label>
+            </p>
+            <p class="field">
+              <% if shipping_method[:cost] > 0 %>
+                <%= number_to_currency shipping_method[:cost] %>
+              <% end%>
+            </p>
+          </li>
+        <% end %> 
+      </ul>
+    </div>
+    <% end %>
     <% if Spree::Config[:shipping_instructions] && @order.rate_hash.present? %>
       <p id="minstrs" data-hook>
         <%= form.label :special_instructions, t(:shipping_instructions) %><br />
@@ -20,7 +114,17 @@
       </p>
     <% end %>
   </div>
-
-  <div class="form-buttons" data-hook="buttons">
-    <%= submit_tag t(:save_and_continue), :class => 'continue button primary' %>
+  <div class="clearfix"></div>
+  <div class="divider line"></div>
+  <div id="cart-buttons" data-hook="buttons">
+    <button type="submit" name="save_and_" class="button classy primary">
+      <span>Save and Continue</span>
+    </button>
   </div>
+  
+  <script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+    $('#choose_pickup').tabs();
+  });
+  </script>
+  

@@ -10,6 +10,7 @@
 #cart-buttons {
 	float: right;
 	width: 367px;
+  margin: 0 20px;
   a,button {
     float:right;
   }
@@ -33,6 +34,15 @@
   width: 360px;
 }
 
+#pickup_date {
+  float: left;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.tabnav li a {
+  font-size: 14px;
+}
 a.button.classy.minibtn, a.button.classy.minibtn span {
 	height: 16px;
 	line-height: 16px;
@@ -62,6 +72,7 @@ $field-width: 320px;
     input[type="radio"], textarea, select {
       height: inherit;
   		padding-left: inherit;
+      width: auto;
     }
   	label.error {
       width:$field-width - 38;
@@ -72,6 +83,7 @@ $field-width: 320px;
   		margin-left: 2px;
   		border-width: 1px 1px 1px 3px;
   	}
+    
   }
 }
 

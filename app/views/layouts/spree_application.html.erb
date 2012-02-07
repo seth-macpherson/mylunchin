@@ -29,6 +29,8 @@
         <div class="inner">
           <%= render :template => "shared/left_sidebar" %>
             <div class="content content_right blog3">
+              <%= breadcrumbs(@taxon) %>
+              <%= flash_messages %>
               <%= yield %>
             </div>
             <div class="clearfix"></div>
