@@ -571,8 +571,7 @@ ActiveRecord::Schema.define(:version => 20120129053940) do
     t.datetime "updated_at"
   end
 
-  create_table "taxons", :id => false, :force => true do |t|
-    t.integer  "id",                               :null => false
+  create_table "taxons", :force => true do |t|
     t.integer  "taxonomy_id",                      :null => false
     t.integer  "parent_id"
     t.integer  "position",          :default => 0
