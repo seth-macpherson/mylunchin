@@ -64,8 +64,9 @@ GIT
       json
       rmagick
 
-PATH
-  remote: ./extensions/spree_social
+GIT
+  remote: git://github.com/seth-macpherson/spree_social.git
+  revision: 25bab142a8045dd766da011429f1d72f90c6ef86
   specs:
     spree_social (1.3)
       oa-oauth (>= 0.3.2)

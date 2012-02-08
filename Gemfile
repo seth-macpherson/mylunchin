@@ -12,7 +12,7 @@ gem 'spree',                 :git  => 'git://github.com/seth-macpherson/spree.gi
 gem 'spree_flexi_variants',  :git  => 'git://github.com/seth-macpherson/spree_flexi_variants.git'
 gem 'spree_last_address',    :git  => "git://github.com/seth-macpherson/spree-last-address.git"
 gem 'spree_heroku', '1.0.0', :git  => 'git://github.com/seth-macpherson/spree-heroku.git'
-gem 'spree_social',          :path => './extensions/spree_social'
+gem 'spree_social',          :git  => 'git://github.com/seth-macpherson/spree_social.git'
 gem 'aws-s3'
 
 # incomplete - taking too long to implement
