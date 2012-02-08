@@ -10,6 +10,7 @@ gem 'rmagick'
 # gem 'carrierwave'
 gem 'spree',                 :git  => 'git://github.com/seth-macpherson/spree.git', :branch => '0-70-stable'
 gem 'spree_flexi_variants',  :git  => 'git://github.com/seth-macpherson/spree_flexi_variants.git'
+gem 'spree_last_address',    :git  => "git://github.com/dancinglightning/spree-last-address.git"
 gem 'spree_social',          :path => './vendor/ruby/1.9.1/bundler/gems/spree_social'
 gem 'spree_heroku', '1.0.0', :git  => 'git://github.com/paxer/spree-heroku.git'
 gem 'aws-s3'

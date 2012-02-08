@@ -10,7 +10,7 @@
 #cart-buttons {
 	float: right;
 	width: 367px;
-  margin: 0 20px;
+  margin: 20px 0;
   a,button {
     float:right;
   }
@@ -18,7 +18,7 @@
 #empty-cart {
 	position: absolute;
   left: -10px;
-  bottom: -20px;
+  bottom: 0px;
 	width: 140px;
 }
 #cart-detail {
