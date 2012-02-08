@@ -65,7 +65,7 @@ GIT
       rmagick
 
 PATH
-  remote: ./vendor/ruby/1.9.1/bundler/gems/spree_social
+  remote: ./extensions/spree_social
   specs:
     spree_social (1.3)
       oa-oauth (>= 0.3.2)

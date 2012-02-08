@@ -4,6 +4,4 @@ log/*.log
 tmp/
 .sass-cache/
 vendor/
-public/assets/
-public/purity/
 public/examples/
