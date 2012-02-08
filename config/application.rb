@@ -25,8 +25,9 @@ module Mylunchin
         Rails.application.config.cache_classes ? require(c) : load(c)
       end
     end
-
-    # config.assets.initialize_on_precompile = false
+    
+    # This is referenced in the official docs, http://guides.rubyonrails.org/asset_pipeline.html#precompiling-assets
+    config.assets.initialize_on_precompile = false
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
