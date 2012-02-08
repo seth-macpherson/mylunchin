@@ -7,7 +7,7 @@ gem 'aws-sdk'
 gem 'pg'
 gem 'yaml_db'
 gem 'rmagick'
-
+gem 'carrierwave', '0.5.6'
 gem 'spree',                 :git  => 'git://github.com/seth-macpherson/spree.git', :branch => '0-70-stable'
 gem 'spree_flexi_variants',  :git  => 'git://github.com/seth-macpherson/spree_flexi_variants.git'
 gem 'spree_last_address',    :git  => "git://github.com/seth-macpherson/spree-last-address.git"
