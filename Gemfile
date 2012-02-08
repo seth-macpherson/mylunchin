@@ -1,18 +1,18 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
-gem 'aws-sdk'
-
 gem 'unicorn'
+
+gem 'aws-sdk'
 gem 'pg'
 gem 'yaml_db'
 gem 'rmagick'
-# gem 'carrierwave'
+
 gem 'spree',                 :git  => 'git://github.com/seth-macpherson/spree.git', :branch => '0-70-stable'
 gem 'spree_flexi_variants',  :git  => 'git://github.com/seth-macpherson/spree_flexi_variants.git'
-gem 'spree_last_address',    :git  => "git://github.com/dancinglightning/spree-last-address.git"
+gem 'spree_last_address',    :git  => "git://github.com/seth-macpherson/spree-last-address.git"
+gem 'spree_heroku', '1.0.0', :git  => 'git://github.com/seth-macpherson/spree-heroku.git'
 gem 'spree_social',          :path => './vendor/ruby/1.9.1/bundler/gems/spree_social'
-gem 'spree_heroku', '1.0.0', :git  => 'git://github.com/paxer/spree-heroku.git'
 gem 'aws-s3'
 
 # incomplete - taking too long to implement
