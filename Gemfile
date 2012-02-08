@@ -1,13 +1,13 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
+gem 'aws-sdk'
 
 gem 'unicorn'
 gem 'pg'
 gem 'yaml_db'
 gem 'rmagick'
-gem 'carrierwave'
-
+# gem 'carrierwave'
 gem 'spree',                 :git  => 'git://github.com/seth-macpherson/spree.git', :branch => '0-70-stable'
 gem 'spree_flexi_variants',  :git  => 'git://github.com/seth-macpherson/spree_flexi_variants.git'
 gem 'spree_social',          :path => './vendor/ruby/1.9.1/bundler/gems/spree_social'

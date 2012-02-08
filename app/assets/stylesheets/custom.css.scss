@@ -43,6 +43,10 @@
 .tabnav li a {
   font-size: 14px;
 }
+.tabnav li.ui-tabs-selected a {
+  color: #333;
+}
+
 a.button.classy.minibtn, a.button.classy.minibtn span {
 	height: 16px;
 	line-height: 16px;

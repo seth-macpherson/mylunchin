@@ -1,62 +1,4 @@
   <%= javascript_include_tag '/javascripts/jquery-ui-1.8.17.custom.min.js' %>
-  <%#= javascript_include_tag '/calendar/fullcalendar.min.js' %>
-  <%#= stylesheet_link_tag '/calendar/fullcalendar.css' %>
-  <!--   <script type="text/javascript" charset="utf-8">
-  $(document).ready(function() {
-  
-    var date = new Date();
-    var d = date.getDate();
-    var m = date.getMonth();
-    var y = date.getFullYear();
-    
-    $('.calendar').fullCalendar({
-      editable: false,
-      allDaySlot: false,
-      defaultView: 'agendaDay',
-      weekends: false,
-      minTime: 8.0,
-      maxTime: 17.0,
-      events: [
-        {
-          title: 'Outside of delivery window',
-          start: new Date(y, m, d, 8, 0),
-          end: new Date(y, m, d, 11, 30),
-          allDay: false
-        },
-        {
-          title: 'Outside of delivery window',
-          start: new Date(y, m, d, 14, 0),
-          end: new Date(y, m, d, 17, 0),
-          allDay: false
-        }
-      ],
-      eventClick: function(calEvent, jsEvent, view) {
-
-          alert('Event: ' + calEvent.title);
-          alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-          alert('View: ' + view.name);
-
-          // change the border color just for fun
-          $(this).css('border-color', 'red');
-
-      }
-      //       selectable: true,
-      // selectHelper: true,
-      // select: function(start, end, allDay) {
-      //   calendar.fullCalendar('renderEvent',
-      //     {
-      //       title: "Pickup",
-      //       start: start,
-      //       end: end
-      //     },
-      //     true // make the event "stick"
-      //   );
-      //   calendar.fullCalendar('unselect');
-      // }      
-    });
-    
-  });
-  </script> -->
   <% 
     cutoff_hour = 12
     start_date = Date.today
@@ -93,14 +35,9 @@
           <li style="height:30px;font-size: 13px">
             <p class="field">
               <label>
-                <%= radio_button(:order, :special_instructions, shipping_method[:name] + " at " Time.at(slot).strftime("%l:%M %p")) %>
+                <%= radio_button(:order, :special_instructions, shipping_method[:name] + " at " + Time.at(slot).strftime("%l:%M %p")) %>
               <%= Time.at(slot).strftime("%l:%M %p") %>
               </label>
-            </p>
-            <p class="field">
-              <% if shipping_method[:cost] > 0 %>
-                <%= number_to_currency shipping_method[:cost] %>
-              <% end%>
             </p>
           </li>
         <% end %> 
