@@ -1,7 +1,5 @@
 Order.class_eval do
   
-  puts "ORDER DECORATORED"
-  
   def rate_hash
     @rate_hash ||= available_shipping_methods(:front_end).collect do |ship_method|
       next unless cost = ship_method.calculator.compute(self)
