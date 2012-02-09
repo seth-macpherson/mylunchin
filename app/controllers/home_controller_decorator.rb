@@ -1,13 +1,11 @@
 HomeController.class_eval do
 
-  before_filter :ensure_domain
+  #before_filter :ensure_domain
 
-  APP_DOMAIN = 'mylunchin.com'
-  SHOW_SPLASH = true
-
+  APP_DOMAIN = 'www.mylunchin.com'
 
   def ensure_domain
-    if SHOW_SPLASH && request.env['HTTP_HOST'] != "mylunchin.herokuapp.com"
+    if Rails.env.production? && request.env['HTTP_HOST'] != "mylunchin.herokuapp.com"
       render :splash, :layout => false
     end
     # if Rails.env.production? && request.env['HTTP_HOST'] != APP_DOMAIN

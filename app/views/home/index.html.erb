@@ -4,4 +4,5 @@
   <%= link_to "Nora's Table", about_url %>
 </h1>
 <% end %>
+<% @products = @products.sort_by(&:sku) %>
 <%= render :partial => "products/show", :collection => @products, :as => :product %>

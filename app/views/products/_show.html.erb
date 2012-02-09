@@ -4,7 +4,7 @@
   images   = @product.images 
   product_img_path = images[0].attachment.url(:original)
   @product_properties = ProductProperty.includes(:property).where(:product_id => @product.id)
-  day_of_week = Date::DAYNAMES[Date.today.wday]
+  day_of_week = Date::DAYNAMES[Date.today.wday].downcase
 
   # by default include all items
   include_item = true
