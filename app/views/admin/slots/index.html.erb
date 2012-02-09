@@ -1,0 +1,25 @@
+<div class='toolbar'>
+  <ul class='actions'>
+    <li>
+      <%= button_link_to "New Window", new_object_url, :icon => 'add'  %>
+    </li>
+  </ul>
+  <br class="clear" />
+</div>
+
+<h1>Delivery Window</h1>
+
+<table class="index">
+  <thead>
+    <tr>
+      <th><%= t(:name) %></th>
+      <th><%= t(:code) %></th>
+      <th><%= t(:description) %></th>
+      <th><%= t(:usage_limit) %></th>
+      <th><%= t(:expiration) %></th>
+      <th style="width:150px;"><%= t(:action) %></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
