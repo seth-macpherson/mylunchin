@@ -129,6 +129,9 @@ store/social/yahoo_256.png: store/social/yahoo_256-10d8f9c4a03c669ca08928655eb1e
 store/social/yahoo_32.png: store/social/yahoo_32-824755e1ba9be635d511bfab38c42ecf.png
 store/social/yahoo_64.png: store/social/yahoo_64-dd3d62de66dfa7ec2d92995d30d64983.png
 ajax-loader.gif: ajax-loader-48243fc99108c178bbf6507f66e85207.gif
+admin/spree_dash.js: admin/spree_dash-18583f628e2d442d49394edd19a6205b.js
+admin/spree_dash.css: admin/spree_dash-5c73fee371941e2b3415bee01602149e.css
+jqPlot/excanvas.min.js: jqPlot/excanvas.min-a3f0222b30ab3f0d33aad885a2d68ccb.js
 admin/bg/active-tab.png: admin/bg/active-tab-12de08cf3df1fb516ab36e34db38de0d.png
 admin/bg/admin_tab_back.png: admin/bg/admin_tab_back-40bdfb4a23285814dd7ad6c7ba8d0993.png
 admin/bg/admin_tab_selected_back.png: admin/bg/admin_tab_selected_back-26763223e9ef12d04045556dd553d79f.png
@@ -221,6 +224,9 @@ noimage/mini.png: noimage/mini-f1bde10190c5ef0f5334392723a746ef.png
 noimage/product.png: noimage/product-7f5c343af172e08d6cdeaa714e1d796d.png
 noimage/small.png: noimage/small-f70284d33cbde80c81607d260a209cb7.png
 spinner.gif: spinner-a2315156827cf1f5c4abd36d48f0b5ee.gif
+admin/address_states.js: admin/address_states-f12dc1da7d14ffc97e4f564efb2eb1bc.js
+admin/images/new.js: admin/images/new-506e2c29ad0417b08b4834a3be43b498.js
+admin/orders/edit_form.js: admin/orders/edit_form-e7124fe88ab38f3dfab0324197442c9d.js
 datepicker/cal.gif: datepicker/cal-599eabfa2b2f96d52efe7cd8cdb63295.gif
 jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-2cd0e9237a985f1293b25e44c01bea03.png
 jquery-ui/ui-bg_flat_0_eeeeee_40x100.png: jquery-ui/ui-bg_flat_0_eeeeee_40x100-256f0020ac704555c07e8c9ddd6efdd1.png
@@ -242,4 +248,5 @@ jquery.alerts/images/title.gif: jquery.alerts/images/title-bbcafedd83d5900daa7c8
 jquery.jstree/themes/apple/bg.jpg: jquery.jstree/themes/apple/bg-368d3018d36bf98ee12d0e3ec30879ae.jpg
 jquery.jstree/themes/apple/d.png: jquery.jstree/themes/apple/d-f01fcd4d2be02a96af87e82f00b4c260.png
 jquery.jstree/themes/apple/dot_for_ie.gif: jquery.jstree/themes/apple/dot_for_ie-197a9393a9bc23530d243900e527faa9.gif
+jquery.jstree/themes/apple/style.css: jquery.jstree/themes/apple/style-5495778000ec67437008294f4812b550.css
 jquery.jstree/themes/apple/throbber.gif: jquery.jstree/themes/apple/throbber-c937a527831fdafcec76bbc2443a3892.gif
