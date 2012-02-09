@@ -1,7 +1,7 @@
 
---- 
-addresses: 
-  columns: 
+---
+addresses:
+  columns:
   - id
   - firstname
   - lastname
@@ -17,122 +17,262 @@ addresses:
   - state_name
   - alternative_phone
   records: 
-  - - "1"
+  - - '1'
     - Seth
     - MacPherson
     - 822 June Street
-    - ""
+    - ''
     - Hood River
-    - "298914262"
-    - "97031"
-    - "214"
+    - '298914262'
+    - '97031'
+    - '214'
     - 1234-123-123
-    - 2012-02-01 00:44:34.20239
-    - 2012-02-01 00:44:34.20239
-    - 
-    - 
-  - - "2"
+    - '2012-02-01 00:44:34.20239'
+    - '2012-02-01 00:44:34.20239'
+    - !!null 
+    - !!null 
+  - - '2'
     - Seth
     - MacPherson
     - 822 June Street
-    - ""
+    - ''
     - Hood River
-    - "298914262"
-    - "97031"
-    - "214"
+    - '298914262'
+    - '97031'
+    - '214'
     - 1234-123-123
-    - 2012-02-01 00:44:34.206225
-    - 2012-02-01 00:44:34.206225
-    - 
-    - 
-  - - "3"
+    - '2012-02-01 00:44:34.206225'
+    - '2012-02-01 00:44:34.206225'
+    - !!null 
+    - !!null 
+  - - '3'
     - Seth
     - MacPherson
     - 822 June St
-    - ""
+    - ''
     - Hood River
-    - "298914262"
-    - "97031"
-    - "214"
+    - '298914262'
+    - '97031'
+    - '214'
     - 555-123-1242
-    - 2012-02-04 04:29:06.620907
-    - 2012-02-04 04:29:06.620907
-    - 
-    - 
-  - - "4"
+    - '2012-02-04 04:29:06.620907'
+    - '2012-02-04 04:29:06.620907'
+    - !!null 
+    - !!null 
+  - - '4'
     - Seth
     - MacPherson
     - 822 June St
-    - ""
+    - ''
     - Hood River
-    - "298914262"
-    - "97031"
-    - "214"
+    - '298914262'
+    - '97031'
+    - '214'
     - 555-123-1242
-    - 2012-02-04 04:29:06.627777
-    - 2012-02-04 04:29:06.627777
-    - 
-    - 
-  - - "5"
+    - '2012-02-04 04:29:06.627777'
+    - '2012-02-04 04:29:06.627777'
+    - !!null 
+    - !!null 
+  - - '5'
     - Seth
     - MacPherson
     - 822 June St
-    - ""
+    - ''
     - Hood River
-    - "298914262"
-    - "97031"
-    - "214"
+    - '298914262'
+    - '97031'
+    - '214'
     - 555-123-1242
-    - 2012-02-06 20:13:31.250176
-    - 2012-02-06 20:13:31.250176
-    - 
-    - 
-  - - "6"
+    - '2012-02-06 20:13:31.250176'
+    - '2012-02-06 20:13:31.250176'
+    - !!null 
+    - !!null 
+  - - '6'
     - Seth
     - MacPherson
     - 822 June St
-    - ""
+    - ''
     - Hood River
-    - "298914262"
-    - "97031"
-    - "214"
+    - '298914262'
+    - '97031'
+    - '214'
     - 555-123-1242
-    - 2012-02-06 20:13:31.255181
-    - 2012-02-06 20:13:31.255181
-    - 
-    - 
-  - - "7"
+    - '2012-02-06 20:13:31.255181'
+    - '2012-02-06 20:13:31.255181'
+    - !!null 
+    - !!null 
+  - - '7'
     - Seth
     - MacPherson
     - 822 June St
-    - ""
+    - ''
     - Hood River
-    - "298914262"
-    - "97031"
-    - "214"
+    - '298914262'
+    - '97031'
+    - '214'
     - Hello
-    - 2012-02-07 06:33:19.905434
-    - 2012-02-07 06:33:19.905434
-    - 
-    - 
-  - - "8"
+    - '2012-02-07 06:33:19.905434'
+    - '2012-02-07 06:33:19.905434'
+    - !!null 
+    - !!null 
+  - - '8'
     - Seth
     - MacPherson
     - 822 June St
-    - ""
+    - ''
     - Hood River
-    - "298914262"
-    - "97031"
-    - "214"
+    - '298914262'
+    - '97031'
+    - '214'
     - Hello
-    - 2012-02-07 06:33:19.908476
-    - 2012-02-07 06:33:19.908476
-    - 
-    - 
+    - '2012-02-07 06:33:19.908476'
+    - '2012-02-07 06:33:19.908476'
+    - !!null 
+    - !!null 
+  - - '9'
+    - Seth
+    - MacPherson
+    - 822 June St
+    - ''
+    - Hood River
+    - '298914262'
+    - '97031'
+    - '214'
+    - Hello
+    - '2012-02-08 05:21:35.62293'
+    - '2012-02-08 05:21:35.62293'
+    - !!null 
+    - !!null 
+  - - '10'
+    - Seth
+    - MacPherson
+    - 822 June St
+    - ''
+    - Hood River
+    - '298914262'
+    - '97031'
+    - '214'
+    - Hello
+    - '2012-02-08 05:21:35.631291'
+    - '2012-02-08 05:21:35.631291'
+    - !!null 
+    - !!null 
+  - - '11'
+    - Seth
+    - MacPherson
+    - 822 June St
+    - ''
+    - Hood River
+    - '298914262'
+    - '97031'
+    - '214'
+    - Hello
+    - '2012-02-08 05:21:46.3673'
+    - '2012-02-08 05:21:46.3673'
+    - !!null 
+    - !!null 
+  - - '12'
+    - Seth
+    - MacPherson
+    - 822 June St
+    - ''
+    - Hood River
+    - '298914262'
+    - '97031'
+    - '214'
+    - Hello
+    - '2012-02-08 05:21:46.369121'
+    - '2012-02-08 05:21:46.369121'
+    - !!null 
+    - !!null 
+  - - '13'
+    - Seth
+    - MacPherson
+    - 822 June St
+    - ''
+    - Hood River
+    - '298914262'
+    - '97031'
+    - '214'
+    - Hello
+    - '2012-02-08 05:48:48.218566'
+    - '2012-02-08 05:48:48.218566'
+    - !!null 
+    - !!null 
+  - - '14'
+    - Seth
+    - MacPherson
+    - 822 June St
+    - ''
+    - Hood River
+    - '298914262'
+    - '97031'
+    - '214'
+    - Hello
+    - '2012-02-08 05:48:48.223547'
+    - '2012-02-08 05:48:48.223547'
+    - !!null 
+    - !!null 
+  - - '15'
+    - Seth
+    - MacPherson
+    - 822 June St
+    - ''
+    - Hood River
+    - '298914262'
+    - '97031'
+    - '214'
+    - Hello
+    - '2012-02-08 23:20:51.953051'
+    - '2012-02-08 23:20:51.953051'
+    - !!null 
+    - !!null 
+  - - '16'
+    - Seth
+    - MacPherson
+    - 822 June St
+    - ''
+    - Hood River
+    - '298914262'
+    - '97031'
+    - '214'
+    - Hello
+    - '2012-02-08 23:20:51.956383'
+    - '2012-02-08 23:20:51.956383'
+    - !!null 
+    - !!null 
+  - - '17'
+    - Seth
+    - MacPherson
+    - 822 June St
+    - ''
+    - Hood River
+    - '298914262'
+    - '97031'
+    - '214'
+    - Hello
+    - '2012-02-08 23:56:34.258218'
+    - '2012-02-08 23:56:34.258218'
+    - !!null 
+    - !!null 
+  - - '18'
+    - Seth
+    - MacPherson
+    - 822 June St
+    - ''
+    - Hood River
+    - '298914262'
+    - '97031'
+    - '214'
+    - Hello
+    - '2012-02-08 23:56:34.259837'
+    - '2012-02-08 23:56:34.259837'
+    - !!null 
+    - !!null 
 
---- 
-user_authentications: 
-  columns: 
+---
+user_authentications:
+  columns:
   - id
   - user_id
   - provider
@@ -141,17 +281,17 @@ user_authentications:
   - created_at
   - updated_at
   records: 
-  - - "1"
-    - "1"
+  - - '1'
+    - '1'
     - facebook
-    - "1378145368"
+    - '1378145368'
     - seth.macpherson
-    - 2012-02-01 05:17:37.602686
-    - 2012-02-01 05:18:59.93041
+    - '2012-02-01 05:17:37.602686'
+    - '2012-02-01 05:18:59.93041'
 
---- 
-assets: 
-  columns: 
+---
+assets:
+  columns:
   - id
   - viewable_id
   - viewable_type
@@ -165,70 +305,70 @@ assets:
   - attachment_height
   - alt
   records: 
-  - - "1"
-    - "1"
+  - - '1'
+    - '1'
     - Product
     - image/jpeg
     - 1.jpg
-    - 
-    - "1"
+    - !!null 
+    - '1'
     - Image
-    - 2012-01-29 06:09:16.540134
-    - "600"
-    - "400"
-    - ""
-  - - "2"
-    - "2"
+    - '2012-01-29 06:09:16.540134'
+    - '600'
+    - '400'
+    - ''
+  - - '2'
+    - '2'
     - Product
     - image/jpeg
     - 2.jpg
-    - 
-    - "1"
+    - !!null 
+    - '1'
     - Image
-    - 2012-01-29 06:11:49.419633
-    - "119"
-    - "80"
-    - ""
-  - - "3"
-    - "3"
+    - '2012-01-29 06:11:49.419633'
+    - '119'
+    - '80'
+    - ''
+  - - '3'
+    - '3'
     - Product
     - image/jpeg
     - 3.jpg
-    - 
-    - "1"
+    - !!null 
+    - '1'
     - Image
-    - 2012-01-29 06:16:52.496472
-    - "600"
-    - "400"
-    - ""
-  - - "4"
-    - "4"
+    - '2012-01-29 06:16:52.496472'
+    - '600'
+    - '400'
+    - ''
+  - - '4'
+    - '4'
     - Product
     - image/jpeg
     - 4.jpg
-    - 
-    - "1"
+    - !!null 
+    - '1'
     - Image
-    - 2012-01-29 06:21:33.008428
-    - "600"
-    - "400"
-    - ""
-  - - "7"
-    - "5"
+    - '2012-01-29 06:21:33.008428'
+    - '600'
+    - '400'
+    - ''
+  - - '7'
+    - '5'
     - Product
     - image/jpeg
     - 5.jpg
-    - 
-    - "1"
+    - !!null 
+    - '1'
     - Image
-    - 2012-02-07 23:38:34.270523
-    - "600"
-    - "400"
+    - '2012-02-07 23:38:34.270523'
+    - '600'
+    - '400'
     - Bermese yumminess.
 
---- 
-calculators: 
-  columns: 
+---
+calculators:
+  columns:
   - id
   - type
   - calculable_id
@@ -236,74 +376,98 @@ calculators:
   - created_at
   - updated_at
   records: 
-  - - "2"
+  - - '2'
     - Calculator::FlatPercentItemTotal
-    - "2"
+    - '2'
     - ShippingMethod
-    - 2012-02-06 19:31:19.346493
-    - 2012-02-06 19:31:19.346493
-  - - "3"
+    - '2012-02-06 19:31:19.346493'
+    - '2012-02-06 19:31:19.346493'
+  - - '3'
     - Calculator::FlatPercentItemTotal
-    - "3"
+    - '3'
     - ShippingMethod
-    - 2012-02-06 19:32:04.581707
-    - 2012-02-06 19:32:04.581707
-  - - "4"
+    - '2012-02-06 19:32:04.581707'
+    - '2012-02-06 19:32:04.581707'
+  - - '4'
     - Calculator::FlatPercentItemTotal
-    - "4"
+    - '4'
     - ShippingMethod
-    - 2012-02-06 19:32:34.565268
-    - 2012-02-06 19:32:34.565268
-  - - "5"
+    - '2012-02-06 19:32:34.565268'
+    - '2012-02-06 19:32:34.565268'
+  - - '5'
     - Calculator::FlatPercentItemTotal
-    - "5"
+    - '5'
     - ShippingMethod
-    - 2012-02-06 19:33:02.74634
-    - 2012-02-06 19:33:02.74634
+    - '2012-02-06 19:33:02.74634'
+    - '2012-02-06 19:33:02.74634'
+  - - '6'
+    - Calculator::FlatPercentItemTotal
+    - '6'
+    - ShippingMethod
+    - '2012-02-09 09:35:19.348366'
+    - '2012-02-09 09:35:19.348366'
+  - - '7'
+    - Calculator::FlatPercentItemTotal
+    - '7'
+    - ShippingMethod
+    - '2012-02-09 09:35:50.823698'
+    - '2012-02-09 09:35:50.823698'
+  - - '8'
+    - Calculator::FlatPercentItemTotal
+    - '8'
+    - ShippingMethod
+    - '2012-02-09 09:37:10.07823'
+    - '2012-02-09 09:37:10.07823'
+  - - '9'
+    - Calculator::FlatPercentItemTotal
+    - '9'
+    - ShippingMethod
+    - '2012-02-09 09:37:49.307066'
+    - '2012-02-09 09:37:49.307066'
 
---- 
-authentication_methods: 
-  columns: 
+---
+authentication_methods:
+  columns:
   - id
   - environment
   - active
   - created_at
   - updated_at
   records: 
-  - - "2"
+  - - '2'
     - development
     - false
-    - 2012-02-01 04:39:04.662863
-    - 2012-02-03 23:16:10.707158
+    - '2012-02-01 04:39:04.662863'
+    - '2012-02-03 23:16:10.707158'
 
---- 
-configurations: 
-  columns: 
+---
+configurations:
+  columns:
   - id
   - name
   - created_at
   - updated_at
   - type
   records: 
-  - - "1"
+  - - '1'
     - Default configuration
-    - 2012-01-29 05:11:49.443196
-    - 2012-01-29 05:11:49.443196
+    - '2012-01-29 05:11:49.443196'
+    - '2012-01-29 05:11:49.443196'
     - AppConfiguration
-  - - "2"
+  - - '2'
     - Default spree flexi variants configuration
-    - 2012-01-30 05:18:11.034508
-    - 2012-01-30 05:18:11.034508
+    - '2012-01-30 05:18:11.034508'
+    - '2012-01-30 05:18:11.034508'
     - FlexiVariantsConfiguration
-  - - "3"
+  - - '3'
     - Default spree_auth configuration
-    - 2012-01-31 06:09:30.289282
-    - 2012-01-31 06:09:30.289282
+    - '2012-01-31 06:09:30.289282'
+    - '2012-01-31 06:09:30.289282'
     - SpreeAuthConfiguration
 
---- 
-countries: 
-  columns: 
+---
+countries:
+  columns:
   - id
   - iso_name
   - iso
@@ -311,1366 +475,1471 @@ countries:
   - iso3
   - numcode
   records: 
-  - - "1"
+  - - '1'
     - AFGHANISTAN
     - AF
     - Afghanistan
     - AFG
-    - "4"
-  - - "2"
+    - '4'
+  - - '2'
     - ALBANIA
     - AL
     - Albania
     - ALB
-    - "8"
-  - - "3"
+    - '8'
+  - - '3'
     - ALGERIA
     - DZ
     - Algeria
     - DZA
-    - "12"
-  - - "4"
+    - '12'
+  - - '4'
     - AMERICAN SAMOA
     - AS
     - American Samoa
     - ASM
-    - "16"
-  - - "5"
+    - '16'
+  - - '5'
     - ANDORRA
     - AD
     - Andorra
     - AND
-    - "20"
-  - - "6"
+    - '20'
+  - - '6'
     - ANGOLA
     - AO
     - Angola
     - AGO
-    - "24"
-  - - "7"
+    - '24'
+  - - '7'
     - ANGUILLA
     - AI
     - Anguilla
     - AIA
-    - "660"
-  - - "8"
+    - '660'
+  - - '8'
     - ANTIGUA AND BARBUDA
     - AG
     - Antigua and Barbuda
     - ATG
-    - "28"
-  - - "9"
+    - '28'
+  - - '9'
     - ARGENTINA
     - AR
     - Argentina
     - ARG
-    - "32"
-  - - "10"
+    - '32'
+  - - '10'
     - ARMENIA
     - AM
     - Armenia
     - ARM
-    - "51"
-  - - "11"
+    - '51'
+  - - '11'
     - ARUBA
     - AW
     - Aruba
     - ABW
-    - "533"
-  - - "12"
+    - '533'
+  - - '12'
     - AUSTRALIA
     - AU
     - Australia
     - AUS
-    - "36"
-  - - "13"
+    - '36'
+  - - '13'
     - AUSTRIA
     - AT
     - Austria
     - AUT
-    - "40"
-  - - "14"
+    - '40'
+  - - '14'
     - AZERBAIJAN
     - AZ
     - Azerbaijan
     - AZE
-    - "31"
-  - - "15"
+    - '31'
+  - - '15'
     - BAHAMAS
     - BS
     - Bahamas
     - BHS
-    - "44"
-  - - "16"
+    - '44'
+  - - '16'
     - BAHRAIN
     - BH
     - Bahrain
     - BHR
-    - "48"
-  - - "17"
+    - '48'
+  - - '17'
     - BANGLADESH
     - BD
     - Bangladesh
     - BGD
-    - "50"
-  - - "18"
+    - '50'
+  - - '18'
     - BARBADOS
     - BB
     - Barbados
     - BRB
-    - "52"
-  - - "19"
+    - '52'
+  - - '19'
     - BELARUS
     - BY
     - Belarus
     - BLR
-    - "112"
-  - - "20"
+    - '112'
+  - - '20'
     - BELGIUM
     - BE
     - Belgium
     - BEL
-    - "56"
-  - - "21"
+    - '56'
+  - - '21'
     - BELIZE
     - BZ
     - Belize
     - BLZ
-    - "84"
-  - - "22"
+    - '84'
+  - - '22'
     - BENIN
     - BJ
     - Benin
     - BEN
-    - "204"
-  - - "23"
+    - '204'
+  - - '23'
     - BERMUDA
     - BM
     - Bermuda
     - BMU
-    - "60"
-  - - "24"
+    - '60'
+  - - '24'
     - BHUTAN
     - BT
     - Bhutan
     - BTN
-    - "64"
-  - - "25"
+    - '64'
+  - - '25'
     - BOLIVIA
     - BO
     - Bolivia
     - BOL
-    - "68"
-  - - "26"
+    - '68'
+  - - '26'
     - BOSNIA AND HERZEGOVINA
     - BA
     - Bosnia and Herzegovina
     - BIH
-    - "70"
-  - - "27"
+    - '70'
+  - - '27'
     - BOTSWANA
     - BW
     - Botswana
     - BWA
-    - "72"
-  - - "28"
+    - '72'
+  - - '28'
     - BRAZIL
     - BR
     - Brazil
     - BRA
-    - "76"
-  - - "29"
+    - '76'
+  - - '29'
     - BRUNEI DARUSSALAM
     - BN
     - Brunei Darussalam
     - BRN
-    - "96"
-  - - "30"
+    - '96'
+  - - '30'
     - BULGARIA
     - BG
     - Bulgaria
     - BGR
-    - "100"
-  - - "31"
+    - '100'
+  - - '31'
     - BURKINA FASO
     - BF
     - Burkina Faso
     - BFA
-    - "854"
-  - - "32"
+    - '854'
+  - - '32'
     - BURUNDI
     - BI
     - Burundi
     - BDI
-    - "108"
-  - - "33"
+    - '108'
+  - - '33'
     - CAMBODIA
     - KH
     - Cambodia
     - KHM
-    - "116"
-  - - "34"
+    - '116'
+  - - '34'
     - CAMEROON
     - CM
     - Cameroon
     - CMR
-    - "120"
-  - - "35"
+    - '120'
+  - - '35'
     - CANADA
     - CA
     - Canada
     - CAN
-    - "124"
-  - - "36"
+    - '124'
+  - - '36'
     - CAPE VERDE
     - CV
     - Cape Verde
     - CPV
-    - "132"
-  - - "37"
+    - '132'
+  - - '37'
     - CAYMAN ISLANDS
     - KY
     - Cayman Islands
     - CYM
-    - "136"
-  - - "38"
+    - '136'
+  - - '38'
     - CENTRAL AFRICAN REPUBLIC
     - CF
     - Central African Republic
     - CAF
-    - "140"
-  - - "39"
+    - '140'
+  - - '39'
     - CHAD
     - TD
     - Chad
     - TCD
-    - "148"
-  - - "40"
+    - '148'
+  - - '40'
     - CHILE
     - CL
     - Chile
     - CHL
-    - "152"
-  - - "41"
+    - '152'
+  - - '41'
     - CHINA
     - CN
     - China
     - CHN
-    - "156"
-  - - "42"
+    - '156'
+  - - '42'
     - COLOMBIA
     - CO
     - Colombia
     - COL
-    - "170"
-  - - "43"
+    - '170'
+  - - '43'
     - COMOROS
     - KM
     - Comoros
     - COM
-    - "174"
-  - - "44"
+    - '174'
+  - - '44'
     - CONGO
     - CG
     - Congo
     - COG
-    - "178"
-  - - "45"
+    - '178'
+  - - '45'
     - CONGO, THE DEMOCRATIC REPUBLIC OF THE
     - CD
     - Congo, the Democratic Republic of the
     - COD
-    - "180"
-  - - "46"
+    - '180'
+  - - '46'
     - COOK ISLANDS
     - CK
     - Cook Islands
     - COK
-    - "184"
-  - - "47"
+    - '184'
+  - - '47'
     - COSTA RICA
     - CR
     - Costa Rica
     - CRI
-    - "188"
-  - - "48"
+    - '188'
+  - - '48'
     - COTE D'IVOIRE
     - CI
     - Cote D'Ivoire
     - CIV
-    - "384"
-  - - "49"
+    - '384'
+  - - '49'
     - CROATIA
     - HR
     - Croatia
     - HRV
-    - "191"
-  - - "50"
+    - '191'
+  - - '50'
     - CUBA
     - CU
     - Cuba
     - CUB
-    - "192"
-  - - "51"
+    - '192'
+  - - '51'
     - CYPRUS
     - CY
     - Cyprus
     - CYP
-    - "196"
-  - - "52"
+    - '196'
+  - - '52'
     - CZECH REPUBLIC
     - CZ
     - Czech Republic
     - CZE
-    - "203"
-  - - "53"
+    - '203'
+  - - '53'
     - DENMARK
     - DK
     - Denmark
     - DNK
-    - "208"
-  - - "54"
+    - '208'
+  - - '54'
     - DJIBOUTI
     - DJ
     - Djibouti
     - DJI
-    - "262"
-  - - "55"
+    - '262'
+  - - '55'
     - DOMINICA
     - DM
     - Dominica
     - DMA
-    - "212"
-  - - "56"
+    - '212'
+  - - '56'
     - DOMINICAN REPUBLIC
     - DO
     - Dominican Republic
     - DOM
-    - "214"
-  - - "57"
+    - '214'
+  - - '57'
     - ECUADOR
     - EC
     - Ecuador
     - ECU
-    - "218"
-  - - "58"
+    - '218'
+  - - '58'
     - EGYPT
     - EG
     - Egypt
     - EGY
-    - "818"
-  - - "59"
+    - '818'
+  - - '59'
     - EL SALVADOR
     - SV
     - El Salvador
     - SLV
-    - "222"
-  - - "60"
+    - '222'
+  - - '60'
     - EQUATORIAL GUINEA
     - GQ
     - Equatorial Guinea
     - GNQ
-    - "226"
-  - - "61"
+    - '226'
+  - - '61'
     - ERITREA
     - ER
     - Eritrea
     - ERI
-    - "232"
-  - - "62"
+    - '232'
+  - - '62'
     - ESTONIA
     - EE
     - Estonia
     - EST
-    - "233"
-  - - "63"
+    - '233'
+  - - '63'
     - ETHIOPIA
     - ET
     - Ethiopia
     - ETH
-    - "231"
-  - - "64"
+    - '231'
+  - - '64'
     - FALKLAND ISLANDS (MALVINAS)
     - FK
     - Falkland Islands (Malvinas)
     - FLK
-    - "238"
-  - - "65"
+    - '238'
+  - - '65'
     - FAROE ISLANDS
     - FO
     - Faroe Islands
     - FRO
-    - "234"
-  - - "66"
+    - '234'
+  - - '66'
     - FIJI
     - FJ
     - Fiji
     - FJI
-    - "242"
-  - - "67"
+    - '242'
+  - - '67'
     - FINLAND
     - FI
     - Finland
     - FIN
-    - "246"
-  - - "68"
+    - '246'
+  - - '68'
     - FRANCE
     - FR
     - France
     - FRA
-    - "250"
-  - - "69"
+    - '250'
+  - - '69'
     - FRENCH GUIANA
     - GF
     - French Guiana
     - GUF
-    - "254"
-  - - "70"
+    - '254'
+  - - '70'
     - FRENCH POLYNESIA
     - PF
     - French Polynesia
     - PYF
-    - "258"
-  - - "71"
+    - '258'
+  - - '71'
     - GABON
     - GA
     - Gabon
     - GAB
-    - "266"
-  - - "72"
+    - '266'
+  - - '72'
     - GAMBIA
     - GM
     - Gambia
     - GMB
-    - "270"
-  - - "73"
+    - '270'
+  - - '73'
     - GEORGIA
     - GE
     - Georgia
     - GEO
-    - "268"
-  - - "74"
+    - '268'
+  - - '74'
     - GERMANY
     - DE
     - Germany
     - DEU
-    - "276"
-  - - "75"
+    - '276'
+  - - '75'
     - GHANA
     - GH
     - Ghana
     - GHA
-    - "288"
-  - - "76"
+    - '288'
+  - - '76'
     - GIBRALTAR
     - GI
     - Gibraltar
     - GIB
-    - "292"
-  - - "77"
+    - '292'
+  - - '77'
     - GREECE
     - GR
     - Greece
     - GRC
-    - "300"
-  - - "78"
+    - '300'
+  - - '78'
     - GREENLAND
     - GL
     - Greenland
     - GRL
-    - "304"
-  - - "79"
+    - '304'
+  - - '79'
     - GRENADA
     - GD
     - Grenada
     - GRD
-    - "308"
-  - - "80"
+    - '308'
+  - - '80'
     - GUADELOUPE
     - GP
     - Guadeloupe
     - GLP
-    - "312"
-  - - "81"
+    - '312'
+  - - '81'
     - GUAM
     - GU
     - Guam
     - GUM
-    - "316"
-  - - "82"
+    - '316'
+  - - '82'
     - GUATEMALA
     - GT
     - Guatemala
     - GTM
-    - "320"
-  - - "83"
+    - '320'
+  - - '83'
     - GUINEA
     - GN
     - Guinea
     - GIN
-    - "324"
-  - - "84"
+    - '324'
+  - - '84'
     - GUINEA-BISSAU
     - GW
     - Guinea-Bissau
     - GNB
-    - "624"
-  - - "85"
+    - '624'
+  - - '85'
     - GUYANA
     - GY
     - Guyana
     - GUY
-    - "328"
-  - - "86"
+    - '328'
+  - - '86'
     - HAITI
     - HT
     - Haiti
     - HTI
-    - "332"
-  - - "87"
+    - '332'
+  - - '87'
     - HOLY SEE (VATICAN CITY STATE)
     - VA
     - Holy See (Vatican City State)
     - VAT
-    - "336"
-  - - "88"
+    - '336'
+  - - '88'
     - HONDURAS
     - HN
     - Honduras
     - HND
-    - "340"
-  - - "89"
+    - '340'
+  - - '89'
     - HONG KONG
     - HK
     - Hong Kong
     - HKG
-    - "344"
-  - - "90"
+    - '344'
+  - - '90'
     - HUNGARY
     - HU
     - Hungary
     - HUN
-    - "348"
-  - - "91"
+    - '348'
+  - - '91'
     - ICELAND
     - IS
     - Iceland
     - ISL
-    - "352"
-  - - "92"
+    - '352'
+  - - '92'
     - INDIA
     - IN
     - India
     - IND
-    - "356"
-  - - "93"
+    - '356'
+  - - '93'
     - INDONESIA
     - ID
     - Indonesia
     - IDN
-    - "360"
-  - - "94"
+    - '360'
+  - - '94'
     - IRAN, ISLAMIC REPUBLIC OF
     - IR
     - Iran, Islamic Republic of
     - IRN
-    - "364"
-  - - "95"
+    - '364'
+  - - '95'
     - IRAQ
     - IQ
     - Iraq
     - IRQ
-    - "368"
-  - - "96"
+    - '368'
+  - - '96'
     - IRELAND
     - IE
     - Ireland
     - IRL
-    - "372"
-  - - "97"
+    - '372'
+  - - '97'
     - ISRAEL
     - IL
     - Israel
     - ISR
-    - "376"
-  - - "98"
+    - '376'
+  - - '98'
     - ITALY
     - IT
     - Italy
     - ITA
-    - "380"
-  - - "99"
+    - '380'
+  - - '99'
     - JAMAICA
     - JM
     - Jamaica
     - JAM
-    - "388"
-  - - "100"
+    - '388'
+  - - '100'
     - JAPAN
     - JP
     - Japan
     - JPN
-    - "392"
-  - - "101"
+    - '392'
+  - - '101'
     - JORDAN
     - JO
     - Jordan
     - JOR
-    - "400"
-  - - "102"
+    - '400'
+  - - '102'
     - KAZAKHSTAN
     - KZ
     - Kazakhstan
     - KAZ
-    - "398"
-  - - "103"
+    - '398'
+  - - '103'
     - KENYA
     - KE
     - Kenya
     - KEN
-    - "404"
-  - - "104"
+    - '404'
+  - - '104'
     - KIRIBATI
     - KI
     - Kiribati
     - KIR
-    - "296"
-  - - "105"
+    - '296'
+  - - '105'
     - KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF
     - KP
     - North Korea
     - PRK
-    - "408"
-  - - "106"
+    - '408'
+  - - '106'
     - KOREA, REPUBLIC OF
     - KR
     - South Korea
     - KOR
-    - "410"
-  - - "107"
+    - '410'
+  - - '107'
     - KUWAIT
     - KW
     - Kuwait
     - KWT
-    - "414"
-  - - "108"
+    - '414'
+  - - '108'
     - KYRGYZSTAN
     - KG
     - Kyrgyzstan
     - KGZ
-    - "417"
-  - - "109"
+    - '417'
+  - - '109'
     - LAO PEOPLE'S DEMOCRATIC REPUBLIC
     - LA
     - Lao People's Democratic Republic
     - LAO
-    - "418"
-  - - "110"
+    - '418'
+  - - '110'
     - LATVIA
     - LV
     - Latvia
     - LVA
-    - "428"
-  - - "111"
+    - '428'
+  - - '111'
     - LEBANON
     - LB
     - Lebanon
     - LBN
-    - "422"
-  - - "112"
+    - '422'
+  - - '112'
     - LESOTHO
     - LS
     - Lesotho
     - LSO
-    - "426"
-  - - "113"
+    - '426'
+  - - '113'
     - LIBERIA
     - LR
     - Liberia
     - LBR
-    - "430"
-  - - "114"
+    - '430'
+  - - '114'
     - LIBYAN ARAB JAMAHIRIYA
     - LY
     - Libyan Arab Jamahiriya
     - LBY
-    - "434"
-  - - "115"
+    - '434'
+  - - '115'
     - LIECHTENSTEIN
     - LI
     - Liechtenstein
     - LIE
-    - "438"
-  - - "116"
+    - '438'
+  - - '116'
     - LITHUANIA
     - LT
     - Lithuania
     - LTU
-    - "440"
-  - - "117"
+    - '440'
+  - - '117'
     - LUXEMBOURG
     - LU
     - Luxembourg
     - LUX
-    - "442"
-  - - "118"
+    - '442'
+  - - '118'
     - MACAO
     - MO
     - Macao
     - MAC
-    - "446"
-  - - "119"
+    - '446'
+  - - '119'
     - MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF
     - MK
     - Macedonia
     - MKD
-    - "807"
-  - - "120"
+    - '807'
+  - - '120'
     - MADAGASCAR
     - MG
     - Madagascar
     - MDG
-    - "450"
-  - - "121"
+    - '450'
+  - - '121'
     - MALAWI
     - MW
     - Malawi
     - MWI
-    - "454"
-  - - "122"
+    - '454'
+  - - '122'
     - MALAYSIA
     - MY
     - Malaysia
     - MYS
-    - "458"
-  - - "123"
+    - '458'
+  - - '123'
     - MALDIVES
     - MV
     - Maldives
     - MDV
-    - "462"
-  - - "124"
+    - '462'
+  - - '124'
     - MALI
     - ML
     - Mali
     - MLI
-    - "466"
-  - - "125"
+    - '466'
+  - - '125'
     - MALTA
     - MT
     - Malta
     - MLT
-    - "470"
-  - - "126"
+    - '470'
+  - - '126'
     - MARSHALL ISLANDS
     - MH
     - Marshall Islands
     - MHL
-    - "584"
-  - - "127"
+    - '584'
+  - - '127'
     - MARTINIQUE
     - MQ
     - Martinique
     - MTQ
-    - "474"
-  - - "128"
+    - '474'
+  - - '128'
     - MAURITANIA
     - MR
     - Mauritania
     - MRT
-    - "478"
-  - - "129"
+    - '478'
+  - - '129'
     - MAURITIUS
     - MU
     - Mauritius
     - MUS
-    - "480"
-  - - "130"
+    - '480'
+  - - '130'
     - MEXICO
     - MX
     - Mexico
     - MEX
-    - "484"
-  - - "131"
+    - '484'
+  - - '131'
     - MICRONESIA, FEDERATED STATES OF
     - FM
     - Micronesia, Federated States of
     - FSM
-    - "583"
-  - - "132"
+    - '583'
+  - - '132'
     - MOLDOVA, REPUBLIC OF
     - MD
     - Moldova, Republic of
     - MDA
-    - "498"
-  - - "133"
+    - '498'
+  - - '133'
     - MONACO
     - MC
     - Monaco
     - MCO
-    - "492"
-  - - "134"
+    - '492'
+  - - '134'
     - MONGOLIA
     - MN
     - Mongolia
     - MNG
-    - "496"
-  - - "135"
+    - '496'
+  - - '135'
     - MONTSERRAT
     - MS
     - Montserrat
     - MSR
-    - "500"
-  - - "136"
+    - '500'
+  - - '136'
     - MOROCCO
     - MA
     - Morocco
     - MAR
-    - "504"
-  - - "137"
+    - '504'
+  - - '137'
     - MOZAMBIQUE
     - MZ
     - Mozambique
     - MOZ
-    - "508"
-  - - "138"
+    - '508'
+  - - '138'
     - MYANMAR
     - MM
     - Myanmar
     - MMR
-    - "104"
-  - - "139"
+    - '104'
+  - - '139'
     - NAMIBIA
     - NA
     - Namibia
     - NAM
-    - "516"
-  - - "140"
+    - '516'
+  - - '140'
     - NAURU
     - NR
     - Nauru
     - NRU
-    - "520"
-  - - "141"
+    - '520'
+  - - '141'
     - NEPAL
     - NP
     - Nepal
     - NPL
-    - "524"
-  - - "142"
+    - '524'
+  - - '142'
     - NETHERLANDS
     - NL
     - Netherlands
     - NLD
-    - "528"
-  - - "143"
+    - '528'
+  - - '143'
     - NETHERLANDS ANTILLES
     - AN
     - Netherlands Antilles
     - ANT
-    - "530"
-  - - "144"
+    - '530'
+  - - '144'
     - NEW CALEDONIA
     - NC
     - New Caledonia
     - NCL
-    - "540"
-  - - "145"
+    - '540'
+  - - '145'
     - NEW ZEALAND
     - NZ
     - New Zealand
     - NZL
-    - "554"
-  - - "146"
+    - '554'
+  - - '146'
     - NICARAGUA
     - NI
     - Nicaragua
     - NIC
-    - "558"
-  - - "147"
+    - '558'
+  - - '147'
     - NIGER
     - NE
     - Niger
     - NER
-    - "562"
-  - - "148"
+    - '562'
+  - - '148'
     - NIGERIA
     - NG
     - Nigeria
     - NGA
-    - "566"
-  - - "149"
+    - '566'
+  - - '149'
     - NIUE
     - NU
     - Niue
     - NIU
-    - "570"
-  - - "150"
+    - '570'
+  - - '150'
     - NORFOLK ISLAND
     - NF
     - Norfolk Island
     - NFK
-    - "574"
-  - - "151"
+    - '574'
+  - - '151'
     - NORTHERN MARIANA ISLANDS
     - MP
     - Northern Mariana Islands
     - MNP
-    - "580"
-  - - "152"
+    - '580'
+  - - '152'
     - NORWAY
-    - "NO"
+    - 'NO'
     - Norway
     - NOR
-    - "578"
-  - - "153"
+    - '578'
+  - - '153'
     - OMAN
     - OM
     - Oman
     - OMN
-    - "512"
-  - - "154"
+    - '512'
+  - - '154'
     - PAKISTAN
     - PK
     - Pakistan
     - PAK
-    - "586"
-  - - "155"
+    - '586'
+  - - '155'
     - PALAU
     - PW
     - Palau
     - PLW
-    - "585"
-  - - "156"
+    - '585'
+  - - '156'
     - PANAMA
     - PA
     - Panama
     - PAN
-    - "591"
-  - - "157"
+    - '591'
+  - - '157'
     - PAPUA NEW GUINEA
     - PG
     - Papua New Guinea
     - PNG
-    - "598"
-  - - "158"
+    - '598'
+  - - '158'
     - PARAGUAY
     - PY
     - Paraguay
     - PRY
-    - "600"
-  - - "159"
+    - '600'
+  - - '159'
     - PERU
     - PE
     - Peru
     - PER
-    - "604"
-  - - "160"
+    - '604'
+  - - '160'
     - PHILIPPINES
     - PH
     - Philippines
     - PHL
-    - "608"
-  - - "161"
+    - '608'
+  - - '161'
     - PITCAIRN
     - PN
     - Pitcairn
     - PCN
-    - "612"
-  - - "162"
+    - '612'
+  - - '162'
     - POLAND
     - PL
     - Poland
     - POL
-    - "616"
-  - - "163"
+    - '616'
+  - - '163'
     - PORTUGAL
     - PT
     - Portugal
     - PRT
-    - "620"
-  - - "164"
+    - '620'
+  - - '164'
     - PUERTO RICO
     - PR
     - Puerto Rico
     - PRI
-    - "630"
-  - - "165"
+    - '630'
+  - - '165'
     - QATAR
     - QA
     - Qatar
     - QAT
-    - "634"
-  - - "166"
+    - '634'
+  - - '166'
     - REUNION
     - RE
     - Reunion
     - REU
-    - "638"
-  - - "167"
+    - '638'
+  - - '167'
     - ROMANIA
     - RO
     - Romania
     - ROM
-    - "642"
-  - - "168"
+    - '642'
+  - - '168'
     - RUSSIAN FEDERATION
     - RU
     - Russian Federation
     - RUS
-    - "643"
-  - - "169"
+    - '643'
+  - - '169'
     - RWANDA
     - RW
     - Rwanda
     - RWA
-    - "646"
-  - - "170"
+    - '646'
+  - - '170'
     - SAINT HELENA
     - SH
     - Saint Helena
     - SHN
-    - "654"
-  - - "171"
+    - '654'
+  - - '171'
     - SAINT KITTS AND NEVIS
     - KN
     - Saint Kitts and Nevis
     - KNA
-    - "659"
-  - - "172"
+    - '659'
+  - - '172'
     - SAINT LUCIA
     - LC
     - Saint Lucia
     - LCA
-    - "662"
-  - - "173"
+    - '662'
+  - - '173'
     - SAINT PIERRE AND MIQUELON
     - PM
     - Saint Pierre and Miquelon
     - SPM
-    - "666"
-  - - "174"
+    - '666'
+  - - '174'
     - SAINT VINCENT AND THE GRENADINES
     - VC
     - Saint Vincent and the Grenadines
     - VCT
-    - "670"
-  - - "175"
+    - '670'
+  - - '175'
     - SAMOA
     - WS
     - Samoa
     - WSM
-    - "882"
-  - - "176"
+    - '882'
+  - - '176'
     - SAN MARINO
     - SM
     - San Marino
     - SMR
-    - "674"
-  - - "177"
+    - '674'
+  - - '177'
     - SAO TOME AND PRINCIPE
     - ST
     - Sao Tome and Principe
     - STP
-    - "678"
-  - - "178"
+    - '678'
+  - - '178'
     - SAUDI ARABIA
     - SA
     - Saudi Arabia
     - SAU
-    - "682"
-  - - "179"
+    - '682'
+  - - '179'
     - SENEGAL
     - SN
     - Senegal
     - SEN
-    - "686"
-  - - "180"
+    - '686'
+  - - '180'
     - SEYCHELLES
     - SC
     - Seychelles
     - SYC
-    - "690"
-  - - "181"
+    - '690'
+  - - '181'
     - SIERRA LEONE
     - SL
     - Sierra Leone
     - SLE
-    - "694"
-  - - "182"
+    - '694'
+  - - '182'
     - SINGAPORE
     - SG
     - Singapore
     - SGP
-    - "702"
-  - - "183"
+    - '702'
+  - - '183'
     - SLOVAKIA
     - SK
     - Slovakia
     - SVK
-    - "703"
-  - - "184"
+    - '703'
+  - - '184'
     - SLOVENIA
     - SI
     - Slovenia
     - SVN
-    - "705"
-  - - "185"
+    - '705'
+  - - '185'
     - SOLOMON ISLANDS
     - SB
     - Solomon Islands
     - SLB
-    - "90"
-  - - "186"
+    - '90'
+  - - '186'
     - SOMALIA
     - SO
     - Somalia
     - SOM
-    - "706"
-  - - "187"
+    - '706'
+  - - '187'
     - SOUTH AFRICA
     - ZA
     - South Africa
     - ZAF
-    - "710"
-  - - "188"
+    - '710'
+  - - '188'
     - SPAIN
     - ES
     - Spain
     - ESP
-    - "724"
-  - - "189"
+    - '724'
+  - - '189'
     - SRI LANKA
     - LK
     - Sri Lanka
     - LKA
-    - "144"
-  - - "190"
+    - '144'
+  - - '190'
     - SUDAN
     - SD
     - Sudan
     - SDN
-    - "736"
-  - - "191"
+    - '736'
+  - - '191'
     - SURINAME
     - SR
     - Suriname
     - SUR
-    - "740"
-  - - "192"
+    - '740'
+  - - '192'
     - SVALBARD AND JAN MAYEN
     - SJ
     - Svalbard and Jan Mayen
     - SJM
-    - "744"
-  - - "193"
+    - '744'
+  - - '193'
     - SWAZILAND
     - SZ
     - Swaziland
     - SWZ
-    - "748"
-  - - "194"
+    - '748'
+  - - '194'
     - SWEDEN
     - SE
     - Sweden
     - SWE
-    - "752"
-  - - "195"
+    - '752'
+  - - '195'
     - SWITZERLAND
     - CH
     - Switzerland
     - CHE
-    - "756"
-  - - "196"
+    - '756'
+  - - '196'
     - SYRIAN ARAB REPUBLIC
     - SY
     - Syrian Arab Republic
     - SYR
-    - "760"
-  - - "197"
+    - '760'
+  - - '197'
     - TAIWAN, PROVINCE OF CHINA
     - TW
     - Taiwan
     - TWN
-    - "158"
-  - - "198"
+    - '158'
+  - - '198'
     - TAJIKISTAN
     - TJ
     - Tajikistan
     - TJK
-    - "762"
-  - - "199"
+    - '762'
+  - - '199'
     - TANZANIA, UNITED REPUBLIC OF
     - TZ
     - Tanzania, United Republic of
     - TZA
-    - "834"
-  - - "200"
+    - '834'
+  - - '200'
     - THAILAND
     - TH
     - Thailand
     - THA
-    - "764"
-  - - "201"
+    - '764'
+  - - '201'
     - TOGO
     - TG
     - Togo
     - TGO
-    - "768"
-  - - "202"
+    - '768'
+  - - '202'
     - TOKELAU
     - TK
     - Tokelau
     - TKL
-    - "772"
-  - - "203"
+    - '772'
+  - - '203'
     - TONGA
     - TO
     - Tonga
     - TON
-    - "776"
-  - - "204"
+    - '776'
+  - - '204'
     - TRINIDAD AND TOBAGO
     - TT
     - Trinidad and Tobago
     - TTO
-    - "780"
-  - - "205"
+    - '780'
+  - - '205'
     - TUNISIA
     - TN
     - Tunisia
     - TUN
-    - "788"
-  - - "206"
+    - '788'
+  - - '206'
     - TURKEY
     - TR
     - Turkey
     - TUR
-    - "792"
-  - - "207"
+    - '792'
+  - - '207'
     - TURKMENISTAN
     - TM
     - Turkmenistan
     - TKM
-    - "795"
-  - - "208"
+    - '795'
+  - - '208'
     - TURKS AND CAICOS ISLANDS
     - TC
     - Turks and Caicos Islands
     - TCA
-    - "796"
-  - - "209"
+    - '796'
+  - - '209'
     - TUVALU
     - TV
     - Tuvalu
     - TUV
-    - "798"
-  - - "210"
+    - '798'
+  - - '210'
     - UGANDA
     - UG
     - Uganda
     - UGA
-    - "800"
-  - - "211"
+    - '800'
+  - - '211'
     - UKRAINE
     - UA
     - Ukraine
     - UKR
-    - "804"
-  - - "212"
+    - '804'
+  - - '212'
     - UNITED ARAB EMIRATES
     - AE
     - United Arab Emirates
     - ARE
-    - "784"
-  - - "213"
+    - '784'
+  - - '213'
     - UNITED KINGDOM
     - GB
     - United Kingdom
     - GBR
-    - "826"
-  - - "214"
+    - '826'
+  - - '214'
     - UNITED STATES
     - US
     - United States
     - USA
-    - "840"
-  - - "215"
+    - '840'
+  - - '215'
     - URUGUAY
     - UY
     - Uruguay
     - URY
-    - "858"
-  - - "216"
+    - '858'
+  - - '216'
     - UZBEKISTAN
     - UZ
     - Uzbekistan
     - UZB
-    - "860"
-  - - "217"
+    - '860'
+  - - '217'
     - VANUATU
     - VU
     - Vanuatu
     - VUT
-    - "548"
-  - - "218"
+    - '548'
+  - - '218'
     - VENEZUELA
     - VE
     - Venezuela
     - VEN
-    - "862"
-  - - "219"
+    - '862'
+  - - '219'
     - VIET NAM
     - VN
     - Viet Nam
     - VNM
-    - "704"
-  - - "220"
+    - '704'
+  - - '220'
     - VIRGIN ISLANDS, BRITISH
     - VG
     - Virgin Islands, British
     - VGB
-    - "92"
-  - - "221"
+    - '92'
+  - - '221'
     - VIRGIN ISLANDS, U.S.
     - VI
     - Virgin Islands, U.S.
     - VIR
-    - "850"
-  - - "222"
+    - '850'
+  - - '222'
     - WALLIS AND FUTUNA
     - WF
     - Wallis and Futuna
     - WLF
-    - "876"
-  - - "223"
+    - '876'
+  - - '223'
     - WESTERN SAHARA
     - EH
     - Western Sahara
     - ESH
-    - "732"
-  - - "224"
+    - '732'
+  - - '224'
     - YEMEN
     - YE
     - Yemen
     - YEM
-    - "887"
-  - - "225"
+    - '887'
+  - - '225'
     - ZAMBIA
     - ZM
     - Zambia
     - ZMB
-    - "894"
-  - - "226"
+    - '894'
+  - - '226'
     - ZIMBABWE
     - ZW
     - Zimbabwe
     - ZWE
-    - "716"
+    - '716'
 
---- 
-creditcards: 
-  columns: 
+---
+slots:
+  columns:
+  - id
+  - order_time
+  - delivery_time
+  - delivery_location
+  - pickup_time
+  - pickup_location
+  - created_at
+  - updated_at
+  records: 
+  - - '45'
+    - '10:00'
+    - '11:30'
+    - <div class="location">Waucoma Building:</div>Main entrance on Wasco St.
+    - '11:30'
+    - Nora's Table
+    - '2012-02-09 07:47:19.851014'
+    - '2012-02-09 07:47:19.851014'
+  - - '46'
+    - '10:15'
+    - '11:45'
+    - <div class="location">Hood River Waterfront:</div>489 Building <span class="hint">(the
+      old United Telephone Services building, new home of Hood Tech), main lobby,
+      northeast entrance</span>
+    - '11:45'
+    - Nora's Table
+    - '2012-02-09 07:47:19.862992'
+    - '2012-02-09 07:47:19.862992'
+  - - '47'
+    - '10:30'
+    - '12:00'
+    - <div class="location">Bingen:</div>The Insitu winery building
+    - '12:00'
+    - Nora's Table
+    - '2012-02-09 07:47:19.864935'
+    - '2012-02-09 07:47:19.864935'
+  - - '48'
+    - '10:45'
+    - !!null 
+    - !!null 
+    - '12:15'
+    - Nora's Table
+    - '2012-02-09 07:47:19.866467'
+    - '2012-02-09 07:47:19.866467'
+  - - '49'
+    - '11:00'
+    - '12:30'
+    - <div class="location">Waucoma Building:</div>Main entrance on Wasco St.
+    - '12:30'
+    - Nora's Table
+    - '2012-02-09 07:47:19.867997'
+    - '2012-02-09 07:47:19.867997'
+  - - '50'
+    - '11:15'
+    - '12:45'
+    - <div class="location">Hood River Waterfront:</div>489 Building <span class="hint">(the
+      old United Telephone Services building, new home of Hood Tech), main lobby,
+      northeast entrance</span>
+    - '12:45'
+    - Nora's Table
+    - '2012-02-09 07:47:19.869189'
+    - '2012-02-09 07:47:19.869189'
+  - - '51'
+    - '11:30'
+    - '1:00'
+    - <div class="location">Bingen:</div>The Insitu winery building
+    - '1:00'
+    - Nora's Table
+    - '2012-02-09 07:47:19.870448'
+    - '2012-02-09 07:47:19.870448'
+  - - '52'
+    - '11:45'
+    - !!null 
+    - !!null 
+    - '1:15'
+    - Nora's Table
+    - '2012-02-09 07:47:19.871873'
+    - '2012-02-09 07:47:19.871873'
+  - - '53'
+    - '12:00'
+    - !!null 
+    - !!null 
+    - '1:30'
+    - Nora's Table
+    - '2012-02-09 07:47:19.873348'
+    - '2012-02-09 07:47:19.873348'
+  - - '54'
+    - '12:15'
+    - !!null 
+    - !!null 
+    - '1:45'
+    - Nora's Table
+    - '2012-02-09 07:47:19.87484'
+    - '2012-02-09 07:47:19.87484'
+  - - '55'
+    - '12:30'
+    - !!null 
+    - !!null 
+    - '2:00'
+    - Nora's Table
+    - '2012-02-09 07:47:19.876118'
+    - '2012-02-09 07:47:19.876118'
+
+---
+creditcards:
+  columns:
   - id
   - month
   - year
@@ -1687,130 +1956,190 @@ creditcards:
   - gateway_customer_profile_id
   - gateway_payment_profile_id
   records: 
-  - - "1"
-    - "2"
-    - "2012"
+  - - '1'
+    - '2'
+    - '2012'
     - visa
-    - "1111"
+    - '1111'
     - Seth
     - MacPherson
-    - 2012-02-06 20:16:01.920498
-    - 2012-02-06 20:16:01.938824
-    - 
-    - 
-    - 
-    - 
+    - '2012-02-06 20:16:01.920498'
+    - '2012-02-06 20:16:01.938824'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - BGS-511131
-    - 
-  - - "2"
-    - "2"
-    - "2012"
-    - 
-    - "1111"
+    - !!null 
+  - - '2'
+    - '2'
+    - '2012'
+    - !!null 
+    - '1111'
     - Seth
     - MacPherson
-    - 2012-02-07 00:12:06.789691
-    - 2012-02-07 00:12:06.804269
-    - 
-    - 
-    - 
-    - 
+    - '2012-02-07 00:12:06.789691'
+    - '2012-02-07 00:12:06.804269'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - FAIL-130511
-    - 
-  - - "3"
-    - "2"
-    - "2012"
-    - 
-    - "234"
+    - !!null 
+  - - '3'
+    - '2'
+    - '2012'
+    - !!null 
+    - '234'
     - Seth
     - MacPherson
-    - 2012-02-07 00:15:36.449281
-    - 2012-02-07 00:15:36.460496
-    - 
-    - 
-    - 
-    - 
+    - '2012-02-07 00:15:36.449281'
+    - '2012-02-07 00:15:36.460496'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - FAIL-114353
-    - 
-  - - "4"
-    - "3"
-    - "2012"
-    - 
-    - "1111"
+    - !!null 
+  - - '4'
+    - '3'
+    - '2012'
+    - !!null 
+    - '1111'
     - Seth
     - MacPherson
-    - 2012-02-07 01:19:27.41862
-    - 2012-02-07 01:19:27.609469
-    - 
-    - 
-    - 
-    - 
+    - '2012-02-07 01:19:27.41862'
+    - '2012-02-07 01:19:27.609469'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - FAIL-434224
-    - 
-  - - "5"
-    - "2"
-    - "2012"
-    - 
+    - !!null 
+  - - '5'
+    - '2'
+    - '2012'
+    - !!null 
     - f234
     - Seth
     - MacPherson
-    - 2012-02-07 04:37:07.895337
-    - 2012-02-07 04:37:07.906226
-    - 
-    - 
-    - 
-    - 
+    - '2012-02-07 04:37:07.895337'
+    - '2012-02-07 04:37:07.906226'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - FAIL-531000
-    - 
-  - - "7"
-    - "2"
-    - "2012"
-    - 
+    - !!null 
+  - - '7'
+    - '2'
+    - '2012'
+    - !!null 
     - 4sdf
     - Seth
     - MacPherson
-    - 2012-02-07 05:01:32.590594
-    - 2012-02-07 05:01:32.603381
-    - 
-    - 
-    - 
-    - 
+    - '2012-02-07 05:01:32.590594'
+    - '2012-02-07 05:01:32.603381'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - FAIL-051525
-    - 
-  - - "8"
-    - "2"
-    - "2012"
-    - 
-    - "1111"
+    - !!null 
+  - - '8'
+    - '2'
+    - '2012'
+    - !!null 
+    - '1111'
     - Seth
     - MacPherson
-    - 2012-02-07 05:02:47.394043
-    - 2012-02-07 05:02:47.406078
-    - 
-    - 
-    - 
-    - 
+    - '2012-02-07 05:02:47.394043'
+    - '2012-02-07 05:02:47.406078'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - FAIL-011003
-    - 
-  - - "9"
-    - "2"
-    - "2012"
+    - !!null 
+  - - '9'
+    - '2'
+    - '2012'
     - american_express
-    - 0009
+    - '0009'
     - Seth
     - MacPherson
-    - 2012-02-07 05:03:25.314948
-    - 2012-02-07 05:03:25.326029
-    - 
-    - 
-    - 
-    - 
+    - '2012-02-07 05:03:25.314948'
+    - '2012-02-07 05:03:25.326029'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - BGS-431233
-    - 
+    - !!null 
+  - - '10'
+    - '2'
+    - '2012'
+    - !!null 
+    - '1111'
+    - Seth
+    - MacPherson
+    - '2012-02-09 00:08:39.65026'
+    - '2012-02-09 00:08:39.792555'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - FAIL-455142
+    - !!null 
+  - - '11'
+    - '2'
+    - '2013'
+    - !!null 
+    - '1111'
+    - Seth
+    - MacPherson
+    - '2012-02-09 12:21:50.977599'
+    - '2012-02-09 12:21:50.992466'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - FAIL-414030
+    - !!null 
+  - - '12'
+    - '2'
+    - '2012'
+    - !!null 
+    - '1111'
+    - Seth
+    - MacPherson
+    - '2012-02-09 12:23:11.81372'
+    - '2012-02-09 12:23:11.824943'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - FAIL-252350
+    - !!null 
+  - - '13'
+    - '2'
+    - '2012'
+    - visa
+    - '1111'
+    - Seth
+    - MacPherson
+    - '2012-02-09 12:26:02.335401'
+    - '2012-02-09 12:26:02.347117'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - BGS-301514
+    - !!null 
 
---- 
-inventory_units: 
-  columns: 
+---
+inventory_units:
+  columns:
   - id
   - variant_id
   - order_id
@@ -1821,28 +2150,37 @@ inventory_units:
   - shipment_id
   - return_authorization_id
   records: 
-  - - "1"
-    - "5"
-    - "11"
+  - - '1'
+    - '5'
+    - '11'
     - sold
-    - "0"
-    - 2012-02-06 20:12:06.713148
-    - 2012-02-06 20:12:06.713148
-    - "1"
-    - 
-  - - "2"
-    - "5"
-    - "12"
+    - '0'
+    - '2012-02-06 20:12:06.713148'
+    - '2012-02-06 20:12:06.713148'
+    - '1'
+    - !!null 
+  - - '2'
+    - '5'
+    - '12'
     - sold
-    - "0"
-    - 2012-02-07 05:03:31.114712
-    - 2012-02-07 05:03:31.114712
-    - "2"
-    - 
+    - '0'
+    - '2012-02-07 05:03:31.114712'
+    - '2012-02-07 05:03:31.114712'
+    - '2'
+    - !!null 
+  - - '3'
+    - '4'
+    - '19'
+    - sold
+    - '0'
+    - '2012-02-09 12:26:16.101653'
+    - '2012-02-09 12:26:16.101653'
+    - '3'
+    - !!null 
 
---- 
-line_items: 
-  columns: 
+---
+line_items:
+  columns:
   - id
   - order_id
   - variant_id
@@ -1851,146 +2189,167 @@ line_items:
   - created_at
   - updated_at
   records: 
-  - - "13"
-    - "2"
-    - "3"
-    - "4"
-    - "11.00"
-    - 2012-01-31 19:15:49.616145
-    - 2012-01-31 19:17:11.575803
-  - - "15"
-    - "1"
-    - "2"
-    - "1"
-    - "10.00"
-    - 2012-01-31 22:19:59.604601
-    - 2012-01-31 22:19:59.604601
-  - - "16"
-    - "4"
-    - "4"
-    - "1"
-    - "12.00"
-    - 2012-02-01 05:26:40.005477
-    - 2012-02-01 05:26:40.005477
-  - - "17"
-    - "5"
-    - "5"
-    - "1"
-    - "12.00"
-    - 2012-02-01 07:01:36.884741
-    - 2012-02-01 07:01:36.884741
-  - - "18"
-    - "6"
-    - "5"
-    - "2"
-    - "12.00"
-    - 2012-02-02 23:37:44.496714
-    - 2012-02-02 23:49:10.964173
-  - - "19"
-    - "7"
-    - "5"
-    - "1"
-    - "12.00"
-    - 2012-02-02 23:53:11.104537
-    - 2012-02-02 23:53:11.104537
-  - - "20"
-    - "8"
-    - "5"
-    - "1"
-    - "12.00"
-    - 2012-02-03 00:53:30.273094
-    - 2012-02-03 00:53:30.273094
-  - - "21"
-    - "9"
-    - "5"
-    - "1"
-    - "12.00"
-    - 2012-02-03 18:37:04.464273
-    - 2012-02-03 18:37:04.464273
-  - - "22"
-    - "10"
-    - "5"
-    - "3"
-    - "12.00"
-    - 2012-02-03 19:02:11.590196
-    - 2012-02-03 23:12:06.039503
-  - - "23"
-    - "11"
-    - "5"
-    - "1"
-    - "12.00"
-    - 2012-02-04 03:52:03.203642
-    - 2012-02-04 03:52:03.203642
-  - - "24"
-    - "12"
-    - "5"
-    - "1"
-    - "12.00"
-    - 2012-02-06 20:12:51.271924
-    - 2012-02-06 20:12:51.271924
-  - - "26"
-    - "13"
-    - "3"
-    - "1"
-    - "11.00"
-    - 2012-02-07 05:21:34.782339
-    - 2012-02-07 05:21:34.782339
-  - - "27"
-    - "14"
-    - "3"
-    - "1"
-    - "11.00"
-    - 2012-02-07 05:53:28.580592
-    - 2012-02-07 05:53:28.580592
-  - - "28"
-    - "14"
-    - "5"
-    - "2"
-    - "12.00"
-    - 2012-02-07 23:39:51.442076
-    - 2012-02-08 00:52:55.59705
-  - - "29"
-    - "15"
-    - "4"
-    - "1"
-    - "12.00"
-    - 2012-02-08 00:56:20.908394
-    - 2012-02-08 00:56:20.908394
-  - - "30"
-    - "16"
-    - "4"
-    - "1"
-    - "12.00"
-    - 2012-02-08 01:01:44.946574
-    - 2012-02-08 01:01:44.946574
-  - - "31"
-    - "16"
-    - "5"
-    - "1"
-    - "12.00"
-    - 2012-02-08 01:34:15.714531
-    - 2012-02-08 01:34:15.714531
+  - - '13'
+    - '2'
+    - '3'
+    - '4'
+    - '11.00'
+    - '2012-01-31 19:15:49.616145'
+    - '2012-01-31 19:17:11.575803'
+  - - '15'
+    - '1'
+    - '2'
+    - '1'
+    - '10.00'
+    - '2012-01-31 22:19:59.604601'
+    - '2012-01-31 22:19:59.604601'
+  - - '16'
+    - '4'
+    - '4'
+    - '1'
+    - '12.00'
+    - '2012-02-01 05:26:40.005477'
+    - '2012-02-01 05:26:40.005477'
+  - - '17'
+    - '5'
+    - '5'
+    - '1'
+    - '12.00'
+    - '2012-02-01 07:01:36.884741'
+    - '2012-02-01 07:01:36.884741'
+  - - '18'
+    - '6'
+    - '5'
+    - '2'
+    - '12.00'
+    - '2012-02-02 23:37:44.496714'
+    - '2012-02-02 23:49:10.964173'
+  - - '19'
+    - '7'
+    - '5'
+    - '2'
+    - '12.00'
+    - '2012-02-02 23:53:11.104537'
+    - '2012-02-08 05:46:29.516024'
+  - - '20'
+    - '8'
+    - '5'
+    - '1'
+    - '12.00'
+    - '2012-02-03 00:53:30.273094'
+    - '2012-02-03 00:53:30.273094'
+  - - '21'
+    - '9'
+    - '5'
+    - '1'
+    - '12.00'
+    - '2012-02-03 18:37:04.464273'
+    - '2012-02-03 18:37:04.464273'
+  - - '22'
+    - '10'
+    - '5'
+    - '3'
+    - '12.00'
+    - '2012-02-03 19:02:11.590196'
+    - '2012-02-03 23:12:06.039503'
+  - - '23'
+    - '11'
+    - '5'
+    - '1'
+    - '12.00'
+    - '2012-02-04 03:52:03.203642'
+    - '2012-02-04 03:52:03.203642'
+  - - '24'
+    - '12'
+    - '5'
+    - '1'
+    - '12.00'
+    - '2012-02-06 20:12:51.271924'
+    - '2012-02-06 20:12:51.271924'
+  - - '26'
+    - '13'
+    - '3'
+    - '1'
+    - '11.00'
+    - '2012-02-07 05:21:34.782339'
+    - '2012-02-07 05:21:34.782339'
+  - - '27'
+    - '14'
+    - '3'
+    - '1'
+    - '11.00'
+    - '2012-02-07 05:53:28.580592'
+    - '2012-02-07 05:53:28.580592'
+  - - '28'
+    - '14'
+    - '5'
+    - '2'
+    - '12.00'
+    - '2012-02-07 23:39:51.442076'
+    - '2012-02-08 00:52:55.59705'
+  - - '29'
+    - '15'
+    - '4'
+    - '1'
+    - '12.00'
+    - '2012-02-08 00:56:20.908394'
+    - '2012-02-08 00:56:20.908394'
+  - - '30'
+    - '16'
+    - '4'
+    - '1'
+    - '12.00'
+    - '2012-02-08 01:01:44.946574'
+    - '2012-02-08 01:01:44.946574'
+  - - '31'
+    - '16'
+    - '5'
+    - '3'
+    - '12.00'
+    - '2012-02-08 01:34:15.714531'
+    - '2012-02-08 05:21:25.557596'
+  - - '32'
+    - '17'
+    - '4'
+    - '1'
+    - '12.00'
+    - '2012-02-08 05:48:16.065358'
+    - '2012-02-08 05:48:16.065358'
+  - - '33'
+    - '18'
+    - '3'
+    - '1'
+    - '11.00'
+    - '2012-02-08 20:59:29.938572'
+    - '2012-02-08 20:59:29.938572'
+  - - '34'
+    - '19'
+    - '4'
+    - '1'
+    - '12.00'
+    - '2012-02-08 23:02:51.658891'
+    - '2012-02-08 23:02:51.658891'
 
---- 
-option_types_prototypes: 
-  columns: 
+---
+option_types_prototypes:
+  columns:
   - prototype_id
   - option_type_id
   records: 
-  - - "2"
-    - "2"
-  - - "2"
-    - "3"
-  - - "3"
-    - "1"
-  - - "3"
-    - "4"
-  - - "3"
-    - "5"
+  - - '2'
+    - '2'
+  - - '2'
+    - '3'
+  - - '3'
+    - '1'
+  - - '3'
+    - '4'
+  - - '3'
+    - '5'
 
---- 
-option_values: 
-  columns: 
+---
+option_values:
+  columns:
   - id
   - option_type_id
   - name
@@ -1999,143 +2358,143 @@ option_values:
   - created_at
   - updated_at
   records: 
-  - - "1"
-    - "1"
+  - - '1'
+    - '1'
     - mayonnaise
-    - "1"
+    - '1'
     - Mayonnaise
-    - 2012-01-29 05:46:56.226352
-    - 2012-01-29 05:46:56.226352
-  - - "2"
-    - "1"
-    - "chipotle_mayo "
-    - "2"
+    - '2012-01-29 05:46:56.226352'
+    - '2012-01-29 05:46:56.226352'
+  - - '2'
+    - '1'
+    - ! 'chipotle_mayo '
+    - '2'
     - Chipotle mayo
-    - 2012-01-29 05:46:56.22857
-    - 2012-01-29 05:46:56.22857
-  - - "3"
-    - "1"
+    - '2012-01-29 05:46:56.22857'
+    - '2012-01-29 05:46:56.22857'
+  - - '3'
+    - '1'
     - mustard
-    - "3"
+    - '3'
     - House-made whole-grain mustard
-    - 2012-01-29 05:46:56.229992
-    - 2012-01-29 05:46:56.229992
-  - - "4"
-    - "1"
+    - '2012-01-29 05:46:56.229992'
+    - '2012-01-29 05:46:56.229992'
+  - - '4'
+    - '1'
     - butter
-    - "4"
+    - '4'
     - Butter
-    - 2012-01-29 05:46:56.231371
-    - 2012-01-29 05:46:56.231371
-  - - "5"
-    - "2"
+    - '2012-01-29 05:46:56.231371'
+    - '2012-01-29 05:46:56.231371'
+  - - '5'
+    - '2'
     - delivered hot
-    - "1"
+    - '1'
     - Delivered hot
-    - 2012-01-29 05:57:05.067092
-    - 2012-01-29 05:57:05.067092
-  - - "6"
-    - "2"
+    - '2012-01-29 05:57:05.067092'
+    - '2012-01-29 05:57:05.067092'
+  - - '6'
+    - '2'
     - delivered cold
-    - "2"
+    - '2'
     - Delivered cold, ready for the microwave
-    - 2012-01-29 05:57:05.068929
-    - 2012-01-29 05:57:05.068929
-  - - "7"
-    - "3"
+    - '2012-01-29 05:57:05.068929'
+    - '2012-01-29 05:57:05.068929'
+  - - '7'
+    - '3'
     - House
-    - "1"
+    - '1'
     - House dressing
-    - 2012-01-29 05:58:52.544612
-    - 2012-01-31 07:21:12.748112
-  - - "8"
-    - "3"
+    - '2012-01-29 05:58:52.544612'
+    - '2012-01-31 07:21:12.748112'
+  - - '8'
+    - '3'
     - Bleu cheese
-    - "2"
+    - '2'
     - Bleu cheese
-    - 2012-01-29 05:58:52.546275
-    - 2012-01-29 05:58:52.546275
-  - - "9"
-    - "3"
+    - '2012-01-29 05:58:52.546275'
+    - '2012-01-29 05:58:52.546275'
+  - - '9'
+    - '3'
     - Champagne vinaigrette
-    - "3"
+    - '3'
     - Champagne vinaigrette
-    - 2012-01-29 05:58:52.547759
-    - 2012-01-29 05:58:52.547759
-  - - "10"
-    - "3"
+    - '2012-01-29 05:58:52.547759'
+    - '2012-01-29 05:58:52.547759'
+  - - '10'
+    - '3'
     - Honey mustard
-    - "4"
+    - '4'
     - Honey mustard
-    - 2012-01-29 05:58:52.549181
-    - 2012-01-29 05:58:52.549181
-  - - "11"
-    - "3"
+    - '2012-01-29 05:58:52.549181'
+    - '2012-01-29 05:58:52.549181'
+  - - '11'
+    - '3'
     - Ranch
-    - "5"
+    - '5'
     - Ranch
-    - 2012-01-29 05:58:52.550583
-    - 2012-01-29 05:58:52.550583
-  - - "12"
-    - "4"
+    - '2012-01-29 05:58:52.550583'
+    - '2012-01-29 05:58:52.550583'
+  - - '12'
+    - '4'
     - Turkey breast
-    - "1"
+    - '1'
     - Smoked turkey breast
-    - 2012-01-29 06:02:36.489616
-    - 2012-01-29 06:02:36.489616
-  - - "13"
-    - "4"
+    - '2012-01-29 06:02:36.489616'
+    - '2012-01-29 06:02:36.489616'
+  - - '13'
+    - '4'
     - Roast beef
-    - "2"
+    - '2'
     - Roast beef sirloin
-    - 2012-01-29 06:02:36.49146
-    - 2012-01-29 06:02:36.49146
-  - - "14"
-    - "4"
+    - '2012-01-29 06:02:36.49146'
+    - '2012-01-29 06:02:36.49146'
+  - - '14'
+    - '4'
     - BLAT
-    - "3"
-    - "BLAT: Applewood smoked bacon, lettuce, tomato on a toasted Dave's bread"
-    - 2012-01-29 06:02:36.492788
-    - 2012-01-29 06:02:36.492788
-  - - "15"
-    - "4"
+    - '3'
+    - ! 'BLAT: Applewood smoked bacon, lettuce, tomato on a toasted Dave''s bread'
+    - '2012-01-29 06:02:36.492788'
+    - '2012-01-29 06:02:36.492788'
+  - - '15'
+    - '4'
     - Veggie
-    - "4"
+    - '4'
     - Vegetarian roasted vegatable
-    - 2012-01-29 06:02:36.494139
-    - 2012-01-29 06:02:36.494139
-  - - "16"
-    - "5"
+    - '2012-01-29 06:02:36.494139'
+    - '2012-01-29 06:02:36.494139'
+  - - '16'
+    - '5'
     - cheddar
-    - "1"
+    - '1'
     - Tillamook cheddar
-    - 2012-01-29 06:03:51.910341
-    - 2012-01-29 06:03:51.910341
-  - - "17"
-    - "5"
+    - '2012-01-29 06:03:51.910341'
+    - '2012-01-29 06:03:51.910341'
+  - - '17'
+    - '5'
     - jack
-    - "2"
+    - '2'
     - Tillamook jack
-    - 2012-01-29 06:03:51.912057
-    - 2012-01-29 06:03:51.912057
-  - - "18"
-    - "5"
+    - '2012-01-29 06:03:51.912057'
+    - '2012-01-29 06:03:51.912057'
+  - - '18'
+    - '5'
     - none
-    - "3"
+    - '3'
     - No thanks
-    - 2012-01-29 06:03:51.913413
-    - 2012-01-29 06:03:51.913413
-  - - "19"
-    - "3"
+    - '2012-01-29 06:03:51.913413'
+    - '2012-01-29 06:03:51.913413'
+  - - '19'
+    - '3'
     - None
-    - "6"
+    - '6'
     - No thanks
-    - 2012-01-31 07:21:12.750592
-    - 2012-01-31 07:21:12.750592
+    - '2012-01-31 07:21:12.750592'
+    - '2012-01-31 07:21:12.750592'
 
---- 
-option_types: 
-  columns: 
+---
+option_types:
+  columns:
   - id
   - name
   - presentation
@@ -2143,40 +2502,40 @@ option_types:
   - updated_at
   - position
   records: 
-  - - "1"
+  - - '1'
     - condiments
     - Condiments
-    - 2012-01-29 05:44:00.043284
-    - 2012-01-29 05:44:00.043284
-    - "0"
-  - - "2"
+    - '2012-01-29 05:44:00.043284'
+    - '2012-01-29 05:44:00.043284'
+    - '0'
+  - - '2'
     - temperature
     - Choose one
-    - 2012-01-29 05:55:36.12662
-    - 2012-01-29 05:55:36.12662
-    - "0"
-  - - "3"
+    - '2012-01-29 05:55:36.12662'
+    - '2012-01-29 05:55:36.12662'
+    - '0'
+  - - '3'
     - salad dressing
     - Salad dressing
-    - 2012-01-29 05:57:44.366932
-    - 2012-01-29 05:57:44.366932
-    - "0"
-  - - "4"
+    - '2012-01-29 05:57:44.366932'
+    - '2012-01-29 05:57:44.366932'
+    - '0'
+  - - '4'
     - sandwich
-    - "Sandwich on Dave\xE2\x80\x99s Killer bread, multigrain, choose one"
-    - 2012-01-29 06:00:45.720593
-    - 2012-01-29 06:00:45.720593
-    - "0"
-  - - "5"
+    - Sandwich on Dave’s Killer bread, multigrain, choose one
+    - '2012-01-29 06:00:45.720593'
+    - '2012-01-29 06:00:45.720593'
+    - '0'
+  - - '5'
     - cheese
     - Cheese, choose one
-    - 2012-01-29 06:03:03.298931
-    - 2012-01-29 06:03:03.298931
-    - "0"
+    - '2012-01-29 06:03:03.298931'
+    - '2012-01-29 06:03:03.298931'
+    - '0'
 
---- 
-product_option_types: 
-  columns: 
+---
+product_option_types:
+  columns:
   - id
   - product_id
   - option_type_id
@@ -2184,98 +2543,98 @@ product_option_types:
   - created_at
   - updated_at
   records: 
-  - - "1"
-    - "2"
-    - "2"
-    - "1"
-    - 2012-01-29 06:11:04.778663
-    - 2012-01-29 06:11:04.778663
-  - - "2"
-    - "2"
-    - "3"
-    - "2"
-    - 2012-01-29 06:11:04.78118
-    - 2012-01-29 06:11:04.78118
-  - - "3"
-    - "3"
-    - "1"
-    - "1"
-    - 2012-01-29 06:16:07.226591
-    - 2012-01-29 06:16:07.226591
-  - - "4"
-    - "3"
-    - "4"
-    - "2"
-    - 2012-01-29 06:16:07.22861
-    - 2012-01-29 06:16:07.22861
-  - - "5"
-    - "3"
-    - "5"
-    - "3"
-    - 2012-01-29 06:16:07.230246
-    - 2012-01-29 06:16:07.230246
+  - - '1'
+    - '2'
+    - '2'
+    - '1'
+    - '2012-01-29 06:11:04.778663'
+    - '2012-01-29 06:11:04.778663'
+  - - '2'
+    - '2'
+    - '3'
+    - '2'
+    - '2012-01-29 06:11:04.78118'
+    - '2012-01-29 06:11:04.78118'
+  - - '3'
+    - '3'
+    - '1'
+    - '1'
+    - '2012-01-29 06:16:07.226591'
+    - '2012-01-29 06:16:07.226591'
+  - - '4'
+    - '3'
+    - '4'
+    - '2'
+    - '2012-01-29 06:16:07.22861'
+    - '2012-01-29 06:16:07.22861'
+  - - '5'
+    - '3'
+    - '5'
+    - '3'
+    - '2012-01-29 06:16:07.230246'
+    - '2012-01-29 06:16:07.230246'
 
---- 
-properties: 
-  columns: 
+---
+properties:
+  columns:
   - id
   - name
   - presentation
   - created_at
   - updated_at
   records: 
-  - - "1"
+  - - '1'
     - gluten_free
     - Gluten Free
-    - 2012-01-29 06:14:35.626735
-    - 2012-01-29 06:14:35.626735
+    - '2012-01-29 06:14:35.626735'
+    - '2012-01-29 06:14:35.626735'
 
---- 
-prototypes: 
-  columns: 
+---
+prototypes:
+  columns:
   - id
   - name
   - created_at
   - updated_at
   records: 
-  - - "1"
+  - - '1'
     - Hot Plate
-    - 2012-01-29 05:55:03.141988
-    - 2012-01-29 05:55:03.141988
-  - - "2"
+    - '2012-01-29 05:55:03.141988'
+    - '2012-01-29 05:55:03.141988'
+  - - '2'
     - Soup & Salad
-    - 2012-01-29 06:04:48.028809
-    - 2012-01-29 06:05:01.617634
-  - - "3"
+    - '2012-01-29 06:04:48.028809'
+    - '2012-01-29 06:05:01.617634'
+  - - '3'
     - Sandwich
-    - 2012-01-29 06:05:30.416991
-    - 2012-01-29 06:05:30.416991
+    - '2012-01-29 06:05:30.416991'
+    - '2012-01-29 06:05:30.416991'
 
---- 
-roles: 
-  columns: 
+---
+roles:
+  columns:
   - id
   - name
   records: 
-  - - "770229923"
+  - - '770229923'
     - user
-  - - "930089099"
+  - - '930089099'
     - admin
 
---- 
-roles_users: 
-  columns: 
+---
+roles_users:
+  columns:
   - role_id
   - user_id
   records: 
-  - - "930089099"
-    - "1"
-  - - "930089099"
-    - "1"
+  - - '930089099'
+    - '1'
+  - - '930089099'
+    - '1'
 
---- 
-preferences: 
-  columns: 
+---
+preferences:
+  columns:
   - id
   - name
   - owner_id
@@ -2286,208 +2645,226 @@ preferences:
   - created_at
   - updated_at
   records: 
-  - - "1"
+  - - '1'
     - site_name
-    - "1"
+    - '1'
     - Configuration
-    - 
-    - 
+    - !!null 
+    - !!null 
     - My Lunch In
-    - 2012-01-29 05:43:00.261844
-    - 2012-01-31 22:47:46.299232
-  - - "2"
+    - '2012-01-29 05:43:00.261844'
+    - '2012-01-31 22:47:46.299232'
+  - - '2'
     - default_seo_title
-    - "1"
+    - '1'
     - Configuration
-    - 
-    - 
+    - !!null 
+    - !!null 
     - my lunch in
-    - 2012-01-29 05:43:00.315763
-    - 2012-01-31 22:47:46.323429
-  - - "3"
+    - '2012-01-29 05:43:00.315763'
+    - '2012-01-31 22:47:46.323429'
+  - - '3'
     - default_meta_keywords
-    - "1"
+    - '1'
     - Configuration
-    - 
-    - 
+    - !!null 
+    - !!null 
     - my lunch in
-    - 2012-01-29 05:43:00.318635
-    - 2012-01-29 05:43:00.318635
-  - - "4"
+    - '2012-01-29 05:43:00.318635'
+    - '2012-01-29 05:43:00.318635'
+  - - '4'
     - default_meta_description
-    - "1"
+    - '1'
     - Configuration
-    - 
-    - 
+    - !!null 
+    - !!null 
     - my lunch in
-    - 2012-01-29 05:43:00.321157
-    - 2012-01-29 05:43:00.321157
-  - - "5"
+    - '2012-01-29 05:43:00.321157'
+    - '2012-01-29 05:43:00.321157'
+  - - '5'
     - site_url
-    - "1"
+    - '1'
     - Configuration
-    - 
-    - 
+    - !!null 
+    - !!null 
     - http://mylunchin.com
-    - 2012-01-29 05:43:00.323721
-    - 2012-01-31 22:47:46.329059
-  - - "6"
+    - '2012-01-29 05:43:00.323721'
+    - '2012-01-31 22:47:46.329059'
+  - - '6'
     - allow_ssl_in_production
-    - "1"
+    - '1'
     - Configuration
-    - 
-    - 
-    - "0"
-    - 2012-01-29 05:43:00.326335
-    - 2012-01-29 05:43:00.326335
-  - - "7"
+    - !!null 
+    - !!null 
+    - '0'
+    - '2012-01-29 05:43:00.326335'
+    - '2012-01-29 05:43:00.326335'
+  - - '7'
     - allow_ssl_in_development_and_test
-    - "1"
+    - '1'
     - Configuration
-    - 
-    - 
-    - "0"
-    - 2012-01-29 05:43:00.328966
-    - 2012-01-29 05:43:00.328966
-  - - "8"
+    - !!null 
+    - !!null 
+    - '0'
+    - '2012-01-29 05:43:00.328966'
+    - '2012-01-29 05:43:00.328966'
+  - - '8'
     - provider
-    - "1"
+    - '1'
     - AuthenticationMethod
-    - 
-    - 
+    - !!null 
+    - !!null 
     - facebook
-    - 2012-01-31 16:08:13.887155
-    - 2012-01-31 16:08:13.887155
-  - - "9"
+    - '2012-01-31 16:08:13.887155'
+    - '2012-01-31 16:08:13.887155'
+  - - '9'
     - api_key
-    - "1"
+    - '1'
     - AuthenticationMethod
-    - 
-    - 
-    - "158336337613907"
-    - 2012-01-31 16:08:13.902666
-    - 2012-01-31 16:08:13.902666
-  - - "10"
+    - !!null 
+    - !!null 
+    - '158336337613907'
+    - '2012-01-31 16:08:13.902666'
+    - '2012-01-31 16:08:13.902666'
+  - - '10'
     - api_secret
-    - "1"
+    - '1'
     - AuthenticationMethod
-    - 
-    - 
+    - !!null 
+    - !!null 
     - 3ca89e4a275eb9ea58c84d3e209a62a6
-    - 2012-01-31 16:08:13.905337
-    - 2012-01-31 16:08:13.905337
-  - - "11"
+    - '2012-01-31 16:08:13.905337'
+    - '2012-01-31 16:08:13.905337'
+  - - '11'
     - code
-    - "1"
+    - '1'
     - Activator
-    - 
-    - 
+    - !!null 
+    - !!null 
     - freelunch
-    - 2012-01-31 19:24:48.82506
-    - 2012-01-31 19:24:48.82506
-  - - "12"
+    - '2012-01-31 19:24:48.82506'
+    - '2012-01-31 19:24:48.82506'
+  - - '12'
     - advertise
-    - "1"
+    - '1'
     - Activator
-    - 
-    - 
-    - "1"
-    - 2012-01-31 19:24:48.842024
-    - 2012-01-31 19:24:48.842024
-  - - "13"
+    - !!null 
+    - !!null 
+    - '1'
+    - '2012-01-31 19:24:48.842024'
+    - '2012-01-31 19:24:48.842024'
+  - - '13'
     - usage_limit
-    - "1"
+    - '1'
     - Activator
-    - 
-    - 
-    - "555"
-    - 2012-01-31 19:24:48.844979
-    - 2012-01-31 19:24:48.844979
-  - - "14"
+    - !!null 
+    - !!null 
+    - '555'
+    - '2012-01-31 19:24:48.844979'
+    - '2012-01-31 19:24:48.844979'
+  - - '14'
     - default_country_id
-    - "1"
+    - '1'
     - Configuration
-    - 
-    - 
-    - "214"
-    - 2012-01-31 22:41:02.220866
-    - 2012-01-31 23:23:35.15966
-  - - "15"
+    - !!null 
+    - !!null 
+    - '214'
+    - '2012-01-31 22:41:02.220866'
+    - '2012-01-31 23:23:35.15966'
+  - - '15'
     - checkout_zone
-    - "1"
+    - '1'
     - Configuration
-    - 
-    - 
+    - !!null 
+    - !!null 
     - United States
-    - 2012-01-31 22:41:02.225397
-    - 2012-01-31 22:46:50.289329
-  - - "16"
+    - '2012-01-31 22:41:02.225397'
+    - '2012-01-31 22:46:50.289329'
+  - - '16'
     - admin_interface_logo
-    - "1"
+    - '1'
     - Configuration
-    - 
-    - 
+    - !!null 
+    - !!null 
     - admin/bg/spree_50.png
-    - 2012-01-31 22:46:50.195612
-    - 2012-01-31 22:46:50.195612
-  - - "17"
+    - '2012-01-31 22:46:50.195612'
+    - '2012-01-31 22:46:50.195612'
+  - - '17'
     - amount
-    - "1"
+    - '1'
     - Calculator
-    - 
-    - 
-    - "0.0"
-    - 2012-02-01 00:43:07.599487
-    - 2012-02-01 00:43:07.599487
-  - - "18"
+    - !!null 
+    - !!null 
+    - '0.0'
+    - '2012-02-01 00:43:07.599487'
+    - '2012-02-01 00:43:07.599487'
+  - - '18'
     - provider
-    - "2"
+    - '2'
     - AuthenticationMethod
-    - 
-    - 
+    - !!null 
+    - !!null 
     - facebook
-    - 2012-02-01 04:39:04.685816
-    - 2012-02-01 04:39:04.685816
-  - - "19"
+    - '2012-02-01 04:39:04.685816'
+    - '2012-02-01 04:39:04.685816'
+  - - '19'
     - api_key
-    - "2"
+    - '2'
     - AuthenticationMethod
-    - 
-    - 
-    - "158336337613907"
-    - 2012-02-01 04:39:04.690352
-    - 2012-02-01 04:39:04.690352
-  - - "20"
+    - !!null 
+    - !!null 
+    - '158336337613907'
+    - '2012-02-01 04:39:04.690352'
+    - '2012-02-01 04:39:04.690352'
+  - - '20'
     - api_secret
-    - "2"
+    - '2'
     - AuthenticationMethod
-    - 
-    - 
+    - !!null 
+    - !!null 
     - 3ca89e4a275eb9ea58c84d3e209a62a6
-    - 2012-02-01 04:39:04.693053
-    - 2012-02-01 04:39:04.693053
-  - - "21"
+    - '2012-02-01 04:39:04.693053'
+    - '2012-02-01 04:39:04.693053'
+  - - '21'
     - flat_percent
-    - "2"
+    - '2'
     - Calculator
-    - 
-    - 
-    - "7.5"
-    - 2012-02-06 19:31:30.355325
-    - 2012-02-06 19:31:30.355325
-  - - "22"
+    - !!null 
+    - !!null 
+    - '7.5'
+    - '2012-02-06 19:31:30.355325'
+    - '2012-02-09 09:32:36.700689'
+  - - '22'
     - flat_percent
-    - "3"
+    - '3'
     - Calculator
-    - 
-    - 
-    - "0.0"
-    - 2012-02-06 19:32:09.179439
-    - 2012-02-06 19:32:09.179439
+    - !!null 
+    - !!null 
+    - '0.0'
+    - '2012-02-06 19:32:09.179439'
+    - '2012-02-06 19:32:09.179439'
+  - - '23'
+    - flat_percent
+    - '5'
+    - Calculator
+    - !!null 
+    - !!null 
+    - '0.0'
+    - '2012-02-09 09:07:45.933056'
+    - '2012-02-09 09:07:45.933056'
+  - - '24'
+    - flat_percent
+    - '4'
+    - Calculator
+    - !!null 
+    - !!null 
+    - '0.0'
+    - '2012-02-09 09:28:53.156381'
+    - '2012-02-09 09:28:53.156381'
 
---- 
-products: 
-  columns: 
+---
+products:
+  columns:
   - id
   - name
   - description
@@ -2502,75 +2879,75 @@ products:
   - meta_keywords
   - count_on_hand
   records: 
-  - - "1"
-    - "Today's Special: Beef Enchiladas"
-    - ""
-    - 2012-01-29 06:06:10.577192
-    - 2012-01-29 06:19:44.750083
+  - - '1'
+    - ! 'Today''s Special: Beef Enchiladas'
+    - ''
+    - '2012-01-29 06:06:10.577192'
+    - '2012-01-29 06:19:44.750083'
     - todays-special-beef-enchiladas
-    - 2012-01-01 00:00:00
-    - 
-    - 
-    - 
-    - ""
-    - ""
-    - "1000"
-  - - "2"
+    - '2012-01-01 00:00:00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - ''
+    - ''
+    - '1000'
+  - - '2'
     - Soup and Salad
-    - ""
-    - 2012-01-29 06:11:04.720519
-    - 2012-01-29 06:19:23.17549
+    - ''
+    - '2012-01-29 06:11:04.720519'
+    - '2012-01-29 06:19:23.17549'
     - soup-and-salad
-    - 2012-01-01 00:00:00
-    - 
-    - 
-    - 
-    - ""
-    - ""
-    - "1000"
-  - - "3"
+    - '2012-01-01 00:00:00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - ''
+    - ''
+    - '1000'
+  - - '3'
     - Full-Meal Sandwich Box
-    - ""
-    - 2012-01-29 06:16:07.167706
-    - 2012-01-29 06:18:41.057421
+    - ''
+    - '2012-01-29 06:16:07.167706'
+    - '2012-01-29 06:18:41.057421'
     - full-meal-sandwich-box
-    - 2012-01-01 00:00:00
-    - 
-    - 
-    - 
-    - ""
-    - ""
-    - "1000"
-  - - "4"
+    - '2012-01-01 00:00:00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - ''
+    - ''
+    - '1000'
+  - - '4'
     - Nora's Cobb Salad
-    - ""
-    - 2012-01-29 06:21:00.889612
-    - 2012-01-29 06:21:14.216605
+    - ''
+    - '2012-01-29 06:21:00.889612'
+    - '2012-01-29 06:21:14.216605'
     - noras-cobb-salad
-    - 2012-01-01 00:00:00
-    - 
-    - 
-    - 
-    - ""
-    - ""
-    - "1000"
-  - - "5"
+    - '2012-01-01 00:00:00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - ''
+    - ''
+    - '1000'
+  - - '5'
     - Burmese Pork Curry
-    - ""
-    - 2012-01-29 06:22:44.89749
-    - 2012-01-29 06:22:59.846381
+    - ''
+    - '2012-01-29 06:22:44.89749'
+    - '2012-01-29 06:22:59.846381'
     - burmese-pork-curry
-    - 2012-01-01 00:00:00
-    - 
-    - 
-    - 
-    - ""
-    - ""
-    - "1000"
+    - '2012-01-01 00:00:00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - ''
+    - ''
+    - '1000'
 
---- 
-payments: 
-  columns: 
+---
+payments:
+  columns:
   - id
   - order_id
   - created_at
@@ -2583,21 +2960,32 @@ payments:
   - response_code
   - avs_response
   records: 
-  - - "9"
-    - "12"
-    - 2012-02-07 05:03:25.316156
-    - 2012-02-07 06:59:55.161207
-    - "12.90"
-    - "9"
+  - - '9'
+    - '12'
+    - '2012-02-07 05:03:25.316156'
+    - '2012-02-07 06:59:55.161207'
+    - '12.90'
+    - '9'
     - Creditcard
-    - "1"
+    - '1'
     - completed
-    - "67890"
+    - '67890'
+    - A
+  - - '13'
+    - '19'
+    - '2012-02-09 12:26:02.336909'
+    - '2012-02-09 12:26:15.958069'
+    - '12.90'
+    - '13'
+    - Creditcard
+    - '1'
+    - pending
+    - '12345'
     - A
 
---- 
-orders: 
-  columns: 
+---
+orders:
+  columns:
   - id
   - user_id
   - number
@@ -2618,562 +3006,584 @@ orders:
   - email
   - special_instructions
   records: 
-  - - "1"
-    - "1"
+  - - '1'
+    - '1'
     - R531880820
-    - "10.00"
-    - "10.00"
-    - 2012-01-30 23:44:54.649168
-    - 2012-02-01 00:44:34.225701
+    - '10.00'
+    - '10.00'
+    - '2012-01-30 23:44:54.649168'
+    - '2012-02-01 00:44:34.225701'
     - delivery
-    - "0.00"
-    - "0.00"
-    - 
-    - "1"
-    - "2"
-    - "0.00"
-    - 
-    - 
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - '1'
+    - '2'
+    - '0.00'
+    - !!null 
+    - !!null 
     - balance_due
     - seth.macpherson@gmail.com
-    - 
-  - - "2"
-    - "3"
+    - !!null 
+  - - '2'
+    - '3'
     - R180017017
-    - "44.00"
-    - "44.00"
-    - 2012-01-31 16:29:27.055197
-    - 2012-01-31 19:18:16.803536
+    - '44.00'
+    - '44.00'
+    - '2012-01-31 16:29:27.055197'
+    - '2012-01-31 19:18:16.803536'
     - address
-    - "0.00"
-    - "0.00"
-    - 
-    - 
-    - 
-    - "0.00"
-    - 
-    - 
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - '0.00'
+    - !!null 
+    - !!null 
     - balance_due
     - seth@macphersonconsulting.com
-    - 
-  - - "3"
-    - "4"
+    - !!null 
+  - - '3'
+    - '4'
     - R686122414
-    - "0.00"
-    - "0.00"
-    - 2012-01-31 21:34:00.82
-    - 2012-01-31 21:34:00.82
+    - '0.00'
+    - '0.00'
+    - '2012-01-31 21:34:00.82'
+    - '2012-01-31 21:34:00.82'
     - cart
-    - "0.00"
-    - "0.00"
-    - 
-    - 
-    - 
-    - "0.00"
-    - 
-    - 
-    - 
-    - 
-    - 
-  - - "4"
-    - "1"
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - '0.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '4'
+    - '1'
     - R853820605
-    - "12.00"
-    - "12.00"
-    - 2012-02-01 05:26:39.81094
-    - 2012-02-01 05:26:39.81094
+    - '12.00'
+    - '12.00'
+    - '2012-02-01 05:26:39.81094'
+    - '2012-02-01 05:26:39.81094'
     - cart
-    - "0.00"
-    - "0.00"
-    - 
-    - 
-    - 
-    - "0.00"
-    - 
-    - 
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - '0.00'
+    - !!null 
+    - !!null 
     - balance_due
     - seth.macpherson@gmail.com
-    - 
-  - - "5"
-    - "6"
+    - !!null 
+  - - '5'
+    - '6'
     - R317104261
-    - "12.00"
-    - "12.00"
-    - 2012-02-01 07:01:36.718428
-    - 2012-02-01 07:02:27.361254
+    - '12.00'
+    - '12.00'
+    - '2012-02-01 07:01:36.718428'
+    - '2012-02-01 07:02:27.361254'
     - address
-    - "0.00"
-    - "0.00"
-    - 
-    - 
-    - 
-    - "0.00"
-    - 
-    - 
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - '0.00'
+    - !!null 
+    - !!null 
     - balance_due
     - seth.macpherson@gmail.com
-    - 
-  - - "6"
-    - "8"
+    - !!null 
+  - - '6'
+    - '8'
     - R337652877
-    - "24.00"
-    - "24.00"
-    - 2012-02-02 23:37:44.320929
-    - 2012-02-02 23:47:58.654739
+    - '24.00'
+    - '24.00'
+    - '2012-02-02 23:37:44.320929'
+    - '2012-02-02 23:47:58.654739'
     - cart
-    - "0.00"
-    - "0.00"
-    - 
-    - 
-    - 
-    - "0.00"
-    - 
-    - 
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - '0.00'
+    - !!null 
+    - !!null 
     - balance_due
     - seth.macpherson+1@gmail.com
-    - 
-  - - "7"
-    - "9"
+    - !!null 
+  - - '7'
+    - '9'
     - R706778262
-    - "12.00"
-    - "12.00"
-    - 2012-02-02 23:53:10.960531
-    - 2012-02-02 23:53:10.960531
+    - '24.00'
+    - '24.00'
+    - '2012-02-02 23:53:10.960531'
+    - '2012-02-02 23:53:10.960531'
     - cart
-    - "0.00"
-    - "0.00"
-    - 
-    - 
-    - 
-    - "0.00"
-    - 
-    - 
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - '0.00'
+    - !!null 
+    - !!null 
     - balance_due
-    - 
-    - 
-  - - "8"
-    - "1"
+    - !!null 
+    - !!null 
+  - - '8'
+    - '1'
     - R615844362
-    - "12.00"
-    - "12.00"
-    - 2012-02-03 00:53:30.107514
-    - 2012-02-03 17:45:57.373402
+    - '12.00'
+    - '12.00'
+    - '2012-02-03 00:53:30.107514'
+    - '2012-02-03 17:45:57.373402'
     - cart
-    - "0.00"
-    - "0.00"
-    - 
-    - 
-    - 
-    - "0.00"
-    - 
-    - 
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - '0.00'
+    - !!null 
+    - !!null 
     - balance_due
     - seth.macpherson@gmail.com
-    - 
-  - - "9"
-    - "1"
+    - !!null 
+  - - '9'
+    - '1'
     - R135150840
-    - "12.00"
-    - "12.00"
-    - 2012-02-03 18:37:04.313571
-    - 2012-02-03 18:57:41.669805
+    - '12.00'
+    - '12.00'
+    - '2012-02-03 18:37:04.313571'
+    - '2012-02-03 18:57:41.669805'
     - cart
-    - "0.00"
-    - "0.00"
-    - 
-    - 
-    - 
-    - "0.00"
-    - 
-    - 
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - '0.00'
+    - !!null 
+    - !!null 
     - balance_due
     - seth.macpherson@gmail.com
-    - 
-  - - "10"
-    - "1"
+    - !!null 
+  - - '10'
+    - '1'
     - R233862000
-    - "36.00"
-    - "36.00"
-    - 2012-02-03 19:02:11.42051
-    - 2012-02-03 23:16:04.168498
+    - '36.00'
+    - '36.00'
+    - '2012-02-03 19:02:11.42051'
+    - '2012-02-03 23:16:04.168498'
     - cart
-    - "0.00"
-    - "0.00"
-    - 
-    - 
-    - 
-    - "0.00"
-    - 
-    - 
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - '0.00'
+    - !!null 
+    - !!null 
     - balance_due
     - seth.macpherson@gmail.com
-    - 
-  - - "11"
-    - "1"
+    - !!null 
+  - - '11'
+    - '1'
     - R888138335
-    - "12.00"
-    - "12.90"
-    - 2012-02-04 03:52:02.979095
-    - 2012-02-06 20:12:06.638224
+    - '12.00'
+    - '12.90'
+    - '2012-02-04 03:52:02.979095'
+    - '2012-02-06 20:12:06.638224'
     - complete
-    - "0.90"
-    - "0.00"
-    - 2012-02-06 20:12:06.640295
-    - "3"
-    - "4"
-    - "0.00"
-    - "2"
+    - '0.90'
+    - '0.00'
+    - '2012-02-06 20:12:06.640295'
+    - '3'
+    - '4'
+    - '0.00'
+    - '2'
     - pending
     - balance_due
     - seth.macpherson@gmail.com
-    - 
-  - - "12"
-    - "1"
+    - !!null 
+  - - '12'
+    - '1'
     - R200561760
-    - "12.00"
-    - "12.90"
-    - 2012-02-06 20:12:51.087406
-    - 2012-02-07 05:03:31.020615
+    - '12.00'
+    - '12.90'
+    - '2012-02-06 20:12:51.087406'
+    - '2012-02-07 05:03:31.020615'
     - complete
-    - "0.90"
-    - "0.00"
-    - 2012-02-07 05:03:31.022015
-    - "5"
-    - "6"
-    - "12.90"
-    - "2"
+    - '0.90'
+    - '0.00'
+    - '2012-02-07 05:03:31.022015'
+    - '5'
+    - '6'
+    - '12.90'
+    - '2'
     - ready
     - paid
     - seth.macpherson@gmail.com
     - 12:30 PM
-  - - "13"
-    - "1"
+  - - '13'
+    - '1'
     - R702131462
-    - "11.00"
-    - "11.00"
-    - 2012-02-07 05:11:23.949066
-    - 2012-02-07 05:11:23.949066
+    - '11.00'
+    - '11.00'
+    - '2012-02-07 05:11:23.949066'
+    - '2012-02-07 05:11:23.949066'
     - cart
-    - "0.00"
-    - "0.00"
-    - 
-    - 
-    - 
-    - "0.00"
-    - 
-    - 
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - '0.00'
+    - !!null 
+    - !!null 
     - balance_due
     - seth.macpherson@gmail.com
-    - 
-  - - "14"
-    - "1"
+    - !!null 
+  - - '14'
+    - '1'
     - R400751084
-    - "35.00"
-    - "35.00"
-    - 2012-02-07 05:53:28.489519
-    - 2012-02-07 23:40:22.814933
+    - '35.00'
+    - '35.00'
+    - '2012-02-07 05:53:28.489519'
+    - '2012-02-07 23:40:22.814933'
     - delivery
-    - "0.00"
-    - "0.00"
-    - 
-    - "7"
-    - "8"
-    - "0.00"
-    - 
-    - 
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - '7'
+    - '8'
+    - '0.00'
+    - !!null 
+    - !!null 
     - balance_due
     - seth.macpherson@gmail.com
-    - " 1:00 PM"
-  - - "15"
-    - "1"
+    - ! ' 1:00 PM'
+  - - '15'
+    - '1'
     - R562505436
-    - "12.00"
-    - "12.00"
-    - 2012-02-08 00:56:20.737874
-    - 2012-02-08 00:56:41.027699
+    - '12.00'
+    - '12.00'
+    - '2012-02-08 00:56:20.737874'
+    - '2012-02-08 00:56:41.027699'
     - cart
-    - "0.00"
-    - "0.00"
-    - 
-    - 
-    - 
-    - "0.00"
-    - 
-    - 
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - '0.00'
+    - !!null 
+    - !!null 
     - balance_due
     - seth.macpherson@gmail.com
-    - 
-  - - "16"
-    - "1"
+    - !!null 
+  - - '16'
+    - '1'
     - R243625785
-    - "24.00"
-    - "24.00"
-    - 2012-02-08 01:01:44.730824
-    - 2012-02-08 01:04:36.79341
-    - cart
-    - "0.00"
-    - "0.00"
-    - 
-    - 
-    - 
-    - "0.00"
-    - 
-    - 
+    - '48.00'
+    - '48.00'
+    - '2012-02-08 01:01:44.730824'
+    - '2012-02-08 05:21:46.388017'
+    - delivery
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - '11'
+    - '12'
+    - '0.00'
+    - !!null 
+    - !!null 
     - balance_due
     - seth.macpherson@gmail.com
-    - 
+    - !!null 
+  - - '17'
+    - '1'
+    - R281020572
+    - '12.00'
+    - '12.00'
+    - '2012-02-08 05:48:15.914121'
+    - '2012-02-08 05:50:45.382482'
+    - payment
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - '13'
+    - '14'
+    - '0.00'
+    - !!null 
+    - !!null 
+    - balance_due
+    - seth.macpherson@gmail.com
+    - Waucoma Building at 12:00 PM
+  - - '18'
+    - '1'
+    - R000325811
+    - '11.00'
+    - '11.00'
+    - '2012-02-08 20:59:29.745989'
+    - '2012-02-08 20:59:29.745989'
+    - cart
+    - '0.00'
+    - '0.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - '0.00'
+    - !!null 
+    - !!null 
+    - balance_due
+    - seth.macpherson@gmail.com
+    - !!null 
+  - - '19'
+    - '1'
+    - R605384414
+    - '12.00'
+    - '12.90'
+    - '2012-02-08 23:02:51.488406'
+    - '2012-02-09 12:26:16.069681'
+    - complete
+    - '0.90'
+    - '0.00'
+    - '2012-02-09 12:26:16.071025'
+    - '17'
+    - '18'
+    - '0.00'
+    - '2'
+    - pending
+    - balance_due
+    - seth.macpherson@gmail.com
+    - Bingin at 12:30 PM
 
---- 
-states: 
-  columns: 
+---
+states:
+  columns:
   - id
   - name
   - abbr
   - country_id
   records: 
-  - - "6764998"
+  - - '6764998'
     - District of Columbia
     - DC
-    - "214"
-  - - "17199670"
+    - '214'
+  - - '17199670'
     - Utah
     - UT
-    - "214"
-  - - "37199952"
+    - '214'
+  - - '37199952'
     - Louisiana
     - LA
-    - "214"
-  - - "41111624"
+    - '214'
+  - - '41111624'
     - Virginia
     - VA
-    - "214"
-  - - "51943165"
+    - '214'
+  - - '51943165'
     - North Dakota
     - ND
-    - "214"
-  - - "66390489"
+    - '214'
+  - - '66390489'
     - Wyoming
     - WY
-    - "214"
-  - - "69729944"
+    - '214'
+  - - '69729944'
     - New Mexico
     - NM
-    - "214"
-  - - "69870734"
+    - '214'
+  - - '69870734'
     - Connecticut
     - CT
-    - "214"
-  - - "91367981"
+    - '214'
+  - - '91367981'
     - West Virginia
     - WV
-    - "214"
-  - - "103680699"
+    - '214'
+  - - '103680699'
     - Wisconsin
     - WI
-    - "214"
-  - - "177087202"
+    - '214'
+  - - '177087202'
     - North Carolina
     - NC
-    - "214"
-  - - "179539703"
+    - '214'
+  - - '179539703'
     - Nevada
     - NV
-    - "214"
-  - - "199950338"
+    - '214'
+  - - '199950338'
     - Hawaii
     - HI
-    - "214"
-  - - "248548169"
+    - '214'
+  - - '248548169'
     - Oklahoma
     - OK
-    - "214"
-  - - "267271847"
+    - '214'
+  - - '267271847'
     - Florida
     - FL
-    - "214"
-  - - "276110813"
+    - '214'
+  - - '276110813'
     - California
     - CA
-    - "214"
-  - - "298914262"
+    - '214'
+  - - '298914262'
     - Oregon
     - OR
-    - "214"
-  - - "308473843"
+    - '214'
+  - - '308473843'
     - Kentucky
     - KY
-    - "214"
-  - - "385551075"
+    - '214'
+  - - '385551075'
     - Massachusetts
     - MA
-    - "214"
-  - - "403740659"
+    - '214'
+  - - '403740659'
     - Alaska
     - AK
-    - "214"
-  - - "414569975"
+    - '214'
+  - - '414569975'
     - Washington
     - WA
-    - "214"
-  - - "426832442"
+    - '214'
+  - - '426832442'
     - New Hampshire
     - NH
-    - "214"
-  - - "471470972"
+    - '214'
+  - - '471470972'
     - Arkansas
     - AR
-    - "214"
-  - - "471711976"
+    - '214'
+  - - '471711976'
     - Pennsylvania
     - PA
-    - "214"
-  - - "474001862"
+    - '214'
+  - - '474001862'
     - Rhode Island
     - RI
-    - "214"
-  - - "480368357"
+    - '214'
+  - - '480368357'
     - Maryland
     - MD
-    - "214"
-  - - "485193526"
+    - '214'
+  - - '485193526'
     - Ohio
     - OH
-    - "214"
-  - - "525212995"
+    - '214'
+  - - '525212995'
     - Texas
     - TX
-    - "214"
-  - - "532363768"
+    - '214'
+  - - '532363768'
     - Mississippi
     - MS
-    - "214"
-  - - "536031023"
+    - '214'
+  - - '536031023'
     - Colorado
     - CO
-    - "214"
-  - - "597434151"
+    - '214'
+  - - '597434151'
     - South Carolina
     - SC
-    - "214"
-  - - "615306087"
+    - '214'
+  - - '615306087'
     - South Dakota
     - SD
-    - "214"
-  - - "625629523"
+    - '214'
+  - - '625629523'
     - Illinois
     - IL
-    - "214"
-  - - "653576146"
+    - '214'
+  - - '653576146'
     - Missouri
     - MO
-    - "214"
-  - - "673350891"
+    - '214'
+  - - '673350891'
     - Nebraska
     - NE
-    - "214"
-  - - "721598219"
+    - '214'
+  - - '721598219'
     - Delaware
     - DE
-    - "214"
-  - - "726305632"
+    - '214'
+  - - '726305632'
     - Tennessee
     - TN
-    - "214"
-  - - "750950030"
+    - '214'
+  - - '750950030'
     - New Jersey
     - NJ
-    - "214"
-  - - "769938586"
+    - '214'
+  - - '769938586'
     - Indiana
     - IN
-    - "214"
-  - - "825306985"
+    - '214'
+  - - '825306985'
     - Iowa
     - IA
-    - "214"
-  - - "876916760"
+    - '214'
+  - - '876916760'
     - Georgia
     - GA
-    - "214"
-  - - "889445952"
+    - '214'
+  - - '889445952'
     - New York
     - NY
-    - "214"
-  - - "931624400"
+    - '214'
+  - - '931624400'
     - Michigan
     - MI
-    - "214"
-  - - "948208802"
+    - '214'
+  - - '948208802'
     - Arizona
     - AZ
-    - "214"
-  - - "969722173"
+    - '214'
+  - - '969722173'
     - Kansas
     - KS
-    - "214"
-  - - "982433740"
+    - '214'
+  - - '982433740'
     - Idaho
     - ID
-    - "214"
-  - - "989115415"
+    - '214'
+  - - '989115415'
     - Vermont
     - VT
-    - "214"
-  - - "999156632"
+    - '214'
+  - - '999156632'
     - Montana
     - MT
-    - "214"
-  - - "1032288924"
+    - '214'
+  - - '1032288924'
     - Minnesota
     - MN
-    - "214"
-  - - "1055056709"
+    - '214'
+  - - '1055056709'
     - Maine
     - ME
-    - "214"
-  - - "1061493585"
+    - '214'
+  - - '1061493585'
     - Alabama
     - AL
-    - "214"
+    - '214'
 
---- 
-shipping_methods: 
-  columns: 
-  - id
-  - zone_id
-  - name
-  - created_at
-  - updated_at
-  - display_on
-  records: 
-  - - "2"
-    - "2"
-    - Bingin
-    - 2012-02-06 19:31:19.342346
-    - 2012-02-06 19:31:19.342346
-    - ""
-  - - "3"
-    - "2"
-    - Waucoma Building
-    - 2012-02-06 19:32:04.579939
-    - 2012-02-06 19:32:04.579939
-    - ""
-  - - "4"
-    - "2"
-    - Waterfront
-    - 2012-02-06 19:32:34.564063
-    - 2012-02-06 19:32:34.564063
-    - ""
-  - - "5"
-    - "2"
-    - Pickup from Nora's Table
-    - 2012-02-06 19:33:02.744859
-    - 2012-02-06 19:33:02.744859
-    - ""
-
---- 
-shipments: 
-  columns: 
+---
+shipments:
+  columns:
   - id
   - order_id
   - shipping_method_id
@@ -3186,32 +3596,139 @@ shipments:
   - address_id
   - state
   records: 
-  - - "1"
-    - "11"
-    - "2"
-    - 
-    - 2012-02-06 20:11:46.377997
-    - 2012-02-06 20:11:46.377997
+  - - '1'
+    - '11'
+    - '2'
+    - !!null 
+    - '2012-02-06 20:11:46.377997'
+    - '2012-02-06 20:11:46.377997'
     - H71420863771
-    - 
-    - 
-    - "4"
+    - !!null 
+    - !!null 
+    - '4'
     - pending
-  - - "2"
-    - "12"
-    - "2"
-    - 
-    - 2012-02-06 20:14:17.935762
-    - 2012-02-06 20:19:04.660201
+  - - '2'
+    - '12'
+    - '2'
+    - !!null 
+    - '2012-02-06 20:14:17.935762'
+    - '2012-02-06 20:19:04.660201'
     - H03815505380
-    - 
-    - 
-    - "6"
+    - !!null 
+    - !!null 
+    - '6'
     - ready
+  - - '3'
+    - '19'
+    - '2'
+    - !!null 
+    - '2012-02-09 12:20:47.89608'
+    - '2012-02-09 12:20:47.89608'
+    - H83502324401
+    - !!null 
+    - !!null 
+    - '18'
+    - pending
 
---- 
-tax_categories: 
-  columns: 
+---
+shipping_methods:
+  columns:
+  - id
+  - zone_id
+  - name
+  - created_at
+  - updated_at
+  - display_on
+  - time
+  - location
+  - deadline
+  - pickup_only
+  records: 
+  - - '2'
+    - '2'
+    - Insitu in Bingen, WA
+    - '2012-02-06 19:31:19.342346'
+    - '2012-02-09 09:32:36.680526'
+    - ''
+    - 12:00PM
+    - The Insitu winery building
+    - 10:30AM
+    - false
+  - - '3'
+    - '2'
+    - Waucoma Building
+    - '2012-02-06 19:32:04.579939'
+    - '2012-02-09 09:21:53.003518'
+    - ''
+    - 11:30AM
+    - The main entrance on Wasco street.
+    - 10:00AM
+    - false
+  - - '4'
+    - '2'
+    - Hood River Waterfront
+    - '2012-02-06 19:32:34.564063'
+    - '2012-02-09 09:28:53.132677'
+    - ''
+    - 11:45AM
+    - 489 Building <span class="hint">(The old United Telephone Services building,
+      new home of Hood Tech) Main lobby, northeast entrance</span>
+    - 10:15AM
+    - false
+  - - '5'
+    - '2'
+    - Nora's Table
+    - '2012-02-06 19:33:02.744859'
+    - '2012-02-09 09:33:13.998286'
+    - ''
+    - 11:30AM
+    - Pick-up
+    - 10:00AM
+    - true
+  - - '6'
+    - '2'
+    - Nora's Table
+    - '2012-02-09 09:35:19.343585'
+    - '2012-02-09 09:35:19.343585'
+    - ''
+    - 11:45AM
+    - Pick-up
+    - 10:15AM
+    - true
+  - - '7'
+    - '2'
+    - Nora's Table
+    - '2012-02-09 09:35:50.822152'
+    - '2012-02-09 09:35:50.822152'
+    - ''
+    - 12:00PM
+    - Pick-up
+    - 10:30AM
+    - true
+  - - '8'
+    - '2'
+    - Waucoma Building
+    - '2012-02-09 09:37:10.076806'
+    - '2012-02-09 09:37:10.076806'
+    - ''
+    - 12:30PM
+    - The main entrance on Wasco street.
+    - 11:00AM
+    - false
+  - - '9'
+    - '2'
+    - Nora's Table
+    - '2012-02-09 09:37:49.305401'
+    - '2012-02-09 09:37:49.305401'
+    - ''
+    - 12:15AM
+    - Pick-up
+    - 10:45AM
+    - true
+
+---
+tax_categories:
+  columns:
   - id
   - name
   - description
@@ -3219,16 +3736,16 @@ tax_categories:
   - updated_at
   - is_default
   records: 
-  - - "1"
+  - - '1'
     - Washington
     - Washington State Deliveries
-    - 2012-01-31 21:29:57.916458
-    - 2012-01-31 21:29:57.916458
+    - '2012-01-31 21:29:57.916458'
+    - '2012-01-31 21:29:57.916458'
     - false
 
---- 
-variants: 
-  columns: 
+---
+variants:
+  columns:
   - id
   - product_id
   - sku
@@ -3243,75 +3760,75 @@ variants:
   - cost_price
   - position
   records: 
-  - - "1"
-    - "1"
-    - ""
-    - "12.00"
-    - 
-    - 
-    - 
-    - 
-    - 
+  - - '1'
+    - '1'
+    - ''
+    - '12.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - true
-    - "1000"
-    - 
-    - 
-  - - "2"
-    - "2"
-    - ""
-    - "10.00"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - '1000'
+    - !!null 
+    - !!null 
+  - - '2'
+    - '2'
+    - ''
+    - '10.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - true
-    - "1000"
-    - 
-    - 
-  - - "3"
-    - "3"
-    - ""
-    - "11.00"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - '1000'
+    - !!null 
+    - !!null 
+  - - '3'
+    - '3'
+    - ''
+    - '11.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - true
-    - "1000"
-    - 
-    - 
-  - - "4"
-    - "4"
-    - ""
-    - "12.00"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - '1000'
+    - !!null 
+    - !!null 
+  - - '4'
+    - '4'
+    - ''
+    - '12.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - true
-    - "1000"
-    - 
-    - 
-  - - "5"
-    - "5"
-    - ""
-    - "12.00"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - '999'
+    - !!null 
+    - !!null 
+  - - '5'
+    - '5'
+    - ''
+    - '12.00'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - true
-    - "998"
-    - 
-    - 
+    - '998'
+    - !!null 
+    - !!null 
 
---- 
-state_events: 
-  columns: 
+---
+state_events:
+  columns:
   - id
   - stateful_id
   - user_id
@@ -3322,127 +3839,136 @@ state_events:
   - stateful_type
   - next_state
   records: 
-  - - "1"
-    - "1"
-    - "1"
+  - - '1'
+    - '1'
+    - '1'
     - payment
-    - 2012-01-31 06:09:58.871151
-    - 2012-01-31 06:09:58.871151
+    - '2012-01-31 06:09:58.871151'
+    - '2012-01-31 06:09:58.871151'
     - balance_due
     - Order
     - paid
-  - - "2"
-    - "1"
-    - "1"
+  - - '2'
+    - '1'
+    - '1'
     - payment
-    - 2012-01-31 06:14:45.649697
-    - 2012-01-31 06:14:45.649697
+    - '2012-01-31 06:14:45.649697'
+    - '2012-01-31 06:14:45.649697'
     - paid
     - Order
     - balance_due
-  - - "3"
-    - "2"
-    - "3"
+  - - '3'
+    - '2'
+    - '3'
     - payment
-    - 2012-01-31 16:44:45.501522
-    - 2012-01-31 16:44:45.501522
+    - '2012-01-31 16:44:45.501522'
+    - '2012-01-31 16:44:45.501522'
     - balance_due
     - Order
     - paid
-  - - "4"
-    - "2"
-    - "3"
+  - - '4'
+    - '2'
+    - '3'
     - payment
-    - 2012-01-31 16:44:45.622328
-    - 2012-01-31 16:44:45.622328
+    - '2012-01-31 16:44:45.622328'
+    - '2012-01-31 16:44:45.622328'
     - balance_due
     - Order
     - paid
-  - - "5"
-    - "2"
-    - "3"
+  - - '5'
+    - '2'
+    - '3'
     - payment
-    - 2012-01-31 16:53:25.935306
-    - 2012-01-31 16:53:25.935306
+    - '2012-01-31 16:53:25.935306'
+    - '2012-01-31 16:53:25.935306'
     - paid
     - Order
     - balance_due
-  - - "6"
-    - "1"
-    - "1"
+  - - '6'
+    - '1'
+    - '1'
     - payment
-    - 2012-01-31 22:18:29.920591
-    - 2012-01-31 22:18:29.920591
+    - '2012-01-31 22:18:29.920591'
+    - '2012-01-31 22:18:29.920591'
     - balance_due
     - Order
     - paid
-  - - "7"
-    - "1"
-    - "1"
+  - - '7'
+    - '1'
+    - '1'
     - payment
-    - 2012-01-31 22:19:59.658745
-    - 2012-01-31 22:19:59.658745
+    - '2012-01-31 22:19:59.658745'
+    - '2012-01-31 22:19:59.658745'
     - paid
     - Order
     - balance_due
-  - - "8"
-    - "11"
-    - "1"
+  - - '8'
+    - '11'
+    - '1'
     - order
-    - 2012-02-06 20:12:07.733717
-    - 2012-02-06 20:12:07.733717
+    - '2012-02-06 20:12:07.733717'
+    - '2012-02-06 20:12:07.733717'
     - cart
     - Order
     - complete
-  - - "19"
-    - "12"
-    - "1"
+  - - '19'
+    - '12'
+    - '1'
     - order
-    - 2012-02-07 05:03:31.985607
-    - 2012-02-07 05:03:31.985607
+    - '2012-02-07 05:03:31.985607'
+    - '2012-02-07 05:03:31.985607'
     - cart
     - Order
     - complete
-  - - "20"
-    - "13"
-    - "1"
+  - - '20'
+    - '13'
+    - '1'
     - payment
-    - 2012-02-07 05:21:17.922821
-    - 2012-02-07 05:21:17.922821
+    - '2012-02-07 05:21:17.922821'
+    - '2012-02-07 05:21:17.922821'
     - balance_due
     - Order
     - paid
-  - - "21"
-    - "13"
-    - "1"
+  - - '21'
+    - '13'
+    - '1'
     - payment
-    - 2012-02-07 05:21:34.848699
-    - 2012-02-07 05:21:34.848699
+    - '2012-02-07 05:21:34.848699'
+    - '2012-02-07 05:21:34.848699'
     - paid
     - Order
     - balance_due
-  - - "22"
-    - "12"
-    - "1"
+  - - '22'
+    - '12'
+    - '1'
     - payment
-    - 2012-02-07 06:59:55.209765
-    - 2012-02-07 06:59:55.209765
+    - '2012-02-07 06:59:55.209765'
+    - '2012-02-07 06:59:55.209765'
     - balance_due
     - Order
     - paid
-  - - "23"
-    - "12"
-    - "1"
+  - - '23'
+    - '12'
+    - '1'
     - shipment
-    - 2012-02-07 06:59:55.2602
-    - 2012-02-07 06:59:55.2602
+    - '2012-02-07 06:59:55.2602'
+    - '2012-02-07 06:59:55.2602'
     - pending
     - Order
     - ready
+  - - '28'
+    - '19'
+    - '1'
+    - order
+    - '2012-02-09 12:26:17.477258'
+    - '2012-02-09 12:26:17.477258'
+    - cart
+    - Order
+    - complete
 
---- 
-zone_members: 
-  columns: 
+---
+zone_members:
+  columns:
   - id
   - zone_id
   - zoneable_id
@@ -3450,50 +3976,50 @@ zone_members:
   - created_at
   - updated_at
   records: 
-  - - "195044517"
-    - "2"
-    - "214"
+  - - '195044517'
+    - '2'
+    - '214'
     - Country
-    - 2009-06-04 17:22:41
-    - 2009-06-04 17:22:41
-  - - "1017582644"
-    - "2"
-    - "35"
+    - '2009-06-04 17:22:41'
+    - '2009-06-04 17:22:41'
+  - - '1017582644'
+    - '2'
+    - '35'
     - Country
-    - 2009-06-04 17:22:41
-    - 2009-06-04 17:22:41
+    - '2009-06-04 17:22:41'
+    - '2009-06-04 17:22:41'
 
---- 
-zones: 
-  columns: 
+---
+zones:
+  columns:
   - id
   - name
   - description
   - created_at
   - updated_at
   records: 
-  - - "2"
+  - - '2'
     - North America
     - USA + Canada
-    - 2009-06-04 17:22:41
-    - 2009-06-04 17:22:41
+    - '2009-06-04 17:22:41'
+    - '2009-06-04 17:22:41'
 
---- 
-product_groups: 
-  columns: 
+---
+product_groups:
+  columns:
   - id
   - name
   - permalink
   - order
   records: 
-  - - "1"
+  - - '1'
     - Default Group
     - default-group
-    - 
+    - !!null 
 
---- 
-adjustments: 
-  columns: 
+---
+adjustments:
+  columns:
   - id
   - order_id
   - amount
@@ -3508,36 +4034,49 @@ adjustments:
   - originator_type
   - eligible
   records: 
-  - - "1"
-    - "11"
-    - "0.90"
+  - - '1'
+    - '11'
+    - '0.90'
     - Shipping
-    - 2012-02-06 20:11:46.517151
-    - 2012-02-06 20:11:46.517151
-    - "1"
+    - '2012-02-06 20:11:46.517151'
+    - '2012-02-06 20:11:46.517151'
+    - '1'
     - Shipment
     - true
     - false
-    - "2"
+    - '2'
     - ShippingMethod
     - true
-  - - "2"
-    - "12"
-    - "0.90"
+  - - '2'
+    - '12'
+    - '0.90'
     - Shipping
-    - 2012-02-06 20:14:17.991119
-    - 2012-02-06 20:19:04.663239
-    - "2"
+    - '2012-02-06 20:14:17.991119'
+    - '2012-02-06 20:19:04.663239'
+    - '2'
     - Shipment
     - true
     - false
-    - "2"
+    - '2'
+    - ShippingMethod
+    - true
+  - - '3'
+    - '19'
+    - '0.90'
+    - Shipping
+    - '2012-02-09 12:20:48.035079'
+    - '2012-02-09 12:20:48.035079'
+    - '3'
+    - Shipment
+    - true
+    - false
+    - '2'
     - ShippingMethod
     - true
 
---- 
-users: 
-  columns: 
+---
+users:
+  columns:
   - id
   - email
   - encrypted_password
@@ -3564,377 +4103,427 @@ users:
   - remember_created_at
   - api_key
   records: 
-  - - "1"
+  - - '1'
     - seth.macpherson@gmail.com
     - 59ce6b07c84b672e57644f020154653ef36768e34e1d5d0cb24ef5fd8b57fe6914275b63d85c3597d9728553850b9fdce4a385f24c75da8875ffba34e4753f5b
     - VdA7jZm5srCiZNVytoy5
-    - 
-    - 2012-01-29 05:11:13.189762
-    - 2012-02-08 01:04:36.716415
-    - 
-    - 
-    - 
-    - "13"
-    - "0"
-    - 
-    - 2012-02-08 01:04:36.676909
-    - 2012-02-08 00:56:40.98561
+    - !!null 
+    - '2012-01-29 05:11:13.189762'
+    - '2012-02-08 23:10:45.956667'
+    - !!null 
+    - !!null 
+    - !!null 
+    - '16'
+    - '0'
+    - !!null 
+    - '2012-02-08 23:10:45.94133'
+    - '2012-02-08 20:20:37.836883'
     - 127.0.0.1
     - 127.0.0.1
     - seth.macpherson@gmail.com
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-  - - "2"
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '2'
     - KhiDVUr8FmtZuqTRom4O@example.net
     - 1fff000d275964a2042d20353a43af11ee23a3b9efc73a33a80484765361fe5017d09744180e38e46796a95a75851390a5de1c4530c5b335f4978c2dd6ad4ac4
     - jiW6DSyUxkDnqh8jSzsd
-    - 
-    - 2012-01-30 23:44:54.573387
-    - 2012-01-30 23:44:54.573387
+    - !!null 
+    - '2012-01-30 23:44:54.573387'
+    - '2012-01-30 23:44:54.573387'
     - KhiDVUr8FmtZuqTRom4O
-    - 
-    - 
-    - "0"
-    - "0"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - KhiDVUr8FmtZuqTRom4O@example.net
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-  - - "3"
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '3'
     - QTTPTwuo8gJByqC0sf6D@example.net
     - c2a57ad035aa25c1000d46c14ff392f35a3bd983173f12ec3a63149f446685647181814230ee179b6320da1def2b46b0787eda1baec596a040eb65d1fd005ec5
     - yf9gMX27L6sE5dBaadcs
-    - 
-    - 2012-01-31 16:29:26.978071
-    - 2012-01-31 16:29:26.978071
+    - !!null 
+    - '2012-01-31 16:29:26.978071'
+    - '2012-01-31 16:29:26.978071'
     - QTTPTwuo8gJByqC0sf6D
-    - 
-    - 
-    - "0"
-    - "0"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - QTTPTwuo8gJByqC0sf6D@example.net
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-  - - "4"
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '4'
     - _OLkz8NuGsApbdLxBrmV@example.net
     - 1e2c09a46adefe8e676297c75b3400c8887463b563d5e36ffb8949cb9832e0183fe386682cf9a49a61ee5068c094138f5fc1ee654889346f9761b2c082f339d2
     - UdkqYNrsymEtWAHM6Myd
-    - 
-    - 2012-01-31 21:34:00.799078
-    - 2012-01-31 21:34:00.799078
+    - !!null 
+    - '2012-01-31 21:34:00.799078'
+    - '2012-01-31 21:34:00.799078'
     - _OLkz8NuGsApbdLxBrmV
-    - 
-    - 
-    - "0"
-    - "0"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - _OLkz8NuGsApbdLxBrmV@example.net
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-  - - "6"
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '6'
     - L0OByq5POgHMYjTZOMwC@example.net
     - dc556052229ac0a55816b50d63a9e8be49f57cd1b53fa348eae105c013238e5ad024c72b9f5a1c5161c816e70d99015d650da4e01c632d304d6fb287cab7e15d
     - TKYqfayg4FafxpxH6gtN
-    - 
-    - 2012-02-01 07:01:36.641991
-    - 2012-02-01 07:01:36.641991
+    - !!null 
+    - '2012-02-01 07:01:36.641991'
+    - '2012-02-01 07:01:36.641991'
     - L0OByq5POgHMYjTZOMwC
-    - 
-    - 
-    - "0"
-    - "0"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - L0OByq5POgHMYjTZOMwC@example.net
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-  - - "7"
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '7'
     - AYAiAZOujMP_UKFUttlC@example.net
     - e3f3e92cde742eb68607d09af15b922f9de68524ae6ecf0f0eaa13053311a7d921cd5a4136e42a20aacf42378cd924db9adbde6a896fb87b73177673a40e732b
     - gKKLxP67xNe9NTPJxHUU
-    - 
-    - 2012-02-02 23:37:44.243463
-    - 2012-02-02 23:37:44.243463
+    - !!null 
+    - '2012-02-02 23:37:44.243463'
+    - '2012-02-02 23:37:44.243463'
     - AYAiAZOujMP_UKFUttlC
-    - 
-    - 
-    - "0"
-    - "0"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - AYAiAZOujMP_UKFUttlC@example.net
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-  - - "9"
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '9'
     - xR-0MxUnyR2fD16LkoeN@example.net
     - 83cfc479ac0057c74cb95986e91950e5022f17913451610935a8e8ab828df49c72a7d4248d4faaa44c8f032cc578dde07ee0a6f0e1ee7ceca9f59fd53fa8b0b1
     - tjnEt2KV4nf7j6xAcGT3
-    - 
-    - 2012-02-02 23:53:10.939665
-    - 2012-02-02 23:53:10.939665
+    - !!null 
+    - '2012-02-02 23:53:10.939665'
+    - '2012-02-02 23:53:10.939665'
     - xR-0MxUnyR2fD16LkoeN
-    - 
-    - 
-    - "0"
-    - "0"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - xR-0MxUnyR2fD16LkoeN@example.net
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-  - - "10"
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '10'
     - EUCFVWuXDIN11JnHs01l@example.net
     - c14c0333bca5fb3f93c61e99f9bc50c6354ee17885cb9066e117009731f5d05e236c8d08aa1f4af8bd4f035463beb5d0e88eae52f0390bf8297215ca1c4d6384
     - VaTiTZGZCawoLvgdfNW2
-    - 
-    - 2012-02-03 00:53:30.080636
-    - 2012-02-03 00:53:30.080636
+    - !!null 
+    - '2012-02-03 00:53:30.080636'
+    - '2012-02-03 00:53:30.080636'
     - EUCFVWuXDIN11JnHs01l
-    - 
-    - 
-    - "0"
-    - "0"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - EUCFVWuXDIN11JnHs01l@example.net
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-  - - "11"
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '11'
     - -uQGNrAjvdB_E2kzHltk@example.net
     - 50efbc4ddbffe4d2a815ca9168a5eefa8ba6a28825e150084a471ace52b8d850f543b2c742c801b39a1ba0770bf550bc6e3070091390a50ac9dbf97b4f9151dc
     - k4Toee1ofPYxygjaxJcK
-    - 
-    - 2012-02-03 18:37:04.295281
-    - 2012-02-03 18:37:04.295281
+    - !!null 
+    - '2012-02-03 18:37:04.295281'
+    - '2012-02-03 18:37:04.295281'
     - -uQGNrAjvdB_E2kzHltk
-    - 
-    - 
-    - "0"
-    - "0"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - -uQGNrAjvdB_E2kzHltk@example.net
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-  - - "12"
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '12'
     - D2U_VkLdYXUYtKO7GRUQ@example.net
     - ebabe1f010b4b38d79232df8dba390c3574bcb7953e8c5df7e4e1bde4e144b001dc51bd8dfd57522962df00b49ab0879404df8202c461faa09d8a399cce88c85
     - qmPWDDFPLexcCFTVH5DJ
-    - 
-    - 2012-02-03 19:02:11.401045
-    - 2012-02-03 19:02:11.401045
+    - !!null 
+    - '2012-02-03 19:02:11.401045'
+    - '2012-02-03 19:02:11.401045'
     - D2U_VkLdYXUYtKO7GRUQ
-    - 
-    - 
-    - "0"
-    - "0"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - D2U_VkLdYXUYtKO7GRUQ@example.net
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-  - - "13"
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '13'
     - gbMt1o-9G5vgDZmm6IFO@example.net
     - 82c32bc27396d02c42b7ac61d973160544849dd791cfe5a7d3991daa94f16557a12f29dad24a775b982716b0070b257f1ed421bf9892ad7fba3871034a685c85
     - G7vnwkTqtsnBEBwR2Tnv
-    - 
-    - 2012-02-04 03:52:02.949141
-    - 2012-02-04 03:52:02.949141
+    - !!null 
+    - '2012-02-04 03:52:02.949141'
+    - '2012-02-04 03:52:02.949141'
     - gbMt1o-9G5vgDZmm6IFO
-    - 
-    - 
-    - "0"
-    - "0"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - gbMt1o-9G5vgDZmm6IFO@example.net
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-  - - "14"
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '14'
     - axiOsGdAlXmuYPx1kCBs@example.net
     - 6623c7824ce9a155e7cdcbbdb5a5beb336beae11d876ffcb5d25373e2102e3d039fefb1666cd77b4b2469683a145798a3ed8847dcef8d3c1ee1143d2efce8cef
     - UNN9kxqox6x46qfBqpwU
-    - 
-    - 2012-02-07 05:53:28.409369
-    - 2012-02-07 05:53:28.409369
+    - !!null 
+    - '2012-02-07 05:53:28.409369'
+    - '2012-02-07 05:53:28.409369'
     - axiOsGdAlXmuYPx1kCBs
-    - 
-    - 
-    - "0"
-    - "0"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - axiOsGdAlXmuYPx1kCBs@example.net
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-  - - "15"
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '15'
     - j8TYpo3SkREL3tQMZX09@example.net
     - 11d9ef3e2817056ef7375e856fb638a91f06e7190cf6249bd32fdfa11a548ffca8f77a31523c750a2f5f2dbe25c038292c3b9e77e986592694765036bd263db9
     - pGJqoeqerPnbM1p32HSW
-    - 
-    - 2012-02-08 00:56:20.713169
-    - 2012-02-08 00:56:20.713169
+    - !!null 
+    - '2012-02-08 00:56:20.713169'
+    - '2012-02-08 00:56:20.713169'
     - j8TYpo3SkREL3tQMZX09
-    - 
-    - 
-    - "0"
-    - "0"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - j8TYpo3SkREL3tQMZX09@example.net
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-  - - "16"
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '16'
     - w-XYRDkOnKL-Fnskv4Xx@example.net
     - ca318136d83e51f6c8ff3d184df57868cc0d8f642834026e018c94fec0307c002742d2679d182dfac1dda7cfd1026eedd2dbed6fe30ea1724e17c0abaef8eb71
     - xfvzXRxnpqCVGm1mYjy4
-    - 
-    - 2012-02-08 01:01:44.707584
-    - 2012-02-08 01:01:44.707584
+    - !!null 
+    - '2012-02-08 01:01:44.707584'
+    - '2012-02-08 01:01:44.707584'
     - w-XYRDkOnKL-Fnskv4Xx
-    - 
-    - 
-    - "0"
-    - "0"
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - w-XYRDkOnKL-Fnskv4Xx@example.net
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '17'
+    - fBLMtrMbPikS_QDZyJYd@example.net
+    - e650374ff760cfc4ad5cc4fe5b091fd470d0e710a35e55e9f31d7d6d9f6058306c08880cd56ceb99af5e692ac8ee1fdc26847da56780a4ed56e978dd3886d36e
+    - 1UeuFJcCbvxDp2Yr7TZZ
+    - !!null 
+    - '2012-02-08 05:48:15.882983'
+    - '2012-02-08 05:48:15.882983'
+    - fBLMtrMbPikS_QDZyJYd
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - fBLMtrMbPikS_QDZyJYd@example.net
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '18'
+    - 88pChgisabDx-iudu2Kv@example.net
+    - 40f7c0116dc6382295a0b9f829c753fc1e932c30ae205426e51aae3ba60c9ee76bf251602a2b4336b9043a43e897ac5f88e12c58c5cf8999fc0b4d43a39b681d
+    - vNq3oyzjnNsgMtUbVwDs
+    - !!null 
+    - '2012-02-08 23:02:51.467641'
+    - '2012-02-08 23:02:51.467641'
+    - 88pChgisabDx-iudu2Kv
+    - !!null 
+    - !!null 
+    - '0'
+    - '0'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - 88pChgisabDx-iudu2Kv@example.net
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
 
---- 
-product_groups_products: 
-  columns: 
+---
+product_groups_products:
+  columns:
   - product_id
   - product_group_id
   records: 
-  - - "1"
-    - "1"
-  - - "2"
-    - "1"
-  - - "3"
-    - "1"
-  - - "4"
-    - "1"
-  - - "5"
-    - "1"
+  - - '1'
+    - '1'
+  - - '2'
+    - '1'
+  - - '3'
+    - '1'
+  - - '4'
+    - '1'
+  - - '5'
+    - '1'
 
---- 
-payment_methods: 
-  columns: 
+---
+payment_methods:
+  columns:
   - id
   - type
   - name
@@ -3946,30 +4535,30 @@ payment_methods:
   - deleted_at
   - display_on
   records: 
-  - - "1"
+  - - '1'
     - Gateway::Bogus
     - Bogus Payment
     - This is for testing purposes only.
     - true
     - development
-    - 2012-02-06 20:15:12.181069
-    - 2012-02-06 20:15:12.181069
-    - 
-    - ""
-  - - "2"
+    - '2012-02-06 20:15:12.181069'
+    - '2012-02-06 20:15:12.181069'
+    - !!null 
+    - ''
+  - - '2'
     - Gateway::AuthorizeNet
     - Authorize.net
-    - ""
+    - ''
     - true
     - common
-    - 2012-02-08 03:11:10.753472
-    - 2012-02-08 03:11:10.753472
-    - 
-    - ""
+    - '2012-02-08 03:11:10.753472'
+    - '2012-02-08 03:11:10.753472'
+    - !!null 
+    - ''
 
---- 
-log_entries: 
-  columns: 
+---
+log_entries:
+  columns:
   - id
   - source_id
   - source_type
@@ -3977,54 +4566,40 @@ log_entries:
   - created_at
   - updated_at
   records: 
-  - - "6"
-    - "9"
+  - - '6'
+    - '9'
     - Payment
-    - |
-      --- !ruby/object:ActiveMerchant::Billing::Response
-      params: {}
-      message: ! 'Bogus Gateway: Forced success'
-      success: true
-      test: true
-      authorization: '12345'
-      fraud_review: !!null 
-      avs_result:
-        code: A
-        message: Street address matches, but 5-digit and 9-digit postal code do not match.
-        street_match: Y
-        postal_match: N
-      cvv_result:
-        code: !!null 
-        message: !!null 
-
-    - 2012-02-07 05:03:30.909698
-    - 2012-02-07 05:03:30.909698
-  - - "7"
-    - "9"
+    - ! "--- !ruby/object:ActiveMerchant::Billing::Response\nparams: {}\nmessage:
+      ! 'Bogus Gateway: Forced success'\nsuccess: true\ntest: true\nauthorization:
+      '12345'\nfraud_review: !!null \navs_result:\n  code: A\n  message: Street address
+      matches, but 5-digit and 9-digit postal code do not match.\n  street_match:
+      Y\n  postal_match: N\ncvv_result:\n  code: !!null \n  message: !!null \n"
+    - '2012-02-07 05:03:30.909698'
+    - '2012-02-07 05:03:30.909698'
+  - - '7'
+    - '9'
     - Payment
-    - |
-      --- !ruby/object:ActiveMerchant::Billing::Response
-      params: {}
-      message: ! 'Bogus Gateway: Forced success'
-      success: true
-      test: true
-      authorization: '67890'
-      fraud_review: !!null 
-      avs_result:
-        code: !!null 
-        message: !!null 
-        street_match: !!null 
-        postal_match: !!null 
-      cvv_result:
-        code: !!null 
-        message: !!null 
+    - ! "--- !ruby/object:ActiveMerchant::Billing::Response\nparams: {}\nmessage:
+      ! 'Bogus Gateway: Forced success'\nsuccess: true\ntest: true\nauthorization:
+      '67890'\nfraud_review: !!null \navs_result:\n  code: !!null \n  message: !!null
+      \n  street_match: !!null \n  postal_match: !!null \ncvv_result:\n  code: !!null
+      \n  message: !!null \n"
+    - '2012-02-07 06:59:55.141718'
+    - '2012-02-07 06:59:55.141718'
+  - - '10'
+    - '13'
+    - Payment
+    - ! "--- !ruby/object:ActiveMerchant::Billing::Response\nparams: {}\nmessage:
+      ! 'Bogus Gateway: Forced success'\nsuccess: true\ntest: true\nauthorization:
+      '12345'\nfraud_review: !!null \navs_result:\n  code: A\n  message: Street address
+      matches, but 5-digit and 9-digit postal code do not match.\n  street_match:
+      Y\n  postal_match: N\ncvv_result:\n  code: !!null \n  message: !!null \n"
+    - '2012-02-09 12:26:15.868369'
+    - '2012-02-09 12:26:15.868369'
 
-    - 2012-02-07 06:59:55.141718
-    - 2012-02-07 06:59:55.141718
-
---- 
-tokenized_permissions: 
-  columns: 
+---
+tokenized_permissions:
+  columns:
   - id
   - permissable_id
   - permissable_type
@@ -4032,196 +4607,226 @@ tokenized_permissions:
   - created_at
   - updated_at
   records: 
-  - - "1"
-    - "2"
+  - - '1'
+    - '2'
     - User
     - 504e0c84486d36d7
-    - 2012-01-30 23:44:54.642502
-    - 2012-01-30 23:44:54.642502
-  - - "2"
-    - "1"
+    - '2012-01-30 23:44:54.642502'
+    - '2012-01-30 23:44:54.642502'
+  - - '2'
+    - '1'
     - Order
     - 64e209da4c5a5387
-    - 2012-01-30 23:44:54.680777
-    - 2012-01-30 23:44:54.680777
-  - - "3"
-    - "3"
+    - '2012-01-30 23:44:54.680777'
+    - '2012-01-30 23:44:54.680777'
+  - - '3'
+    - '3'
     - User
     - d8a8253c81c27169
-    - 2012-01-31 16:29:27.049623
-    - 2012-01-31 16:29:27.049623
-  - - "4"
-    - "2"
+    - '2012-01-31 16:29:27.049623'
+    - '2012-01-31 16:29:27.049623'
+  - - '4'
+    - '2'
     - Order
     - e8e1db6240e4bdce
-    - 2012-01-31 16:29:27.078622
-    - 2012-01-31 16:29:27.078622
-  - - "5"
-    - "4"
+    - '2012-01-31 16:29:27.078622'
+    - '2012-01-31 16:29:27.078622'
+  - - '5'
+    - '4'
     - User
     - f0718287b69f73a1
-    - 2012-01-31 21:34:00.814781
-    - 2012-01-31 21:34:00.814781
-  - - "6"
-    - "3"
+    - '2012-01-31 21:34:00.814781'
+    - '2012-01-31 21:34:00.814781'
+  - - '6'
+    - '3'
     - Order
     - 36d75d40f2a63113
-    - 2012-01-31 21:34:00.845663
-    - 2012-01-31 21:34:00.845663
-  - - "7"
-    - "5"
+    - '2012-01-31 21:34:00.845663'
+    - '2012-01-31 21:34:00.845663'
+  - - '7'
+    - '5'
     - User
     - 2a1a5d8dde8d7d97
-    - 2012-02-01 05:17:37.585943
-    - 2012-02-01 05:17:37.585943
-  - - "8"
-    - "4"
+    - '2012-02-01 05:17:37.585943'
+    - '2012-02-01 05:17:37.585943'
+  - - '8'
+    - '4'
     - Order
     - 0d4a76c72f131602
-    - 2012-02-01 05:26:39.853526
-    - 2012-02-01 05:26:39.853526
-  - - "9"
-    - "6"
+    - '2012-02-01 05:26:39.853526'
+    - '2012-02-01 05:26:39.853526'
+  - - '9'
+    - '6'
     - User
     - 82925a298a29cd12
-    - 2012-02-01 07:01:36.712083
-    - 2012-02-01 07:01:36.712083
-  - - "10"
-    - "5"
+    - '2012-02-01 07:01:36.712083'
+    - '2012-02-01 07:01:36.712083'
+  - - '10'
+    - '5'
     - Order
     - 45b3142b0c3c57f7
-    - 2012-02-01 07:01:36.744261
-    - 2012-02-01 07:01:36.744261
-  - - "11"
-    - "7"
+    - '2012-02-01 07:01:36.744261'
+    - '2012-02-01 07:01:36.744261'
+  - - '11'
+    - '7'
     - User
     - 2726e41d875b24a4
-    - 2012-02-02 23:37:44.313083
-    - 2012-02-02 23:37:44.313083
-  - - "12"
-    - "6"
+    - '2012-02-02 23:37:44.313083'
+    - '2012-02-02 23:37:44.313083'
+  - - '12'
+    - '6'
     - Order
     - 1f24ee998d9a7034
-    - 2012-02-02 23:37:44.359545
-    - 2012-02-02 23:37:44.359545
-  - - "13"
-    - "8"
+    - '2012-02-02 23:37:44.359545'
+    - '2012-02-02 23:37:44.359545'
+  - - '13'
+    - '8'
     - User
     - 27eb57f8fd0085cc
-    - 2012-02-02 23:47:58.60268
-    - 2012-02-02 23:47:58.60268
-  - - "14"
-    - "9"
+    - '2012-02-02 23:47:58.60268'
+    - '2012-02-02 23:47:58.60268'
+  - - '14'
+    - '9'
     - User
     - 0dd25b4500c55c0a
-    - 2012-02-02 23:53:10.9564
-    - 2012-02-02 23:53:10.9564
-  - - "15"
-    - "7"
+    - '2012-02-02 23:53:10.9564'
+    - '2012-02-02 23:53:10.9564'
+  - - '15'
+    - '7'
     - Order
     - e4e7799cd8ffd0d3
-    - 2012-02-02 23:53:10.983184
-    - 2012-02-02 23:53:10.983184
-  - - "16"
-    - "10"
+    - '2012-02-02 23:53:10.983184'
+    - '2012-02-02 23:53:10.983184'
+  - - '16'
+    - '10'
     - User
     - d9bcc384b00d4399
-    - 2012-02-03 00:53:30.100765
-    - 2012-02-03 00:53:30.100765
-  - - "17"
-    - "8"
+    - '2012-02-03 00:53:30.100765'
+    - '2012-02-03 00:53:30.100765'
+  - - '17'
+    - '8'
     - Order
     - 632d31af15298c54
-    - 2012-02-03 00:53:30.189435
-    - 2012-02-03 00:53:30.189435
-  - - "18"
-    - "11"
+    - '2012-02-03 00:53:30.189435'
+    - '2012-02-03 00:53:30.189435'
+  - - '18'
+    - '11'
     - User
     - 36bc1e0a4e260b40
-    - 2012-02-03 18:37:04.309443
-    - 2012-02-03 18:37:04.309443
-  - - "19"
-    - "9"
+    - '2012-02-03 18:37:04.309443'
+    - '2012-02-03 18:37:04.309443'
+  - - '19'
+    - '9'
     - Order
     - 65fa94fe57ae62a2
-    - 2012-02-03 18:37:04.337192
-    - 2012-02-03 18:37:04.337192
-  - - "20"
-    - "12"
+    - '2012-02-03 18:37:04.337192'
+    - '2012-02-03 18:37:04.337192'
+  - - '20'
+    - '12'
     - User
     - e03c3cbb264a82f4
-    - 2012-02-03 19:02:11.416283
-    - 2012-02-03 19:02:11.416283
-  - - "21"
-    - "10"
+    - '2012-02-03 19:02:11.416283'
+    - '2012-02-03 19:02:11.416283'
+  - - '21'
+    - '10'
     - Order
     - 58e8d9e2400a08a9
-    - 2012-02-03 19:02:11.447155
-    - 2012-02-03 19:02:11.447155
-  - - "22"
-    - "13"
+    - '2012-02-03 19:02:11.447155'
+    - '2012-02-03 19:02:11.447155'
+  - - '22'
+    - '13'
     - User
     - a45980d43779308d
-    - 2012-02-04 03:52:02.971205
-    - 2012-02-04 03:52:02.971205
-  - - "23"
-    - "11"
+    - '2012-02-04 03:52:02.971205'
+    - '2012-02-04 03:52:02.971205'
+  - - '23'
+    - '11'
     - Order
     - 064db967084c2f23
-    - 2012-02-04 03:52:03.061222
-    - 2012-02-04 03:52:03.061222
-  - - "24"
-    - "12"
+    - '2012-02-04 03:52:03.061222'
+    - '2012-02-04 03:52:03.061222'
+  - - '24'
+    - '12'
     - Order
     - daf49623beaab1f6
-    - 2012-02-06 20:12:51.207851
-    - 2012-02-06 20:12:51.207851
-  - - "25"
-    - "13"
+    - '2012-02-06 20:12:51.207851'
+    - '2012-02-06 20:12:51.207851'
+  - - '25'
+    - '13'
     - Order
     - 98587dfdf3d49fa1
-    - 2012-02-07 05:11:23.998615
-    - 2012-02-07 05:11:23.998615
-  - - "26"
-    - "14"
+    - '2012-02-07 05:11:23.998615'
+    - '2012-02-07 05:11:23.998615'
+  - - '26'
+    - '14'
     - User
     - 793dbca93497b3d1
-    - 2012-02-07 05:53:28.485503
-    - 2012-02-07 05:53:28.485503
-  - - "27"
-    - "14"
+    - '2012-02-07 05:53:28.485503'
+    - '2012-02-07 05:53:28.485503'
+  - - '27'
+    - '14'
     - Order
     - 10443d899bfff0b8
-    - 2012-02-07 05:53:28.513736
-    - 2012-02-07 05:53:28.513736
-  - - "28"
-    - "15"
+    - '2012-02-07 05:53:28.513736'
+    - '2012-02-07 05:53:28.513736'
+  - - '28'
+    - '15'
     - User
     - 8e9c37c72c4af272
-    - 2012-02-08 00:56:20.730868
-    - 2012-02-08 00:56:20.730868
-  - - "29"
-    - "15"
+    - '2012-02-08 00:56:20.730868'
+    - '2012-02-08 00:56:20.730868'
+  - - '29'
+    - '15'
     - Order
     - 2dffb9a1fbd30402
-    - 2012-02-08 00:56:20.845216
-    - 2012-02-08 00:56:20.845216
-  - - "30"
-    - "16"
+    - '2012-02-08 00:56:20.845216'
+    - '2012-02-08 00:56:20.845216'
+  - - '30'
+    - '16'
     - User
     - 443f710d1e389a9f
-    - 2012-02-08 01:01:44.726899
-    - 2012-02-08 01:01:44.726899
-  - - "31"
-    - "16"
+    - '2012-02-08 01:01:44.726899'
+    - '2012-02-08 01:01:44.726899'
+  - - '31'
+    - '16'
     - Order
     - 481cee606e7775fb
-    - 2012-02-08 01:01:44.810209
-    - 2012-02-08 01:01:44.810209
+    - '2012-02-08 01:01:44.810209'
+    - '2012-02-08 01:01:44.810209'
+  - - '32'
+    - '17'
+    - User
+    - 5a7e08f5e23929d4
+    - '2012-02-08 05:48:15.906649'
+    - '2012-02-08 05:48:15.906649'
+  - - '33'
+    - '17'
+    - Order
+    - 57d9d1ddec8d4237
+    - '2012-02-08 05:48:15.940571'
+    - '2012-02-08 05:48:15.940571'
+  - - '34'
+    - '18'
+    - Order
+    - d45d582a9d6748b8
+    - '2012-02-08 20:59:29.787711'
+    - '2012-02-08 20:59:29.787711'
+  - - '35'
+    - '18'
+    - User
+    - 314fe95968432947
+    - '2012-02-08 23:02:51.48398'
+    - '2012-02-08 23:02:51.48398'
+  - - '36'
+    - '19'
+    - Order
+    - b305719cd2c5783c
+    - '2012-02-08 23:02:51.589125'
+    - '2012-02-08 23:02:51.589125'
 
---- 
-ad_hoc_option_types: 
-  columns: 
+---
+ad_hoc_option_types:
+  columns:
   - id
   - product_id
   - option_type_id
@@ -4230,66 +4835,66 @@ ad_hoc_option_types:
   - created_at
   - updated_at
   records: 
-  - - "1"
-    - "1"
-    - "2"
-    - 
+  - - '1'
+    - '1'
+    - '2'
+    - !!null 
     - true
-    - 2012-01-29 06:10:09.416151
-    - 2012-01-29 06:10:19.391163
-  - - "2"
-    - "2"
-    - "2"
-    - 
+    - '2012-01-29 06:10:09.416151'
+    - '2012-01-29 06:10:19.391163'
+  - - '2'
+    - '2'
+    - '2'
+    - !!null 
     - true
-    - 2012-01-29 06:13:31.731944
-    - 2012-01-29 06:13:46.193045
-  - - "3"
-    - "2"
-    - "3"
-    - 
+    - '2012-01-29 06:13:31.731944'
+    - '2012-01-29 06:13:46.193045'
+  - - '3'
+    - '2'
+    - '3'
+    - !!null 
     - true
-    - 2012-01-29 06:13:55.368823
-    - 2012-01-29 06:14:07.556722
-  - - "4"
-    - "3"
-    - "1"
-    - 
+    - '2012-01-29 06:13:55.368823'
+    - '2012-01-29 06:14:07.556722'
+  - - '4'
+    - '3'
+    - '1'
+    - !!null 
     - false
-    - 2012-01-29 06:17:04.07385
-    - 2012-01-29 06:17:04.07385
-  - - "5"
-    - "3"
-    - "4"
-    - 
+    - '2012-01-29 06:17:04.07385'
+    - '2012-01-29 06:17:04.07385'
+  - - '5'
+    - '3'
+    - '4'
+    - !!null 
     - true
-    - 2012-01-29 06:17:30.380744
-    - 2012-01-29 06:17:37.620595
-  - - "6"
-    - "3"
-    - "5"
-    - 
+    - '2012-01-29 06:17:30.380744'
+    - '2012-01-29 06:17:37.620595'
+  - - '6'
+    - '3'
+    - '5'
+    - !!null 
     - true
-    - 2012-01-29 06:17:46.874694
-    - 2012-01-29 06:17:53.031259
-  - - "7"
-    - "4"
-    - "3"
-    - 
+    - '2012-01-29 06:17:46.874694'
+    - '2012-01-29 06:17:53.031259'
+  - - '7'
+    - '4'
+    - '3'
+    - !!null 
     - true
-    - 2012-01-29 06:21:50.247378
-    - 2012-01-29 06:22:05.253816
-  - - "8"
-    - "5"
-    - "2"
-    - 
+    - '2012-01-29 06:21:50.247378'
+    - '2012-01-29 06:22:05.253816'
+  - - '8'
+    - '5'
+    - '2'
+    - !!null 
     - true
-    - 2012-01-29 06:23:40.091465
-    - 2012-01-29 06:23:53.418844
+    - '2012-01-29 06:23:40.091465'
+    - '2012-01-29 06:23:53.418844'
 
---- 
-ad_hoc_option_values: 
-  columns: 
+---
+ad_hoc_option_values:
+  columns:
   - id
   - ad_hoc_option_type_id
   - option_value_id
@@ -4298,342 +4903,377 @@ ad_hoc_option_values:
   - updated_at
   - position
   records: 
-  - - "1"
-    - "1"
-    - "5"
-    - "0.00"
-    - 2012-01-29 06:10:09.446425
-    - 2012-01-29 06:10:09.448868
-    - "1"
-  - - "2"
-    - "1"
-    - "6"
-    - "0.00"
-    - 2012-01-29 06:10:09.450951
-    - 2012-01-29 06:10:09.452011
-    - "1"
-  - - "3"
-    - "2"
-    - "5"
-    - "0.00"
-    - 2012-01-29 06:13:31.759311
-    - 2012-01-29 06:13:31.761497
-    - "1"
-  - - "4"
-    - "2"
-    - "6"
-    - "0.00"
-    - 2012-01-29 06:13:31.76331
-    - 2012-01-29 06:13:31.764188
-    - "1"
-  - - "5"
-    - "3"
-    - "7"
-    - "0.00"
-    - 2012-01-29 06:13:55.396109
-    - 2012-01-29 06:13:55.398258
-    - "1"
-  - - "6"
-    - "3"
-    - "8"
-    - "0.00"
-    - 2012-01-29 06:13:55.40002
-    - 2012-01-29 06:13:55.400962
-    - "1"
-  - - "7"
-    - "3"
-    - "9"
-    - "0.00"
-    - 2012-01-29 06:13:55.402378
-    - 2012-01-29 06:13:55.40327
-    - "1"
-  - - "8"
-    - "3"
-    - "10"
-    - "0.00"
-    - 2012-01-29 06:13:55.404716
-    - 2012-01-29 06:13:55.405604
-    - "1"
-  - - "9"
-    - "3"
-    - "11"
-    - "0.00"
-    - 2012-01-29 06:13:55.407024
-    - 2012-01-29 06:13:55.407905
-    - "1"
-  - - "10"
-    - "4"
-    - "1"
-    - "0.00"
-    - 2012-01-29 06:17:04.101383
-    - 2012-01-29 06:17:04.103535
-    - "1"
-  - - "11"
-    - "4"
-    - "2"
-    - "0.00"
-    - 2012-01-29 06:17:04.105385
-    - 2012-01-29 06:17:04.106306
-    - "1"
-  - - "12"
-    - "4"
-    - "3"
-    - "0.00"
-    - 2012-01-29 06:17:04.107723
-    - 2012-01-29 06:17:04.108624
-    - "1"
-  - - "13"
-    - "4"
-    - "4"
-    - "0.00"
-    - 2012-01-29 06:17:04.109978
-    - 2012-01-29 06:17:04.110824
-    - "1"
-  - - "14"
-    - "5"
-    - "12"
-    - "0.00"
-    - 2012-01-29 06:17:30.410487
-    - 2012-01-29 06:17:30.41267
-    - "1"
-  - - "15"
-    - "5"
-    - "13"
-    - "0.00"
-    - 2012-01-29 06:17:30.41436
-    - 2012-01-29 06:17:30.415249
-    - "1"
-  - - "16"
-    - "5"
-    - "14"
-    - "0.00"
-    - 2012-01-29 06:17:30.416625
-    - 2012-01-29 06:17:30.417495
-    - "1"
-  - - "17"
-    - "5"
-    - "15"
-    - "0.00"
-    - 2012-01-29 06:17:30.418869
-    - 2012-01-29 06:17:30.419733
-    - "1"
-  - - "18"
-    - "6"
-    - "16"
-    - "0.00"
-    - 2012-01-29 06:17:46.902372
-    - 2012-01-29 06:17:46.904522
-    - "1"
-  - - "19"
-    - "6"
-    - "17"
-    - "0.00"
-    - 2012-01-29 06:17:46.906162
-    - 2012-01-29 06:17:46.907067
-    - "1"
-  - - "20"
-    - "6"
-    - "18"
-    - "0.00"
-    - 2012-01-29 06:17:46.908465
-    - 2012-01-29 06:17:46.909344
-    - "1"
-  - - "21"
-    - "7"
-    - "7"
-    - "0.00"
-    - 2012-01-29 06:21:50.274634
-    - 2012-01-29 06:21:50.276864
-    - "1"
-  - - "22"
-    - "7"
-    - "8"
-    - "0.00"
-    - 2012-01-29 06:21:50.278808
-    - 2012-01-29 06:21:50.279842
-    - "1"
-  - - "23"
-    - "7"
-    - "9"
-    - "0.00"
-    - 2012-01-29 06:21:50.28133
-    - 2012-01-29 06:21:50.282228
-    - "1"
-  - - "24"
-    - "7"
-    - "10"
-    - "0.00"
-    - 2012-01-29 06:21:50.283637
-    - 2012-01-29 06:21:50.284527
-    - "1"
-  - - "25"
-    - "7"
-    - "11"
-    - "0.00"
-    - 2012-01-29 06:21:50.285938
-    - 2012-01-29 06:21:50.286819
-    - "1"
-  - - "26"
-    - "8"
-    - "5"
-    - "0.00"
-    - 2012-01-29 06:23:40.119066
-    - 2012-01-29 06:23:40.121184
-    - "1"
-  - - "27"
-    - "8"
-    - "6"
-    - "0.00"
-    - 2012-01-29 06:23:40.122946
-    - 2012-01-29 06:23:40.123825
-    - "1"
+  - - '1'
+    - '1'
+    - '5'
+    - '0.00'
+    - '2012-01-29 06:10:09.446425'
+    - '2012-01-29 06:10:09.448868'
+    - '1'
+  - - '2'
+    - '1'
+    - '6'
+    - '0.00'
+    - '2012-01-29 06:10:09.450951'
+    - '2012-01-29 06:10:09.452011'
+    - '1'
+  - - '3'
+    - '2'
+    - '5'
+    - '0.00'
+    - '2012-01-29 06:13:31.759311'
+    - '2012-01-29 06:13:31.761497'
+    - '1'
+  - - '4'
+    - '2'
+    - '6'
+    - '0.00'
+    - '2012-01-29 06:13:31.76331'
+    - '2012-01-29 06:13:31.764188'
+    - '1'
+  - - '5'
+    - '3'
+    - '7'
+    - '0.00'
+    - '2012-01-29 06:13:55.396109'
+    - '2012-01-29 06:13:55.398258'
+    - '1'
+  - - '6'
+    - '3'
+    - '8'
+    - '0.00'
+    - '2012-01-29 06:13:55.40002'
+    - '2012-01-29 06:13:55.400962'
+    - '1'
+  - - '7'
+    - '3'
+    - '9'
+    - '0.00'
+    - '2012-01-29 06:13:55.402378'
+    - '2012-01-29 06:13:55.40327'
+    - '1'
+  - - '8'
+    - '3'
+    - '10'
+    - '0.00'
+    - '2012-01-29 06:13:55.404716'
+    - '2012-01-29 06:13:55.405604'
+    - '1'
+  - - '9'
+    - '3'
+    - '11'
+    - '0.00'
+    - '2012-01-29 06:13:55.407024'
+    - '2012-01-29 06:13:55.407905'
+    - '1'
+  - - '10'
+    - '4'
+    - '1'
+    - '0.00'
+    - '2012-01-29 06:17:04.101383'
+    - '2012-01-29 06:17:04.103535'
+    - '1'
+  - - '11'
+    - '4'
+    - '2'
+    - '0.00'
+    - '2012-01-29 06:17:04.105385'
+    - '2012-01-29 06:17:04.106306'
+    - '1'
+  - - '12'
+    - '4'
+    - '3'
+    - '0.00'
+    - '2012-01-29 06:17:04.107723'
+    - '2012-01-29 06:17:04.108624'
+    - '1'
+  - - '13'
+    - '4'
+    - '4'
+    - '0.00'
+    - '2012-01-29 06:17:04.109978'
+    - '2012-01-29 06:17:04.110824'
+    - '1'
+  - - '14'
+    - '5'
+    - '12'
+    - '0.00'
+    - '2012-01-29 06:17:30.410487'
+    - '2012-01-29 06:17:30.41267'
+    - '1'
+  - - '15'
+    - '5'
+    - '13'
+    - '0.00'
+    - '2012-01-29 06:17:30.41436'
+    - '2012-01-29 06:17:30.415249'
+    - '1'
+  - - '16'
+    - '5'
+    - '14'
+    - '0.00'
+    - '2012-01-29 06:17:30.416625'
+    - '2012-01-29 06:17:30.417495'
+    - '1'
+  - - '17'
+    - '5'
+    - '15'
+    - '0.00'
+    - '2012-01-29 06:17:30.418869'
+    - '2012-01-29 06:17:30.419733'
+    - '1'
+  - - '18'
+    - '6'
+    - '16'
+    - '0.00'
+    - '2012-01-29 06:17:46.902372'
+    - '2012-01-29 06:17:46.904522'
+    - '1'
+  - - '19'
+    - '6'
+    - '17'
+    - '0.00'
+    - '2012-01-29 06:17:46.906162'
+    - '2012-01-29 06:17:46.907067'
+    - '1'
+  - - '20'
+    - '6'
+    - '18'
+    - '0.00'
+    - '2012-01-29 06:17:46.908465'
+    - '2012-01-29 06:17:46.909344'
+    - '1'
+  - - '21'
+    - '7'
+    - '7'
+    - '0.00'
+    - '2012-01-29 06:21:50.274634'
+    - '2012-01-29 06:21:50.276864'
+    - '1'
+  - - '22'
+    - '7'
+    - '8'
+    - '0.00'
+    - '2012-01-29 06:21:50.278808'
+    - '2012-01-29 06:21:50.279842'
+    - '1'
+  - - '23'
+    - '7'
+    - '9'
+    - '0.00'
+    - '2012-01-29 06:21:50.28133'
+    - '2012-01-29 06:21:50.282228'
+    - '1'
+  - - '24'
+    - '7'
+    - '10'
+    - '0.00'
+    - '2012-01-29 06:21:50.283637'
+    - '2012-01-29 06:21:50.284527'
+    - '1'
+  - - '25'
+    - '7'
+    - '11'
+    - '0.00'
+    - '2012-01-29 06:21:50.285938'
+    - '2012-01-29 06:21:50.286819'
+    - '1'
+  - - '26'
+    - '8'
+    - '5'
+    - '0.00'
+    - '2012-01-29 06:23:40.119066'
+    - '2012-01-29 06:23:40.121184'
+    - '1'
+  - - '27'
+    - '8'
+    - '6'
+    - '0.00'
+    - '2012-01-29 06:23:40.122946'
+    - '2012-01-29 06:23:40.123825'
+    - '1'
 
---- 
-ad_hoc_option_values_line_items: 
-  columns: 
+---
+ad_hoc_option_values_line_items:
+  columns:
   - id
   - line_item_id
   - ad_hoc_option_value_id
   - created_at
   - updated_at
   records: 
-  - - "22"
-    - "13"
-    - "10"
-    - 2012-01-31 19:15:49.63029
-    - 2012-01-31 19:15:49.63029
-  - - "23"
-    - "13"
-    - "11"
-    - 2012-01-31 19:15:49.633816
-    - 2012-01-31 19:15:49.633816
-  - - "24"
-    - "13"
-    - "14"
-    - 2012-01-31 19:15:49.634965
-    - 2012-01-31 19:15:49.634965
-  - - "25"
-    - "13"
-    - "18"
-    - 2012-01-31 19:15:49.636184
-    - 2012-01-31 19:15:49.636184
-  - - "27"
-    - "15"
-    - "3"
-    - 2012-01-31 22:19:59.613646
-    - 2012-01-31 22:19:59.613646
-  - - "28"
-    - "15"
-    - "8"
-    - 2012-01-31 22:19:59.615157
-    - 2012-01-31 22:19:59.615157
-  - - "29"
-    - "16"
-    - "25"
-    - 2012-02-01 05:26:40.018704
-    - 2012-02-01 05:26:40.018704
-  - - "30"
-    - "17"
-    - "26"
-    - 2012-02-01 07:01:36.895336
-    - 2012-02-01 07:01:36.895336
-  - - "31"
-    - "18"
-    - "26"
-    - 2012-02-02 23:37:44.509392
-    - 2012-02-02 23:37:44.509392
-  - - "32"
-    - "19"
-    - "26"
-    - 2012-02-02 23:53:11.114395
-    - 2012-02-02 23:53:11.114395
-  - - "33"
-    - "20"
-    - "26"
-    - 2012-02-03 00:53:30.284875
-    - 2012-02-03 00:53:30.284875
-  - - "34"
-    - "21"
-    - "26"
-    - 2012-02-03 18:37:04.473758
-    - 2012-02-03 18:37:04.473758
-  - - "35"
-    - "22"
-    - "26"
-    - 2012-02-03 19:02:11.601649
-    - 2012-02-03 19:02:11.601649
-  - - "36"
-    - "23"
-    - "27"
-    - 2012-02-04 03:52:03.217065
-    - 2012-02-04 03:52:03.217065
-  - - "37"
-    - "24"
-    - "26"
-    - 2012-02-06 20:12:51.359324
-    - 2012-02-06 20:12:51.359324
-  - - "39"
-    - "26"
-    - "10"
-    - 2012-02-07 05:21:34.798478
-    - 2012-02-07 05:21:34.798478
-  - - "40"
-    - "26"
-    - "11"
-    - 2012-02-07 05:21:34.800357
-    - 2012-02-07 05:21:34.800357
-  - - "41"
-    - "26"
-    - "16"
-    - 2012-02-07 05:21:34.801667
-    - 2012-02-07 05:21:34.801667
-  - - "42"
-    - "26"
-    - "18"
-    - 2012-02-07 05:21:34.802984
-    - 2012-02-07 05:21:34.802984
-  - - "43"
-    - "27"
-    - "10"
-    - 2012-02-07 05:53:28.65429
-    - 2012-02-07 05:53:28.65429
-  - - "44"
-    - "27"
-    - "12"
-    - 2012-02-07 05:53:28.656317
-    - 2012-02-07 05:53:28.656317
-  - - "45"
-    - "27"
-    - "13"
-    - 2012-02-07 05:53:28.657465
-    - 2012-02-07 05:53:28.657465
-  - - "46"
-    - "27"
-    - "14"
-    - 2012-02-07 05:53:28.658745
-    - 2012-02-07 05:53:28.658745
-  - - "47"
-    - "27"
-    - "19"
-    - 2012-02-07 05:53:28.660058
-    - 2012-02-07 05:53:28.660058
-  - - "48"
-    - "28"
-    - "27"
-    - 2012-02-07 23:39:51.456968
-    - 2012-02-07 23:39:51.456968
-  - - "49"
-    - "29"
-    - "24"
-    - 2012-02-08 00:56:20.919946
-    - 2012-02-08 00:56:20.919946
-  - - "50"
-    - "30"
-    - "25"
-    - 2012-02-08 01:01:44.958959
-    - 2012-02-08 01:01:44.958959
-  - - "51"
-    - "31"
-    - "26"
-    - 2012-02-08 01:34:15.783288
-    - 2012-02-08 01:34:15.783288
+  - - '22'
+    - '13'
+    - '10'
+    - '2012-01-31 19:15:49.63029'
+    - '2012-01-31 19:15:49.63029'
+  - - '23'
+    - '13'
+    - '11'
+    - '2012-01-31 19:15:49.633816'
+    - '2012-01-31 19:15:49.633816'
+  - - '24'
+    - '13'
+    - '14'
+    - '2012-01-31 19:15:49.634965'
+    - '2012-01-31 19:15:49.634965'
+  - - '25'
+    - '13'
+    - '18'
+    - '2012-01-31 19:15:49.636184'
+    - '2012-01-31 19:15:49.636184'
+  - - '27'
+    - '15'
+    - '3'
+    - '2012-01-31 22:19:59.613646'
+    - '2012-01-31 22:19:59.613646'
+  - - '28'
+    - '15'
+    - '8'
+    - '2012-01-31 22:19:59.615157'
+    - '2012-01-31 22:19:59.615157'
+  - - '29'
+    - '16'
+    - '25'
+    - '2012-02-01 05:26:40.018704'
+    - '2012-02-01 05:26:40.018704'
+  - - '30'
+    - '17'
+    - '26'
+    - '2012-02-01 07:01:36.895336'
+    - '2012-02-01 07:01:36.895336'
+  - - '31'
+    - '18'
+    - '26'
+    - '2012-02-02 23:37:44.509392'
+    - '2012-02-02 23:37:44.509392'
+  - - '32'
+    - '19'
+    - '26'
+    - '2012-02-02 23:53:11.114395'
+    - '2012-02-02 23:53:11.114395'
+  - - '33'
+    - '20'
+    - '26'
+    - '2012-02-03 00:53:30.284875'
+    - '2012-02-03 00:53:30.284875'
+  - - '34'
+    - '21'
+    - '26'
+    - '2012-02-03 18:37:04.473758'
+    - '2012-02-03 18:37:04.473758'
+  - - '35'
+    - '22'
+    - '26'
+    - '2012-02-03 19:02:11.601649'
+    - '2012-02-03 19:02:11.601649'
+  - - '36'
+    - '23'
+    - '27'
+    - '2012-02-04 03:52:03.217065'
+    - '2012-02-04 03:52:03.217065'
+  - - '37'
+    - '24'
+    - '26'
+    - '2012-02-06 20:12:51.359324'
+    - '2012-02-06 20:12:51.359324'
+  - - '39'
+    - '26'
+    - '10'
+    - '2012-02-07 05:21:34.798478'
+    - '2012-02-07 05:21:34.798478'
+  - - '40'
+    - '26'
+    - '11'
+    - '2012-02-07 05:21:34.800357'
+    - '2012-02-07 05:21:34.800357'
+  - - '41'
+    - '26'
+    - '16'
+    - '2012-02-07 05:21:34.801667'
+    - '2012-02-07 05:21:34.801667'
+  - - '42'
+    - '26'
+    - '18'
+    - '2012-02-07 05:21:34.802984'
+    - '2012-02-07 05:21:34.802984'
+  - - '43'
+    - '27'
+    - '10'
+    - '2012-02-07 05:53:28.65429'
+    - '2012-02-07 05:53:28.65429'
+  - - '44'
+    - '27'
+    - '12'
+    - '2012-02-07 05:53:28.656317'
+    - '2012-02-07 05:53:28.656317'
+  - - '45'
+    - '27'
+    - '13'
+    - '2012-02-07 05:53:28.657465'
+    - '2012-02-07 05:53:28.657465'
+  - - '46'
+    - '27'
+    - '14'
+    - '2012-02-07 05:53:28.658745'
+    - '2012-02-07 05:53:28.658745'
+  - - '47'
+    - '27'
+    - '19'
+    - '2012-02-07 05:53:28.660058'
+    - '2012-02-07 05:53:28.660058'
+  - - '48'
+    - '28'
+    - '27'
+    - '2012-02-07 23:39:51.456968'
+    - '2012-02-07 23:39:51.456968'
+  - - '49'
+    - '29'
+    - '24'
+    - '2012-02-08 00:56:20.919946'
+    - '2012-02-08 00:56:20.919946'
+  - - '50'
+    - '30'
+    - '25'
+    - '2012-02-08 01:01:44.958959'
+    - '2012-02-08 01:01:44.958959'
+  - - '51'
+    - '31'
+    - '26'
+    - '2012-02-08 01:34:15.783288'
+    - '2012-02-08 01:34:15.783288'
+  - - '52'
+    - '32'
+    - '23'
+    - '2012-02-08 05:48:16.079224'
+    - '2012-02-08 05:48:16.079224'
+  - - '53'
+    - '33'
+    - '11'
+    - '2012-02-08 20:59:29.952241'
+    - '2012-02-08 20:59:29.952241'
+  - - '54'
+    - '33'
+    - '12'
+    - '2012-02-08 20:59:29.955807'
+    - '2012-02-08 20:59:29.955807'
+  - - '55'
+    - '33'
+    - '13'
+    - '2012-02-08 20:59:29.957081'
+    - '2012-02-08 20:59:29.957081'
+  - - '56'
+    - '33'
+    - '15'
+    - '2012-02-08 20:59:29.958242'
+    - '2012-02-08 20:59:29.958242'
+  - - '57'
+    - '33'
+    - '19'
+    - '2012-02-08 20:59:29.95976'
+    - '2012-02-08 20:59:29.95976'
+  - - '58'
+    - '34'
+    - '24'
+    - '2012-02-08 23:02:51.669922'
+    - '2012-02-08 23:02:51.669922'

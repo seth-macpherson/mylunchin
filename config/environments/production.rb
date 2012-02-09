@@ -9,8 +9,8 @@ Mylunchin::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this) (set to false before deploying)
-  config.serve_static_assets = true
-  puts "config.serve_static_assets: true (should be false)"
+  config.serve_static_assets = false
+  puts "config.serve_static_assets: #{config.serve_static_assets} (should be false)"
 
   # Compress JavaScripts and CSS (defaults: true)
   config.assets.compress = true
