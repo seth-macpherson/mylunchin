@@ -1,60 +1,6 @@
 <% if @product.ad_hoc_option_types && !@product.ad_hoc_option_types.empty? %>
   <% lookup=ActionView::LookupContext.new(ActionController::Base.view_paths, {:formats => [:html]}) %>
-  <!--  
-  <div id="ad_hoc_options" style="overflow: auto;">
-  -->
   <%= "<h4>*#{t(:not_all_combinations_available)}</h4>".html_safe if !@product.ad_hoc_variant_exclusions.empty? %>
-
-
-<!--
-  %ul.plate-variations
-    - plate.variations.each do |v|
-      %li.variation-label
-        %span
-          #{v.label}:
-        %ul
-          - v.selections.each do |s|
-            %li.plate-selection
-              - if v.choose_one
-                %input.radio{:type => "radio", 
-                  :name => "variations[#{v.id}", 
-                  :value => s.name,
-                  :checked => (s.defaulted ? "checked" : nil),
-                  :id => "selection_#{plate.id}_#{s.id}"}
-              - else
-                %input.checkbox{:type => "checkbox", 
-                  :name => "variations[#{v.id}]", 
-                  :value => s.name, 
-                  :checked => (s.defaulted ? "checked" : nil),
-                  :id => "selection_#{plate.id}_#{s.id}"}
-              
-              %label{:for => "selection_#{plate.id}_#{s.id}"}
-                #{s.name}
-              .clear
-              
-              
-                  <%# render a custom partial based on the option type name? %>
-
-                  <%# partial_name = "products/ad_hoc_options/#{ot.name}" %>
-                  <%# if lookup.exists?(partial_name,nil,true) %>
-                    <%#= render :partial => partial_name, :locals => {:option_type=>ahot} %>
-                  <%# else %>
-                    <label><%#= ot.presentation %></label>
-                    <%#= select_tag "ad_hoc_option_values[#{ahot.id}]",
-                      options_for_select(ad_hoc_option_value_options(ahot.option_values)),
-                     :include_blank => 'None', :class => class_str %>
-                  <%# end %>
-                  </li>
-                <%# end %>  <%# each %>
-              </ol>
-
-
-          <%#= check_box_tag "ad_hoc_option_values[#{option_type.id}][]", ah_ov.id.to_s, false, :class => class_str %>
-          <span class="variant-description"><%#= "#{ah_ov.option_value.presentation}"%></span>
-          <%#= radio_button_tag "ad_hoc_option_values[#{option_type.id}][]", v.id, checked, :disabled => !v.in_stock && !Spree::Config[:allow_backorders] %>
-
-  
--->
 
   <ul class="plate-variations">
     <% @product.ad_hoc_option_types.each do |ahot| %>
