@@ -1,9 +1,16 @@
+
 <div data-hook="checkout_payment_step">
   <% unless @order.available_payment_methods.count > 1%>
     <%= hidden_field_tag "order[payments_attributes][][payment_method_id]", @order.available_payment_methods.first.id %>
     <% unless @errors_exist %>
       <div class="box">
         Please provide your credit card information and click 'Save and Continue'.
+        <% if Rails.env == "development" %>
+        <br />
+        TEST_VISA = 4111111111111111
+        <br />
+        CVS = TEST_VISA
+        <% end %>
       </div>
     <% end %>
   <% else %>

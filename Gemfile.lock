@@ -296,6 +296,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   feedzirra
   jquery-rails
+  mail
   pg
   rails (= 3.1.1)
   rmagick

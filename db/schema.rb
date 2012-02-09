@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120208200031) do
+ActiveRecord::Schema.define(:version => 20120209091038) do
 
   create_table "activators", :force => true do |t|
     t.string   "description"
@@ -530,6 +530,10 @@ ActiveRecord::Schema.define(:version => 20120208200031) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "display_on"
+    t.string   "time"
+    t.string   "location"
+    t.string   "deadline"
+    t.boolean  "pickup_only", :default => false
   end
 
   create_table "slots", :force => true do |t|

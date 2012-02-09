@@ -18,6 +18,7 @@ gem 'aws-s3'
 # incomplete - taking too long to implement
 # gem 'spree_schedule_delivery', :path => './vendor/ruby/1.9.1/bundler/gems/spree_schedule_delivery'
 
+gem 'mail'
 gem 'feedzirra'
 
 # Gems used only for assets and not required

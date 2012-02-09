@@ -21,25 +21,51 @@
       <% end%>
     </select>
     <div class="clear"></div>
-    <h5>Choose pick-up from Nora's Table or delivery at one of the locations below</h5>
-    <table border="0" cellspacing="5" cellpadding="5" width="100%" style="font-weight:bold;border:1px solid #CCCCCC; border-collapse:collapse;">
-      <tr>
-        <th>Order by</th>
-        <th colspan="2">Delivered at</th>
-        <th colspan="2">Pick-up at</th>
-      </tr>
-      <% Slot.all.each do |slot| %>
-      <tr bgcolor='<%= cycle("#EFEFEF","#DCDCDC") %>'>
-        <th width="60"><%= slot.order_time %></th>
-        <td width="10">
-          <%= radio_button(:order, :special_instructions, shipping_method[:name] + " at " + Time.at(slot).strftime("%l:%M %p")) %>
-        </td>
-        <td width="200"><%= slot.delivery_time %><%== slot.delivery_location %></td>
-        <td width="10"><%= slot.pickup_time %></td>
-        <td width="200"><%= slot.pickup_location %></td>
-      </tr>
+    <!-- <h5>Choose pick-up from Nora's Table or delivery at one of the locations below</h5> -->
+      <% cutoff = Time.now #parse('2012-2-9 10:20:00 -08:00') %>
+    <ul id="delivered_to">
+      <li>
+          <h3>Delivered To</h3>
+          <div class="line short"></div>
+      </li>
+      <% @order.rate_hash.each do |shipping_method| %>
+      <% if shipping_method[:pickup_only] == false && (shipping_method[:cutoff] > cutoff) %>
+          <li class="slot">
+            <label class="special">
+              <%= radio_button(:order, :shipping_method_id, shipping_method[:id]) %>
+              <%= shipping_method[:time] %> @ <%= shipping_method[:name] %>
+              <%= (" + " + number_to_currency(shipping_method[:cost]) + " taxes") if shipping_method[:cost] > 0 %>
+            </label>
+            <ul class="location explanation">
+              <li><%== shipping_method[:location] %></li>
+              <li>(must order by <%= shipping_method[:deadline] %>)</li>
+            </ul>
+          </li>
+        <% end %>
       <% end %>
-    </table>
+    </ul>
+    <ul id="pickup_from">
+      <li>
+          <h3>Lunch Pick Up</h3>
+          <div class="line short"></div>
+      </li>
+      <% @order.rate_hash.each do |shipping_method| %>
+      <% if shipping_method[:pickup_only] && (shipping_method[:cutoff] > cutoff) %>
+          <li class="slot">
+            <label class="special">
+              <%= radio_button(:order, :shipping_method_id, shipping_method[:id]) %>
+              <%= shipping_method[:time] %> @ <%= shipping_method[:name] %>
+              <%= (" + " + number_to_currency(shipping_method[:cost]) + " taxes") if shipping_method[:cost] > 0 %>
+            </label>
+            <ul class="location explanation">
+              <li><%== shipping_method[:location] %></li>
+              <li>(must order by <%= shipping_method[:deadline] %>)</li>
+            </ul>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+
     <% if Spree::Config[:shipping_instructions] && @order.rate_hash.present? %>
       <p id="minstrs" data-hook>
         <%= form.label :special_instructions, t(:shipping_instructions) %><br />

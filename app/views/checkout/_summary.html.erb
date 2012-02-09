@@ -9,7 +9,7 @@
       <% order.adjustments.eligible.each do |adjustment| %>
       <% next if (adjustment.originator_type == "TaxRate") and (adjustment.amount == 0) %>
         <tr>
-          <td><%= adjustment.label %>: </td>
+          <td>WA Taxes: </td>
           <td><%= number_to_currency adjustment.amount %></td>
         </tr>
       <% end %>

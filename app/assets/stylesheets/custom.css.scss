@@ -136,9 +136,22 @@ $field-width: 320px;
   }
 }
 
-.location {
-  color: #333;
+#delivered_to, #pickup_from {
+  float: left;
+  width: 330px;
+  padding-right: 20px; 
+  color: darken(#888888,10%);
+  li.slot {
+    height: 90px;
+  }
+  ul.location li, h3 {
+    margin: 0 0 0 22px;
+  }
+  label {
+    font-size: 20px;
+  }
 }
+
 /*
 
 @mixin linear-gradient($from, $to) {

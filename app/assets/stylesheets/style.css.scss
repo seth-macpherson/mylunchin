@@ -199,7 +199,7 @@ input, textarea {
   font-style: normal; }
 
 
-.nav, h1, h2, h3, h4, .home_tagline h1, .tagline h1, .over span, .dropcap1, .dropcap2, .bold, .nivo-caption {
+.nav, h1, h2, h3, h4, .home_tagline h1, .tagline h1, .over span, .dropcap1, .dropcap2, .bold, .nivo-caption, label.special {
   font-family: 'LeagueGothicRegular', Helvetica, Arial;
   text-transform: uppercase;
   font-weight: normal; }
@@ -369,7 +369,7 @@ blockquote {
   color: #60b044; 
 }
 
-.red-box, .errorExplanation {
+.red-box, .errorExplanation, .flash.error {
   margin: 20px 0;
   display:block;
   border: 1px solid #CD0A0A;

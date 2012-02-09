@@ -2,9 +2,9 @@ namespace :mylunchin do
   desc "Creates delivery and pickup slots for orders"
   task :slots => :environment do
 
-    waterfront = '<div class="location">Hood River Waterfront:</div>489 Building <span class="hint">(the old United Telephone Services building, new home of Hood Tech), main lobby, northeast entrance</span>'
     waucoma    = '<div class="location">Waucoma Building:</div>Main entrance on Wasco St.'
-    insitu     = '<div class="location">Insitu:</div>The winery building in Bingen, WA'
+    waterfront = '<div class="location">Hood River Waterfront:</div>489 Building <span class="hint">(The old United Telephone Services building, new home of Hood Tech) Main lobby, northeast entrance</span>'
+    insitu     = '<div class="location">Bingen, WA:</div>The Insitu winery building'
 
     slots = Slot.create([{ 
       order_time: '10:00',
