@@ -92,8 +92,12 @@ social/twitter.png: social/twitter-0b2cb6ce4390c0e2e6bb822b82ff1609.png
 table.png: table-640a6d538d894200d7777ae339562d3e.png
 toggle.png: toggle-3829605118aedb90f6795fd26502d68e.png
 twitter_quote.png: twitter_quote-1c7704fa4ca1aff610acdb4a54994061.png
+admin/all.js: admin/all-3d0b10bf529ff1331258abb5b93de503.js
 application.js: application-a461b72ebe4d98f77ed40a89e2f57d78.js
+store/all.js: store/all-78dc0081b8b2c417aed7471475b942f8.js
+admin/all.css: admin/all-dd56873f3a995fd56972f7cfdafbb464.css
 application.css: application-a13240bdefd7b5e2b83dc17c725dfa8d.css
+store/all.css: store/all-7bd1d7210d0d3a72cc37a0e18e57b80f.css
 store/social/facebook_128.png: store/social/facebook_128-187e0f342261054e035a7a424a60c8dc.png
 store/social/facebook_256.png: store/social/facebook_256-a4d64dc27e4f9f739e618dbefdc0414e.png
 store/social/facebook_32.png: store/social/facebook_32-bd2a1d3ccc47b7048f4355ee49efeaa8.png
