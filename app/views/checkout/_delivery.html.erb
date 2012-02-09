@@ -6,10 +6,11 @@
     end_date = start_date + 9.days
   %>
   <div class="tabs" id="choose_pickup" data-hook="shipping_method_inner">
+
     <% if Time.now.hour > cutoff_hour %>
-    <div class="box box-orange">
-      Your lunch order will be available for pickup tomorrow because we are past the today's delivery window of 11:30AM - 2PM.
-    </div>
+      <div class="box box-orange">
+        Your lunch order will be available for pickup tomorrow because we are past the today's delivery window of 11:30AM - 2PM.
+      </div>
     <% end %>
 
     <h3 style="float:left;width:200px">Choose Pickup Date/Time:</h3>

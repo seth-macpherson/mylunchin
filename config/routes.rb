@@ -1,5 +1,12 @@
 Mylunchin::Application.routes.draw do
 
+  resources :slots
+
+  namespace :admin do
+    resources :slots
+  end
+
+
   # root :to => 'home#index'
   match "/about" => "home#about", :as => "about"
   match "/pending" => "home#pending", :as => "pending"

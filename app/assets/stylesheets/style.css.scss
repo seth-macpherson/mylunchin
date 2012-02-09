@@ -360,10 +360,22 @@ blockquote {
   border-color: #ddd;
   color: #666; }
 
-.box-orange {
+.box-orange, .warning {
   border-color: #ffcc99;
   color: #ff9966; }
 
+.box-blue, .notice {
+  border-color: #8add6d;
+  color: #60b044; 
+}
+
+.red-box, .errorExplanation {
+  margin: 20px 0;
+  display:block;
+  border: 1px solid #CD0A0A;
+	line-height: 1.5em;
+	padding: 5px;
+}
 /*========================*/
 /*===  5. Header       ===*/
 /*========================*/
@@ -746,7 +758,7 @@ blockquote {
 .post-image {
   margin-bottom: 15px; }
 
-.blog3 {
+.primary {
   .post-image {
     float: left;
     width: 214px;

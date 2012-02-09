@@ -1,4 +1,11 @@
 <div class="sidebar sidebar_left">
+  <% if @order && !["confirm", "cart"].include?(@order.state) %>
+    <div class="sidebar_item">
+      <div id="checkout-summary" data-hook="checkout_summary_box">
+        <%= render 'checkout/summary', :order => @order %>
+      </div>
+    </div>
+  <% end %>
 <!--
   <div class="sidebar_item">
     <div class="search">
@@ -27,7 +34,7 @@
     </ul>
   </div>
   <div class="sidebar_item">
-    <h5>Custom text</h5>
+    <h5>&nbsp;</h5>
     <!-- 
     <p>You can put any text content here or, if you prefer, another list containing your recent posts, works or useful links.</p>
      -->

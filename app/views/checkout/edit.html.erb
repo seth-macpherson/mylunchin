@@ -1,12 +1,7 @@
-<div id="checkout" data-hook>
-  <!-- <h1><%#= t(:checkout) %></h1> -->
-  <%#= checkout_progress %>
+<div id="checkout" class="relative" data-hook>
+  <h1><%= t(:checkout) %></h1>
+  <%= checkout_progress %>
   <%= render 'shared/error_messages', :target => @order %>
-  <% if @order.state != 'confirm' %>
-    <div id="checkout-summary" data-hook="checkout_summary_box">
-      <%#= render 'summary', :order => @order %>
-    </div>
-  <% end %>
   <%= form_for @order, :url => update_checkout_path(@order.state), :html => { :id => "checkout_form_#{@order.state}", :class => "edit_order" } do |form| %>
     <%= render @order.state, :form => form %>
     <%= submit_tag nil, :id => 'post-final', :style => 'display:none;' %>

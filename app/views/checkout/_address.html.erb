@@ -1,4 +1,6 @@
-  <h3>Billing Address</h3>
+  <div class="box">
+    Please provide your billing information.
+  </div>
   <%= form.fields_for :bill_address do |bill_form| %>
     <input type="hidden" name="order[use_billing]" value="1" />
     <ul>

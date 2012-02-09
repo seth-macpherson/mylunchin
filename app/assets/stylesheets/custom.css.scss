@@ -40,6 +40,11 @@
   font-weight: bold;
 }
 
+#creditcard-image {
+  margin-top: 20px;
+}
+
+
 .tabnav li a {
   font-size: 14px;
 }
@@ -87,10 +92,49 @@ $field-width: 320px;
   		margin-left: 2px;
   		border-width: 1px 1px 1px 3px;
   	}
-    
+  }
+  .cc-expire {
+    width: 160px;
+  }
+  .cc-code {
+    width: 300px;
+    input {
+      width: 130px;
+    }
   }
 }
 
+
+#checkout {
+  ol, li {
+  	list-style-type:none;
+  	padding:0;
+  	margin:0;
+  	}		
+  .breadcrumb {
+    margin-bottom: 20px;
+  	height:2.3em;
+  	border:1px solid #dedede;
+    li {
+      float:left;
+      line-height:2.3em;
+      color:#777;
+      padding-left:.75em;
+      span {
+        background:url(asset-path('crumbs.gif','image')) no-repeat right center;
+    	  color: #ccc;
+        display:block;
+    	  padding:0 15px 0 0;
+      }
+          a:hover, a:focus {
+      	color: #111;
+      }
+    &.current-first span, &.current span {
+      font-weight: bold;
+      color: #111;}
+    }
+  }
+}
 
 /*
 

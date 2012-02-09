@@ -4,40 +4,49 @@
   images   = @product.images 
   product_img_path = images[0].attachment.url(:original)
   @product_properties = ProductProperty.includes(:property).where(:product_id => @product.id)
+  day_of_week = Date::DAYNAMES[Date.today.wday]
 
+  # by default include all items
+  include_item = true
+  
+  if @product.name.downcase.include?("special") && !@product.name.downcase.include?(day_of_week)
+    # exclude Thursday's menu items on Friday, Monday, etc.
+    include_item = false
+  end
 %>
-
-<div class="post relative">
-  <!-- 
-    The use of data-hooks to define where content goes is both powerful(?) and maddening.
-    If you look at the hook "product_images", it has the ability to somehow
-   -->
-  <div class="post-image gallery clearfix">
-    <%= link_to product_img_path, :rel => "gallery[gallery#{product.id}]" do %>
-      <%= image_tag(product_img_path, :height => 120) %>
-    <% end %>
-    <span class="date">
-      <span class="bold">
-        <%= product.created_at.strftime("%b %d") %>
-      </span>
-      <%= product.created_at.year %>
-    </span>
-    <span class="comments-nr">
-      <%= link_to product_img_path, :rel => "gallery_trigger[gallery#{product.id}]" do %>
-        <span class="bold">
-          <%= number_to_currency(product.price, :unit => "$") %>
-        </span>
-        lunch
+<% if include_item %>
+  <div class="post relative">
+    <!-- 
+      The use of data-hooks to define where content goes is both powerful(?) and maddening.
+      If you look at the hook "product_images", it has the ability to somehow
+     -->
+    <div class="post-image gallery clearfix">
+      <%= link_to product_img_path, :rel => "gallery[gallery#{product.id}]" do %>
+        <%= image_tag(product_img_path, :height => 120) %>
       <% end %>
-    </span>
+      <span class="date">
+        <span class="bold">
+          <%= product.created_at.strftime("%b %d") %>
+        </span>
+        <%= product.created_at.year %>
+      </span>
+      <span class="comments-nr">
+        <%= link_to product_img_path, :rel => "gallery_trigger[gallery#{product.id}]" do %>
+          <span class="bold">
+            <%= number_to_currency(product.price, :unit => "$") %>
+          </span>
+          lunch
+        <% end %>
+      </span>
+    </div>
+    <div class="post-entry">
+      <h1 class="title line"><%= product.name %></h1>
+      <div class="divider line short"></div>
+      <p class="plate-description" data-hook="product_description">
+        <%= product_description(@product) rescue t("product_has_no_description") %>
+      </p>
+      <%= render 'products/properties' %>
+      <%= render 'products/cart_form' %>    
+    </div>
   </div>
-  <div class="post-entry">
-    <h1 class="title line"><%= product.name %></h1>
-    <div class="divider line short"></div>
-    <p class="plate-description" data-hook="product_description">
-      <%= product_description(@product) rescue t("product_has_no_description") %>
-    </p>
-    <%= render 'products/properties' %>
-    <%= render 'products/cart_form' %>    
-  </div>
-</div>
+<% end %>

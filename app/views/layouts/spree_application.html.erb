@@ -28,13 +28,12 @@
         </div>
         <div class="inner">
           <%= render :template => "shared/left_sidebar" %>
-            <div class="content content_right blog3">
-              <%= breadcrumbs(@taxon) %>
-              <%= flash_messages %>
-              <%= yield %>
-            </div>
-            <div class="clear"></div>
+          <div class="content content_right primary">
+            <%= breadcrumbs(@taxon) %>
+            <%= flash_messages %>
+            <%= yield %>
           </div>
+          <div class="clear"></div>
         </div>      
       <%= render :template => "layouts/footer" %>
     </div>
