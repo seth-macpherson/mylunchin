@@ -11,8 +11,11 @@
       <% end %>
     </div>
   <% end %>
-
-  <% if @order.available_payment_methods.count > 1 %>
+  <% if @order.available_payment_methods.length == 0 %>
+    <div class="box warning">
+      No payment methods have been setup.  Please contact the administrator.
+    </div>    
+  <% elsif @order.available_payment_methods.length == 1 %>
     <%= hidden_field_tag "order[payments_attributes][][payment_method_id]", @order.available_payment_methods.first.id %>
   <% else %>
     <% @order.available_payment_methods.each do |method| %>
