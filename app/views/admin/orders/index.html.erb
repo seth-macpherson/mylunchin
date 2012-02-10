@@ -4,9 +4,9 @@
 
 <%= render :partial => 'admin/shared/order_sub_menu' %>
 
-<h1><%= t(:listing_orders) %></h1>
+<h1>Open Orders</h1>
 <% content_for :head do %>
-  <style type="text/css" media="screen">
+  <style type="text/css" media="all">
     #listing_orders ul, #listing_orders li {
     	list-style-type:none;
       clear: both;
@@ -28,6 +28,41 @@
     .contact_info, .order_info, .delivery_info {
       width: 33%;
     }
+  </style>
+  <style type="text/css" media="print">
+  @page  { 
+  	margin-left:1mm;
+  	margin-right:1mm;
+  	margin-top:1mm;
+  	margin-bottom:1mm;
+	 }
+
+  body {
+    background: white;
+    font-family:"Trebuchet MS";
+    font-size: 10pt;
+  	color:#000000;
+  }
+
+  #content.with-sidebar {
+    padding-right:0;
+  }
+
+  .footer .bold {
+    width: 100px;
+  }
+  .footer .cell {
+    width: 220px;
+  }
+  #header, #admin-menu, #sub-menu, #search_sidebar,#admin_new_order {
+    display:none;
+    width:0;
+    height:0;
+    margin:0;
+  }
+  #listing_orders {
+    width: 100%;
+  }
   </style>
 <% end %>
 <table class="index" id="listing_orders" data-hook>
@@ -63,16 +98,12 @@
       <td>  
         <table width="100%">
           <% items.each do |item| %>
-            <tr data-hook="order_details_line_item_row">
-              <td class="10%"><%= item.quantity %></td>
-              <td width="90%"><%= item.variant.product.name %> <%= "(" + variant_options(item.variant) + ")" unless item.variant .option_values.empty? %></td>
+            <tr>
+              <td class="qty"><%=item.quantity%></td>
+              <td width="300"><%=item.variant.product.name%> <%= "(" + variant_options(item.variant) + ")" unless item.variant.option_values.empty? %>
+                <%= render :partial => 'shared/additional_line_item_fields', :locals=>{:item => item} %>
+              </td>
             </tr>
-            <% items.each do |item| %>
-              <tr>
-                <td class="10%"><%= item.quantity %></td>
-                <td width="90%"><%= item.variant.product.name %> <%= "(" + variant_options(item.variant) + ")" unless item.variant .option_values.empty? %></td>
-              </tr>
-            <% end %>
           <% end %>
           
         </table>
@@ -86,7 +117,7 @@
 
 
 <% content_for :sidebar do %>
-  <div class="box" data-hook="admin_orders_index_search">
+  <div id="search_sidebar" class="box" data-hook="admin_orders_index_search">
     <h3><%= t(:search) %></h3>
     <%= form_for [:admin, @search] do |f| %>
       <%= label_tag nil, t(:date_range) %><br />
