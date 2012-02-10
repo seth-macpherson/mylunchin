@@ -6,8 +6,6 @@
     <li><%= link_to "Seasonal", seasonal_url %></li> -->
     <% if current_user %>
     <li><%= link_to "Sign out", destroy_user_session_path %></li>
-    <% else %>
-    <li><%= link_to "Sign in", user_session_path %></li>
     <% end %>
     <li id="link-to-cart" data-hook><%= link_to_cart('Lunch box ') %></li>
   </ul>

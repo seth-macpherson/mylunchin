@@ -11,7 +11,7 @@ Order Summary
 ============================================================
 Subtotal: <%= number_to_currency @order.item_total %>
 <% @order.adjustments.each do |adjustment| %>
-<%= "WA Taxes: #{number_to_currency adjustment.amount}"%>
+<%= "Taxes: #{number_to_currency adjustment.amount}"%>
 <% end %>
 Order Total: <%= number_to_currency @order.total %>
 

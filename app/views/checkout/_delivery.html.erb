@@ -1,38 +1,43 @@
   <%= javascript_include_tag '/javascripts/jquery-ui-1.8.17.custom.min.js' %>
   <% 
+    current_time = Time.now #parse('2012-2-9 10:00:00 -08:00')
     cutoff_hour = 12
     start_date = Date.today
-    start_date += 1.day if Time.now.hour > cutoff_hour
+    start_date += 1.day if current_time.hour > cutoff_hour
     end_date = start_date + 9.days
   %>
   <div class="tabs" id="choose_pickup" data-hook="shipping_method_inner">
 
-    <% if Time.now.hour > cutoff_hour %>
-      <div class="box box-orange">
-        Your lunch order will be available for pickup tomorrow because we are past the today's delivery window of 11:30AM - 2PM.
+    <h3>Choose Delivery or Pick Up:</h3>
+
+    <% if current_time.hour > cutoff_hour %>
+      <div class="box">
+        Your lunch order will be available for pickup tomorrow because we are past the today's lunch service (11:30AM - 2:00PM).
       </div>
     <% end %>
 
-    <h3 style="float:left;width:200px">Choose Pickup Date/Time:</h3>
+    <!--
+      
     <select id="pickup_date" style="float:left">
-      <% (start_date..end_date).to_a.each do |slot| %>
-        <% case slot.wday when 0, 6 then next end  %>
-        <option><%= slot.to_formatted_s(:long_ordinal) %></option>
-      <% end%>
+      <%# (start_date..end_date).to_a.each do |slot| %>
+        <%# case slot.wday when 0, 6 then next end  %>
+        <option><%#= slot.to_formatted_s(:long_ordinal) %></option>
+      <%# end%>
     </select>
     <div class="clear"></div>
+    -->
     <!-- <h5>Choose pick-up from Nora's Table or delivery at one of the locations below</h5> -->
-      <% cutoff = Time.now #parse('2012-2-9 10:20:00 -08:00') %>
     <ul id="delivered_to">
       <li>
-          <h3>Delivered To</h3>
+          <h3>Lunch Delivery</h3>
           <div class="line short"></div>
       </li>
       <% @order.rate_hash.each do |shipping_method| %>
-      <% if shipping_method[:pickup_only] == false && (shipping_method[:cutoff] > cutoff) %>
-          <li class="slot">
+        <% disable_row = (current_time > shipping_method[:cutoff] && current_time.hour < cutoff_hour) ? true : nil %>
+        <% if shipping_method[:pickup_only] == false %>
+          <li class="slot <%= disable_row.nil? ? '' : 'disabled' %>">
             <label class="special">
-              <%= radio_button(:order, :shipping_method_id, shipping_method[:id]) %>
+              <%= radio_button(:order, :shipping_method_id, shipping_method[:id], :disabled => disable_row ) %>
               <%= shipping_method[:time] %> @ <%= shipping_method[:name] %>
               <%= (" + " + number_to_currency(shipping_method[:cost]) + " taxes") if shipping_method[:cost] > 0 %>
             </label>
@@ -50,10 +55,11 @@
           <div class="line short"></div>
       </li>
       <% @order.rate_hash.each do |shipping_method| %>
-      <% if shipping_method[:pickup_only] && (shipping_method[:cutoff] > cutoff) %>
-          <li class="slot">
+        <% disable_row = (current_time > shipping_method[:cutoff] && current_time.hour < cutoff_hour) ? true : nil %>
+        <% if shipping_method[:pickup_only] %>
+          <li class="slot <%= disable_row.nil? ? '' : 'disabled' %>">
             <label class="special">
-              <%= radio_button(:order, :shipping_method_id, shipping_method[:id]) %>
+              <%= radio_button(:order, :shipping_method_id, shipping_method[:id], :disabled => disable_row ) %>
               <%= shipping_method[:time] %> @ <%= shipping_method[:name] %>
               <%= (" + " + number_to_currency(shipping_method[:cost]) + " taxes") if shipping_method[:cost] > 0 %>
             </label>

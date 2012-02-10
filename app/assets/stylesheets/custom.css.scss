@@ -144,6 +144,9 @@ $field-width: 320px;
   li.slot {
     height: 90px;
   }
+  li.disabled {
+    color: #EFEFEF;
+  }
   ul.location li, h3 {
     margin: 0 0 0 22px;
   }
