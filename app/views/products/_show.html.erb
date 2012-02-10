@@ -5,7 +5,7 @@
   begin
     product_img_path = images[0].attachment.url(:original)
   rescue
-    product_img_path = "http://s3.amazonaws.com/mylunchin-com/assets/placeholder-image.jpg?AWSAccessKeyId=ASIAIHWVGZKOZK663JSQ&Expires=1328848385&Signature=nukJOnCN8Sb9dzDGjP1HMTD9HXE%3D&x-amz-security-token=AQoDYXdzEM3//////////wEakAJ7OQA5uL5jZTu5Q5zRKJwfBDHooQ9GVJRm%2BK4Eu0Tgq2hwT5dNJMjCXqJTIkIDkfETZt9YQBdHdbV0Y3hPjakkMkipvuRpKULoMz9Ju2CuXpzCOG/VHJlDVMq0dT65fREDo2CQreNkN0ld43GkNjXaOj/DasvOgEOIsOeGaREISp7%2BhF7rYW3trnC52Lvt68G%2BFz%2BAxmSGuVBkuvKeMiKbN8hjdlzQRiTjPJJTwYTrXUvb/yOfMIN3ccyY9qezNTknQgwdm6WVfa1lrNToPLytFsEufNEr9pGxTHroxt%2BBPddJjLOnE/RGbOiZ7L3BCAfs462iepRjER7e%2Bz6mkX2VWyqxS4mqe0hR7ZBz2WfDaCDxsdL5BA%3D%3D"
+    product_img_path = "http://s3.amazonaws.com/mylunchin-com/assets/placeholder-image.jpg"
   end
   @product_properties = ProductProperty.includes(:property).where(:product_id => @product.id)
   day_of_week = Date::DAYNAMES[Date.today.wday].downcase
