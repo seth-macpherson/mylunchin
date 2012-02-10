@@ -10,11 +10,21 @@
     #listing_orders ul, #listing_orders li {
     	list-style-type:none;
       clear: both;
+      margin: 1px 0;
     }
+    #listing_orders h3 {
+      border-bottom: 1px solid #DDDDDD;
+    }
+    table.index td{
+      padding: 3px;
+      page-break-inside:avoid;
+      border: none;
+    }
+    
     p.field, p.field_value {
       float: left;
       clear: none;
-      width: 70px;
+      width: 50px;
       font-size: 1.2em;
       line-height: 1.25;
     }
@@ -25,23 +35,28 @@
     .clear {
       clear: both;
     }
-    .contact_info, .order_info, .delivery_info {
-      width: 33%;
+    .contact_info {
+      width: 25%;
+    }
+    .order_info{
+      width: 40%;
+    } 
+    .delivery_info{
+      width: 35%;
     }
   </style>
   <style type="text/css" media="print">
-  @page  { 
-  	margin-left:1mm;
-  	margin-right:1mm;
-  	margin-top:1mm;
-  	margin-bottom:1mm;
-	 }
-
   body {
     background: white;
     font-family:"Trebuchet MS";
     font-size: 10pt;
   	color:#000000;
+    margin: 0;
+    padding: 0;
+  }
+
+  h3 {
+    font-size: 12pt;
   }
 
   #content.with-sidebar {
@@ -68,7 +83,7 @@
 <table class="index" id="listing_orders" data-hook>
   <tr data-hook="admin_orders_index_headers">
     <th class="contact_info"><%= sort_link @search, :email,        "Contact Info" %>
-    <th class="order_info"><%= sort_link @search, :number,       "Order" %>
+      <th class="order_info"><%= sort_link @search, :number,       "Qty | Item Description" %>
     <th class="delivery_info"><%= sort_link @search, :number,       "Delivery/Pickup" %>
   </tr>
   <% @orders.each do |order| %>
@@ -79,12 +94,7 @@
       <td>
         <ul>
           <li>
-            <p class="field">
-              Name:
-            </p>
-            <p class="field_value">
-              <%= address.firstname + ' ' + address.lastname %>
-            </p>
+            <h3><%= address.firstname + ' ' + address.lastname %></h3>
           </li>
           <li>
             <p class="field">
@@ -94,21 +104,24 @@
               <%= number_to_phone(address.phone) %>
             </p>
           </li>
+          <li><%= mail_to order.email, "Send Email" %></li>
+          <li><%= link_to order.number, admin_order_path(order) %></li>
         </ul>
       <td>  
         <table width="100%">
           <% items.each do |item| %>
             <tr>
               <td class="qty"><%=item.quantity%></td>
-              <td width="300"><%=item.variant.product.name%> <%= "(" + variant_options(item.variant) + ")" unless item.variant.option_values.empty? %>
+              <td width="300"><h3><%= item.variant.product.name%></h3> <%= "(" + variant_options(item.variant) + ")" unless item.variant.option_values.empty? %>
                 <%= render :partial => 'shared/additional_line_item_fields', :locals=>{:item => item} %>
               </td>
             </tr>
           <% end %>
-          
         </table>
       </td>
-      <td></td>
+      <td>
+        <h3 style="margin-top: 3px"><%= shipping.time + ' @ ' + shipping.name %></h3>
+      </td>
     </tr>
   <% end %>
   </tbody>
