@@ -11,7 +11,7 @@ class Admin::MailMethodsController < Admin::ResourceController
   rescue Exception => e
     flash[:error] = t("admin.mail_methods.testmail.error") % {:e => e}
   ensure
-    respond_with(@mail_method) { |format| format.html { redirect_to :back } }
+    respond_with(@mail_method) { |format| format.html { redirect_to admin_mail_methods_path } }
   end
 
   private
