@@ -1,5 +1,4 @@
-class Admin::MailMethodsController < Admin::ResourceController
-  after_filter :initialize_mail_settings
+Admin::CheckoutController.class_eval do
 
   def testmail
     @mail_method = MailMethod.find(params[:id])
@@ -14,8 +13,4 @@ class Admin::MailMethodsController < Admin::ResourceController
     respond_with(@mail_method) { |format| format.html { redirect_to admin_mail_methods_path } }
   end
 
-  private
-  def initialize_mail_settings
-    Spree::MailSettings.init
-  end
 end
