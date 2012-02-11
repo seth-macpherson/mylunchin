@@ -1,4 +1,4 @@
-Admin::CheckoutController.class_eval do
+Admin::MailMethodsController.class_eval do
 
   def testmail
     @mail_method = MailMethod.find(params[:id])
