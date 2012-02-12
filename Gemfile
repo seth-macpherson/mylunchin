@@ -2,6 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem 'unicorn'
+# gem 'rack-cache'
+# gem 'dalli'
 
 gem 'aws-sdk'
 gem 'pg'
