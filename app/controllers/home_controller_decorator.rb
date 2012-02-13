@@ -10,7 +10,7 @@ HomeController.class_eval do
     # end
     if Rails.env.production? && request.env['HTTP_HOST'] != APP_DOMAIN
       # HTTP 301 is a "permanent" redirect
-      redirect_to "http://#{APP_DOMAIN}/?routed", :status => 301
+      redirect_to "http://#{APP_DOMAIN}", :status => 301
     end
   end
 
