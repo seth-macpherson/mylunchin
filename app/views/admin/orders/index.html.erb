@@ -1,4 +1,3 @@
-<% require 'chronic' %>
 <div class='toolbar order-links'>
   <%= button_link_to t(:new_order), new_admin_order_url, :icon => 'add', :id => 'admin_new_order' %>
 </div>
@@ -93,7 +92,6 @@
   </tr>
   
   <% 
-  # @orders = @orders.sort_by(:)
     @orders.each do |order| %>
     <% address = order.bill_address %>
     <% shipping = order.shipping_method %>

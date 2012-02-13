@@ -5,13 +5,13 @@ HomeController.class_eval do
   APP_DOMAIN = 'www.mylunchin.com'
 
   def ensure_domain
-    if Rails.env.production? && request.env['HTTP_HOST'] != "mylunchin.herokuapp.com"
-      render :splash, :layout => false
-    end
-    # if Rails.env.production? && request.env['HTTP_HOST'] != APP_DOMAIN
-    #   # HTTP 301 is a "permanent" redirect
-    #   redirect_to "http://#{APP_DOMAIN}/?routed", :status => 301
+    # if Rails.env.production? && request.env['HTTP_HOST'] != "mylunchin.herokuapp.com"
+    #   render :splash, :layout => false
     # end
+    if Rails.env.production? && request.env['HTTP_HOST'] != APP_DOMAIN
+      # HTTP 301 is a "permanent" redirect
+      redirect_to "http://#{APP_DOMAIN}/?routed", :status => 301
+    end
   end
 
   def about
