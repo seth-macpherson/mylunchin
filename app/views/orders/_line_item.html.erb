@@ -35,7 +35,7 @@
   
   <td data-hook="cart_item_delete">
     <% unless read_only %>
-      <%= link_to '#', :class => 'button classy danger minibtn', :id => "delete_#{dom_id(line_item)}", :confirm => "Remove this lunch?" do %>
+      <%= link_to '#', :class => 'button classy danger delete minibtn', :id => "delete_#{dom_id(line_item)}", :confirm => "Remove this lunch?" do %>
         <span>x</span>
       <% end %>
     <% end %>
