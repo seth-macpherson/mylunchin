@@ -2,13 +2,15 @@
   <% 
     require 'chronic'
     # Chronic.time_class = Time.zone
-    @current_time  = Chronic.parse('now')
-    @cutoff_time   = Chronic.parse("today #{@order.rate_hash.last[:shipping_method][:deadline]}")
+    last_pickup   = ShippingMethod.maximum('deadline')
+    last_pickup   += last_pickup.downcase.include?("pm") ? '' : 'PM'
+    @current_time = Chronic.parse('now')
+    @cutoff_time  = Chronic.parse(last_pickup,:now => @current_time)
     @delivery_date = case 
                       when [6,0].include?(@current_time.wday) || (@current_time.wday == 5 && @current_time > @cutoff_time)
                         then Chronic.parse('monday') 
-                      when @current_time.to_i > @cutoff_time.to_i
-                        then Chronic.parse('tomorrow midnight')
+                      when @current_time > @cutoff_time
+                        then @current_time + 1.day
                       else @current_time
                     end
     weekend       = [6,0].include?(@current_time.wday)                    
@@ -29,12 +31,8 @@
         <h3>Pick Up and Delivery options available for <a href="#" title="Next delivery date" onclick="return false"><%= @delivery_day %>:</a></h3>
       <% else %>
         <h3>
-          Your lunch order will be available for pickup or delivery <a href="#" onclick="return false"><%= @delivery_day %></a>.<br />
-          <% if weekend %>
-          We don't currently offer lunch service over the weekend.
-          <% else %>
-          Ordering from today's menu ended at <%= @order.rate_hash.last[:shipping_method][:deadline] %>. 
-          <% end%>
+          Your lunch order is <span class="error">unavailable</span> for pickup or delivery <a href="#" onclick="return false" class="error">Today</a>.<br />
+          But you are welcome to place your order for <%= @delivery_day %>
         </h3>
       <% end %>
     </div>
