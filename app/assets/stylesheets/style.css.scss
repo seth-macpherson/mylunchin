@@ -252,12 +252,12 @@ h6 {
   float: left;
   font-size: 40px;
   line-height: 40px;
-  margin: 0 8px 0 0; }
+  margin: 0 15px 0 11px; }
 
 .dropcap2 {
   width: 40px;
   height: 40px;
-  background: url(../img/dropcap.png) no-repeat;
+  background: url(asset-path('dropcap.png','image')) no-repeat;
   color: #fff;
   font-size: 30px;
   text-align: center;
