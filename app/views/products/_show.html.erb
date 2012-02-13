@@ -15,7 +15,7 @@
   
   if @product.name.downcase.include?("special") && !@product.name.downcase.include?(day_of_week)
     # exclude Thursday's menu items on Friday, Monday, etc.
-    include_item = false
+    # include_item = false
   end
 %>
 <% if include_item %>
@@ -28,13 +28,15 @@
       <%= link_to product_img_path, :rel => "gallery[gallery#{product.id}]" do %>
         <%= image_tag(product_img_path, :height => 120) %>
       <% end %>
+      <!-- 
       <span class="date">
         <span class="bold">
           <%= product.created_at.strftime("%b %d") %>
         </span>
         <%= product.created_at.year %>
       </span>
-      <span class="comments-nr">
+       -->
+      <span class="comments-nr wide">
         <%= link_to product_img_path, :rel => "gallery_trigger[gallery#{product.id}]" do %>
           <span class="bold">
             <%= number_to_currency(product.price, :unit => "$") %>

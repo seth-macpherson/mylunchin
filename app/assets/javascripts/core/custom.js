@@ -262,4 +262,13 @@ jQuery(document).ready(function () {
 
 	prettyPhoto();
 
+	/*
+	 * ---------------------------------------------------------------- 
+	 *  Hide flash messages when notice, or info
+	 * ----------------------------------------------------------------  
+	 */
+
+   setTimeout(function(){
+     $('.info, .notice').hide('slow');
+   },4000);
 });

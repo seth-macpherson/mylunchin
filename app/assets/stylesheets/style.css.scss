@@ -350,11 +350,17 @@ blockquote {
   background-color: #555;
   color: #fff; }
 
-.box {
+.box, .flash {
   padding: 19px 16px;
   border: 1px solid #ddd;
   text-align: center;
-  margin-bottom: 30px; }
+  margin-bottom: 30px; 
+  h3 {
+    margin-bottom: 0;} }
+
+.flash {
+  font-size: 26px;
+  line-height: 26px; }
 
 .box-grey {
   border-color: #ddd;
@@ -364,10 +370,14 @@ blockquote {
   border-color: #D16F4E;
   color: #D16F4E; }
 
-.box-blue, .notice {
-  border-color: #8add6d;
-  color: #8add6d; 
+.box-blue, .info {
+  border-color: #0770A0;
+  color: #0770A0; 
 }
+.box-green, .notice {
+  color: #8add6d;
+}
+
 
 .red-box, .errorExplanation, .flash.error {
   margin: 20px 0;
@@ -463,6 +473,8 @@ blockquote {
   font-size: 32px;
   line-height: 40px;
   color: #888;
+  span {
+    color: #444; }
   a {
     color: #d16f4e;
     &:hover {
@@ -768,7 +780,9 @@ blockquote {
   .date {
     width: 106px; }
   .comments-nr {
-    width: 105px; }
+    width: 105px; 
+    &.wide {
+      width: 210px;}}
   .post-entry {
     width: 418px;
     h1 {

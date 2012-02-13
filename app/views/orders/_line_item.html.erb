@@ -1,3 +1,4 @@
+<% read_only ||= false %>
 <tr class="<%= cycle('', 'alt') %>">
   <td data-hook="cart_item_image">
     <% if variant.images.length == 0 %>
@@ -7,15 +8,14 @@
     <% end %>
   </td>
   <td data-hook="cart_item_description">
-    <!-- 
-    <h4><%#= link_to variant.product.name, product_path(variant.product) %></h4>
-     -->
     <h4><%= link_to variant.product.name, root_url %></h4>
     <%= variant.options_text %>
-    <% if @order.insufficient_stock_lines.include? line_item %>
-      <span class="out-of-stock">
-        <%= variant.in_stock? ? t(:insufficient_stock, :on_hand => variant.on_hand) : t(:out_of_stock) %><br />
-      </span>
+    <% unless read_only %>
+      <% if @order.insufficient_stock_lines.include? line_item %>
+        <span class="out-of-stock">
+          <%= variant.in_stock? ? t(:insufficient_stock, :on_hand => variant.on_hand) : t(:out_of_stock) %><br />
+        </span>
+      <% end %>
     <% end %>
     <%= truncate(variant.product.description, :length => 100, :omission => "...") %>
   </td>
@@ -23,14 +23,21 @@
     <%= product_price(line_item.variant) %>
   </td>
   <td data-hook="cart_item_quantity">
-    <%= item_form.text_field :quantity, :size => 3, :class => "line_item_quantity" %>
+    <% unless read_only %>
+      <%= item_form.text_field :quantity, :size => 3, :class => "line_item_quantity" %>
+    <% else %>
+      <%= line_item.quantity %>
+    <% end %>
   </td>
-  <td data-hook="cart_item_total">
+  <td data-hook="cart_item_total" align="right">
     <%= format_price(product_price(line_item.variant, :format_as_currency => false) * line_item.quantity) unless line_item.quantity.nil? %>
   </td>
+  
   <td data-hook="cart_item_delete">
-    <%= link_to '#', :class => 'button classy danger minibtn', :id => "delete_#{dom_id(line_item)}", :confirm => "Remove this lunch?" do %>
-      <span>x</span>
+    <% unless read_only %>
+      <%= link_to '#', :class => 'button classy danger minibtn', :id => "delete_#{dom_id(line_item)}", :confirm => "Remove this lunch?" do %>
+        <span>x</span>
+      <% end %>
     <% end %>
   </td>
 </tr>

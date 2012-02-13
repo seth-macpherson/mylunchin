@@ -1,40 +1,33 @@
-<table class="index" data-hook="order_details">
-  <tbody id="line-items" data-hook>
-    <tr data-hook="order_details_line_items_headers">
-      <th><%= t(:item_description) %></th>
-      <th class="price"><%= t(:price) %></th>
-      <th class="qty"><%= t(:qty) %></th>
-      <th class="total"><span><%= t(:total) %></span></th>
+<table class="index" id="cart-detail">
+  <thead>
+    <tr data-hook="cart_items_headers">
+      <th colspan="2"><%= t(:item) %></th>
+      <th><%= t(:price) %></th>
+      <th><%= t(:qty) %></th>
+      <th><%= t(:total) %></th>
     </tr>
-
-    <% @order.line_items.each do |item| %>
-      <tr data-hook="order_details_line_item_row">
-        <td width="300"><%= item.variant.product.name %> <%= "(" + variant_options(item.variant) + ")" unless item.variant .option_values.empty? %></td>
-        <td class="price"><%= number_to_currency item.price %></td>
-        <td class="qty"><%= item.quantity %></td>
-        <td class="total"><span><%= number_to_currency (item.price * item.quantity) %></span></td>
-      </tr>
+  </thead>
+  <tbody id="line_items" data-hook>
+    <% @order.line_items.each do |line_item| %>
+      <%= render 'orders/line_item', :variant => line_item.variant, :line_item => line_item, :read_only => true %>
     <% end %>
-  </tbody>
-  <tbody id="subtotal" data-hook="order_details_subtotal">
-    <tr class="total" id="subtotal-row">
-      <td colspan="3"><b><%= t(:subtotal) %>:</b></td>
-      <td class="total"><span><%= number_to_currency @order.item_total %></span></td>
-    </tr>
-  </tbody>
-  <tbody id="order-charges" data-hook="order_details_adjustments">
-    <% @order.adjustments.eligible.each do |adjustment| %>
-    <% next if (adjustment.originator_type == "TaxRate") and (adjustment.amount == 0) %>
-      <tr class="total">
-        <td colspan="3"><strong><%= adjustment.label %></strong></td>
-        <td class="total"><span><%= number_to_currency adjustment.amount %></span></td>
-      </tr>
-    <% end %>
-  </tbody>
-  <tbody id="order-total" data-hook="order_details_total">
-    <tr class="total">
-      <td colspan="3"><b><%= t(:order_total) %>:</b></td>
-      <td class="total"><span id="order_total"><%= number_to_currency @order.total %></span></td>
-    </tr>
   </tbody>
 </table>
+<div class="divider line short"></div>
+<div id="subtotal" data-hook>
+  <h3><%= "#{t(:subtotal)}: #{order_price(@order)}" %></h3>
+  <% @order.adjustments.each do |adjustment| %>
+  <h3>Taxes <%= number_to_currency adjustment.amount %></h3>
+  <% end %>
+  <hr>
+  <h3><%= "Total Charges: #{number_to_currency @order.total}" %></h3>
+</div>
+<div class="links" id="empty-cart" data-hook="cart_buttons">
+  <%= link_to root_path, :class => 'button classy' do %>
+    <span>Add Another Lunch?</span>
+  <% end %>
+  <% unless params.has_key? :checkout_complete %>
+    | <%= link_to t(:my_account), account_path if current_user%>
+  <% end %>
+</div>
+<div class="clear"></div>

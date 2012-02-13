@@ -2,13 +2,9 @@
 <div data-hook="checkout_payment_step">
   <% unless @errors_exist %>
     <div class="box">
-      Please provide your credit card information and click 'Save and Continue'.
-      <% if Rails.env == "development" %>
-      <br />
-      TEST_VISA = 4111111111111111
-      <br />
-      CVS = TEST_VISA
-      <% end %>
+      <h3>
+      Please provide your credit card information
+      </h3>
     </div>
   <% end %>
   <% if @order.available_payment_methods.length == 0 %>
@@ -28,8 +24,7 @@
     <% end %>
   <% end %>
   
-  
-  <ul id="payment-methods" data-hook>
+  <ul id="payment-methods" class="relative" data-hook >
     <% @order.available_payment_methods.each do |method| %>
       <li id="payment_method_<%= method.id %>" class="<%= 'last' if method == @order.available_payment_methods.last %>" data-hook>
           <%= render "checkout/payment/#{method.method_type}", :payment_method => method %>
@@ -39,10 +34,17 @@
   <div class="divider line"></div>
   <div id="cart-buttons" data-hook="buttons">
     <button type="submit" name="save_and_" class="button classy primary">
-      <span>Save and Continue</span>
+      <span>Order Lunch</span>
     </button>
     <script>disableSaveOnClick();</script>
   </div>
+  <% if Rails.env == "development" %>
+  <br />
+  TEST_VISA = 4111111111111111
+  <br />
+  CVS = 123
+  <% end %>
+  
 
   <div data-hook="coupon_code_field" data-hook></div>
 </div>

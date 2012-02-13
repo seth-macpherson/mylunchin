@@ -1,39 +1,51 @@
-  <%= javascript_include_tag '/javascripts/jquery-ui-1.8.17.custom.min.js' %>
+  <%#= javascript_include_tag '/javascripts/jquery-ui-1.8.17.custom.min.js' %>
   <% 
-    current_time = Time.now #parse('2012-2-9 10:00:00 -08:00')
-    cutoff_hour = 12
-    start_date = Date.today
-    start_date += 1.day if current_time.hour > cutoff_hour
-    end_date = start_date + 9.days
+    require 'chronic'
+    # Chronic.time_class = Time.zone
+    @current_time  = Chronic.parse('now')
+    @cutoff_time   = Chronic.parse("today #{@order.rate_hash.last[:shipping_method][:deadline]}")
+    @delivery_date = case 
+                      when [6,0].include?(@current_time.wday) || (@current_time.wday == 5 && @current_time > @cutoff_time)
+                        then Chronic.parse('monday') 
+                      when @current_time.to_i > @cutoff_time.to_i
+                        then Chronic.parse('tomorrow midnight')
+                      else @current_time
+                    end
+    weekend       = [6,0].include?(@current_time.wday)                    
+    @delivery_today = @delivery_date.wday == @current_time.wday
+    @delivery_day  = @delivery_today ? 'Today' : Date::DAYNAMES[@delivery_date.wday]
   %>
+  <% content_for :debug do %>
+    weekday:<%= @current_time.wday %><br />
+    weekend:<%= [6,0].include?(@current_time.wday) %><br />
+    @cutoff_time: <%= @cutoff_time %><br />
+    delivery date:<%= @delivery_date %><br />
+  <% end %>
+  
   <div class="tabs" id="choose_pickup" data-hook="shipping_method_inner">
+    <%= form.hidden_field :special_instructions, :value => @delivery_date %>
+    <div class="box">
+      <% if @delivery_today %>
+        <h3>Pick Up and Delivery options available for <a href="#" title="Next delivery date" onclick="return false"><%= @delivery_day %>:</a></h3>
+      <% else %>
+        <h3>
+          Your lunch order will be available for pickup or delivery <a href="#" onclick="return false"><%= @delivery_day %></a>.<br />
+          <% if weekend %>
+          We don't currently offer lunch service over the weekend.
+          <% else %>
+          Ordering from today's menu ended at <%= @order.rate_hash.last[:shipping_method][:deadline] %>. 
+          <% end%>
+        </h3>
+      <% end %>
+    </div>
 
-    <h3>Choose Delivery or Pick Up:</h3>
-
-    <% if current_time.hour > cutoff_hour %>
-      <div class="box">
-        Your lunch order will be available for pickup tomorrow because we are past the today's lunch service (11:30AM - 2:00PM).
-      </div>
-    <% end %>
-
-    <!--
-      
-    <select id="pickup_date" style="float:left">
-      <%# (start_date..end_date).to_a.each do |slot| %>
-        <%# case slot.wday when 0, 6 then next end  %>
-        <option><%#= slot.to_formatted_s(:long_ordinal) %></option>
-      <%# end%>
-    </select>
-    <div class="clear"></div>
-    -->
-    <!-- <h5>Choose pick-up from Nora's Table or delivery at one of the locations below</h5> -->
     <ul id="delivered_to">
       <li>
           <h3>Lunch Delivery</h3>
           <div class="line short"></div>
       </li>
       <% @order.rate_hash.each do |shipping_method| %>
-        <% disable_row = (current_time > shipping_method[:cutoff] && current_time.hour < cutoff_hour) ? true : nil %>
+      <% disable_row = ((@current_time > Chronic.parse("#{shipping_method[:cutoff]}",:now => @delivery_date)) && @delivery_today) ? true : nil %>
         <% if shipping_method[:pickup_only] == false %>
           <li class="slot <%= disable_row.nil? ? '' : 'disabled' %>">
             <label class="special">
@@ -48,6 +60,11 @@
           </li>
         <% end %>
       <% end %>
+      <li id="no-delivery-left">
+        <label class="special">
+          Sorry, no delivery options left today
+        </label>
+      </li>
     </ul>
     <ul id="pickup_from">
       <li>
@@ -55,7 +72,7 @@
           <div class="line short"></div>
       </li>
       <% @order.rate_hash.each do |shipping_method| %>
-        <% disable_row = (current_time > shipping_method[:cutoff] && current_time.hour < cutoff_hour) ? true : nil %>
+      <% disable_row = ((@current_time > Chronic.parse("#{shipping_method[:cutoff]}",:now => @delivery_date)) && @delivery_today) ? true : nil %>
         <% if shipping_method[:pickup_only] %>
           <li class="slot <%= disable_row.nil? ? '' : 'disabled' %>">
             <label class="special">
@@ -65,7 +82,7 @@
             </label>
             <ul class="location explanation">
               <li><%== shipping_method[:location] %></li>
-              <li>(must order by <%= shipping_method[:deadline] %>)</li>
+              <li>(please order by <%= shipping_method[:deadline] %>)</li>
             </ul>
           </li>
         <% end %>
@@ -87,9 +104,25 @@
     </button>
   </div>
   
-  <script type="text/javascript" charset="utf-8">
+  <script type="text/javascript">
   $(document).ready(function() {
     $('#choose_pickup').tabs();
+    $("li.disabled").fadeTo(800,.3).slideUp(1000);
+    // if we're hidden every delivery option then show them a sorry msg
+    if($("#delivered_to>li.disabled").size() == ($("#delivered_to>li").size() - 2)) {
+      $("#no-delivery-left").show('fast');
+    }
   });
   </script>
+  <!--
+      
+  <select id="pickup_date" style="float:left">
+    <%# (@delivery_date..end_date).to_a.each do |slot| %>
+      <%# case slot.wday when 0, 6 then next end  %>
+      <option><%#= slot.to_formatted_s(:long_ordinal) %></option>
+    <%# end%>
+  </select>
+  <div class="clear"></div>
+  -->
+  <!-- <h5>Choose pick-up from Nora's Table or delivery at one of the locations below</h5> -->
   

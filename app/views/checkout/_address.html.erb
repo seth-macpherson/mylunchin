@@ -1,5 +1,7 @@
   <div class="box">
-    Please provide your billing information.
+    <h3>
+      Please provide billing information
+    </h3>
   </div>
   <%= form.fields_for :bill_address do |bill_form| %>
     <input type="hidden" name="order[use_billing]" value="1" />
@@ -16,28 +18,28 @@
       </li>
       <li>
         <p class="field" id="baddress1">
-          <%= bill_form.label :address1, t(:street_address) %><span class="req">*</span><br />
+          <%= bill_form.label :address1, "Billing Street" %><span class="req">*</span><br />
           <%= bill_form.text_field :address1, :class => 'required' %>
         </p>
         <p class="field" id="baddress2">
-          <%= bill_form.label :address2, t(:street_address_2) %><br />
+          <%= bill_form.label :address2, "Billing Street (cont'd)" %><br />
           <%= bill_form.text_field :address2 %>
         </p>
       </li>
       <li>
         <p class="field" id="bcity">
-          <%= bill_form.label :city, t(:city) %><span class="req">*</span><br />
+          <%= bill_form.label :city, "Billing City" %><span class="req">*</span><br />
           <%= bill_form.text_field :city, :class => 'required' %>
         </p>
         <p class="field" id="bstate">
-          <%= bill_form.label :state_id, t(:state) %><span class="req">*</span><br />
+          <%= bill_form.label :state_id, "Billing State" %><span class="req">*</span><br />
           <%= bill_form.collection_select :state_id, @order.bill_address.country.states.sort, :id, :name, :selected => '298914262' %>
           <%#= bill_form.collection_select :country_id, available_countries, :id, :name, {}, {:class => 'required'} %>
         </p>  
       </li>
       <li>
         <p class="field" id="bzipcode">
-          <%= bill_form.label :zipcode, t(:zip) %><span class="req">*</span><br />
+          <%= bill_form.label :zipcode, "Billing Zip" %><span class="req">*</span><br />
           <%= bill_form.text_field :zipcode, :class => 'required' %>
         </p>
         <p class="field" id="bcountry">

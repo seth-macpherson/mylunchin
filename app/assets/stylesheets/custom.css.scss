@@ -40,8 +40,16 @@
   font-weight: bold;
 }
 
+#payment-methods {
+  p.field {
+    position: relative;
+  }
+}
 #creditcard-image {
-  margin-top: 20px;
+  top: 20px;
+  left: 0px;
+  clip:rect(0px, 80px, 30px, 0px);
+  position: absolute;
 }
 
 
@@ -69,15 +77,20 @@ $field-width: 320px;
   	input, textarea, select {
       width: $field-width - 30;
     	height: 25px;
+  		font-size: 12px;
+  		padding-left: 4px;
+    	margin: 2px;
+  	}
+    input, textarea {
   		$shadow-props: 2px 2px 3px #e3e3e3 inset;
   		-webkit-box-shadow: $shadow-props;
   		-moz-box-shadow: $shadow-props;
   		box-shadow: $shadow-props;
   		border: 1px solid #ccc;
-  		font-size: 12px;
-  		padding-left: 4px;
-    	margin: 2px;
-  	}
+    }
+    select {
+      padding: 3px;
+    }
     input[type="radio"], textarea, select {
       height: inherit;
   		padding-left: inherit;
@@ -112,6 +125,7 @@ $field-width: 320px;
   	margin:0;
   	}		
   .breadcrumb {
+    font-size: 115%;
     margin-bottom: 20px;
   	height:2.3em;
   	border:1px solid #dedede;
@@ -119,19 +133,22 @@ $field-width: 320px;
       float:left;
       line-height:2.3em;
       color:#777;
-      padding-left:.75em;
       span {
         background:url(asset-path('crumbs.gif','image')) no-repeat right center;
     	  color: #ccc;
         display:block;
-    	  padding:0 15px 0 0;
+    	  padding:0 18px 0 10px;
+        a {
+          color: #666666;
+          font-weight: bold;
+        }
       }
-          a:hover, a:focus {
+      a:hover, a:focus {
       	color: #111;
       }
     &.current-first span, &.current span {
       font-weight: bold;
-      color: #111;}
+      color: #D16F4E;}
     }
   }
 }
@@ -144,14 +161,17 @@ $field-width: 320px;
   li.slot {
     height: 90px;
   }
-  li.disabled {
-    color: #EFEFEF;
-  }
   ul.location li, h3 {
     margin: 0 0 0 22px;
   }
   label {
     font-size: 20px;
+  }
+}
+#no-delivery-left {
+  display: none;
+  label {
+    padding-left: 22px;
   }
 }
 
