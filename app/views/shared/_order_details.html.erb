@@ -26,8 +26,5 @@
   <%= link_to root_path, :class => 'button classy' do %>
     <span>Add Another Lunch?</span>
   <% end %>
-  <% unless params.has_key? :checkout_complete %>
-    | <%= link_to t(:my_account), account_path if current_user%>
-  <% end %>
 </div>
 <div class="clear"></div>
