@@ -1,6 +1,6 @@
 <%
   require 'chronic'
-  # Chronic.time_class = Time.zone
+  Chronic.time_class = Time.zone
   last_pickup = ShippingMethod.maximum('deadline')
   last_pickup += last_pickup.downcase.include?("pm") ? '' : 'PM'
   @current_time  = Chronic.parse('now')

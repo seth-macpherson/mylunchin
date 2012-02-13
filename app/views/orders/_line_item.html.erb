@@ -19,10 +19,10 @@
     <% end %>
     <%= truncate(variant.product.description, :length => 100, :omission => "...") %>
   </td>
-  <td data-hook="cart_item_price">
+  <td data-hook="cart_item_price" align="right">
     <%= product_price(line_item.variant) %>
   </td>
-  <td data-hook="cart_item_quantity">
+  <td data-hook="cart_item_quantity" align="right">
     <% unless read_only %>
       <%= item_form.text_field :quantity, :size => 3, :class => "line_item_quantity" %>
     <% else %>

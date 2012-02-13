@@ -1,7 +1,7 @@
   <%#= javascript_include_tag '/javascripts/jquery-ui-1.8.17.custom.min.js' %>
   <% 
     require 'chronic'
-    # Chronic.time_class = Time.zone
+    Chronic.time_class = Time.zone
     last_pickup   = ShippingMethod.maximum('deadline')
     last_pickup   += last_pickup.downcase.include?("pm") ? '' : 'PM'
     @current_time = Chronic.parse('now')
@@ -17,12 +17,14 @@
     @delivery_today = @delivery_date.wday == @current_time.wday
     @delivery_day  = @delivery_today ? 'Today' : Date::DAYNAMES[@delivery_date.wday]
   %>
-  <% content_for :debug do %>
-    weekday:<%= @current_time.wday %><br />
-    weekend:<%= [6,0].include?(@current_time.wday) %><br />
-    @cutoff_time: <%= @cutoff_time %><br />
-    delivery date:<%= @delivery_date %><br />
-  <% end %>
+
+<!-- 
+last_pickup:    <%= last_pickup %>
+@current_time   <%= @current_time %>
+@cutoff_time    <%= @cutoff_time %>
+@delivery_date  <%= @delivery_date %>
+@delivery_day   <%= @delivery_day %>
+ -->
   
   <div class="tabs" id="choose_pickup" data-hook="shipping_method_inner">
     <%= form.hidden_field :special_instructions, :value => @delivery_date %>
