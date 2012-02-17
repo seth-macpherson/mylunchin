@@ -23,8 +23,10 @@
 }
 #cart-detail {
 	width: 100%;
+  .cart_item_description {
+    padding: 5px 10px;
+  }
 }
-
 #existing-customer .authentication img{
 	display:none;
 }
@@ -155,8 +157,8 @@ $field-width: 320px;
 
 #delivered_to, #pickup_from {
   float: left;
-  width: 330px;
-  padding-right: 20px; 
+  width: 370px;
+  padding-right: 40px; 
   color: darken(#888888,10%);
   li.slot {
     height: 90px;
@@ -165,8 +167,13 @@ $field-width: 320px;
     margin: 0 0 0 22px;
   }
   label {
+    color: darken(#888888,10%);
+    letter-spacing: 1px;
     font-size: 20px;
   }
+}
+#pickup_from {
+  width: 270px;
 }
 #no-delivery-left {
   display: none;

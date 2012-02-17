@@ -4,7 +4,11 @@
 
 <%= render :partial => 'admin/shared/order_sub_menu' %>
 
-<h1>Open Orders</h1>
+<h1>Open Orders:
+  <%# if !@search.created_at_less_than %>
+  <%#= Date::DAYNAMES[@search.created_at_greater_than.wday] %>
+  <%# end %>
+</h1>
 <% content_for :head do %>
   <style type="text/css" media="all">
     #listing_orders ul, #listing_orders li {
@@ -24,10 +28,13 @@
     p.field, p.field_value {
       float: left;
       clear: none;
-      width: 50px;
+      width: 55px;
+      padding-right: 5px;
       line-height: 1.25;
+      text-align: right;
     }
     p.field_value {
+      text-align: left;
       font-weight: bold;
       width: 130px;
     }
@@ -43,9 +50,14 @@
     .delivery_info{
       width: 35%;
     }
+    .page-break  { display:none; }
   </style>
   <style type="text/css" media="print">
   @page { margin: 0; padding:0; }
+  .page-break  { 
+    display:block; 
+    page-break-before:auto; 
+  }
   html { margin: 0; padding: 0; }
   body {
     background: white;
@@ -55,7 +67,17 @@
     margin: 0;
     padding: 0;
   }
-
+  .separator {
+    page-break-after: always;
+  }
+  p.field {
+    width: 20%;
+    font-size: 8pt;
+  }
+  p.field_value {
+    width: 80%;
+    font-size: 8pt;
+  }
   h3 {
     font-size: 10pt;
   }
@@ -91,17 +113,17 @@
     <th class="delivery_info">Delivery/Pickup</th>
   </tr>
   
-  <% 
-    @orders.each do |order| %>
+  <% @orders.each do |order| %>
     <% address = order.bill_address %>
     <% shipping = order.shipping_method %>
+    <% shipment = order.shipments.first %>
     <% items = order.line_items %>
-    <tr data-hook="admin_orders_index_rows">
+    <tr class="row_order" data-hook="admin_orders_index_rows">
       <td>
         <ul>
           <li>
             <% begin %>
-            <h3><%= address.firstname + ' ' + address.lastname %></h3>
+            <h3><%= address.firstname.capitalize + ' ' + address.lastname.capitalize %></h3>
             <% rescue %>
             <h3>Not specified</h3>
             <% end %>
@@ -110,7 +132,7 @@
             <p class="field">
               Phone:
             </p>
-            <p class="field">
+            <p class="field_value">
               <% begin %>
               <%= number_to_phone(address.phone) %>
               <% rescue %>
@@ -119,8 +141,22 @@
             </p>
           </li>
           <li><%= order.state != 'complete' ? "Order Status: #{order.state}": ''%></li>
-          <li class="no-print"><%= mail_to order.email, "Send Email" %></li>
-          <li><%= link_to order.number, admin_order_path(order) %></li>
+          <li class="no-print">
+            <p class="field">
+              Email:
+            </p>
+            <p class="field_value">
+              <%= mail_to order.email, "Send Email" %>
+            </p>
+            </li>
+          <li class="no-print">
+            <p class="field">
+              Order #:
+            </p>
+            <p class="field_value">
+              <%= link_to order.number, admin_order_path(order) %>
+            </p>
+          </li>
         </ul>
       <td>  
         <table width="100%">
@@ -144,10 +180,10 @@
         <% rescue %>
         <h3>Not specified</h3>
         <% end %>
-        <p class="clear"><%#= shipping.inspect %></p>
+        <p class="clear">Special Instructions:</p>
       </td>
     </tr>
-    <tr>
+    <tr class="page-break">
       <td colspan="3" style="border-top:1px solid #999; height:30px"></td>
     </tr>
   <% end %>

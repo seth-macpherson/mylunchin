@@ -1,25 +1,10 @@
   <%#= javascript_include_tag '/javascripts/jquery-ui-1.8.17.custom.min.js' %>
   <% 
-    require 'chronic'
-    Chronic.time_class = Time.zone
-    last_pickup   = ShippingMethod.maximum('deadline')
-    last_pickup   += last_pickup.downcase.include?("pm") ? '' : 'PM'
-    @current_time = Chronic.parse('now')
-    @cutoff_time  = Chronic.parse(last_pickup,:now => @current_time)
-    @delivery_date = case 
-                      when [6,0].include?(@current_time.wday) || (@current_time.wday == 5 && @current_time > @cutoff_time)
-                        then Chronic.parse('monday') 
-                      when @current_time > @cutoff_time
-                        then @current_time + 1.day
-                      else @current_time
-                    end
-    weekend       = [6,0].include?(@current_time.wday)                    
-    @delivery_today = @delivery_date.wday == @current_time.wday
-    @delivery_day  = @delivery_today ? 'Today' : Date::DAYNAMES[@delivery_date.wday]
+  delivery_options('now') 
   %>
 
 <!-- 
-last_pickup:    <%= last_pickup %>
+@last_pickup:   <%= @last_pickup %>
 @current_time   <%= @current_time %>
 @cutoff_time    <%= @cutoff_time %>
 @delivery_date  <%= @delivery_date %>
@@ -44,25 +29,10 @@ last_pickup:    <%= last_pickup %>
           <h3>Lunch Delivery</h3>
           <div class="line short"></div>
       </li>
-      <% @order.rate_hash.each do |shipping_method| %>
-      <% disable_row = ((@current_time > Chronic.parse("#{shipping_method[:cutoff]}",:now => @delivery_date)) && @delivery_today) ? true : nil %>
-        <% if shipping_method[:pickup_only] == false %>
-          <li class="slot <%= disable_row.nil? ? '' : 'disabled' %>">
-            <label class="special">
-              <%= radio_button(:order, :shipping_method_id, shipping_method[:id], :disabled => disable_row ) %>
-              <%= shipping_method[:time] %> @ <%= shipping_method[:name] %>
-              <%= (" + " + number_to_currency(shipping_method[:cost]) + " taxes") if shipping_method[:cost] > 0 %>
-            </label>
-            <ul class="location explanation">
-              <li><%== shipping_method[:location] %></li>
-              <li>(must order by <%= shipping_method[:deadline] %>)</li>
-            </ul>
-          </li>
-        <% end %>
-      <% end %>
+      <%= render :partial => "shipping_method", :collection => @order.rate_hash, :as => :shipping_method, :locals => {:pickup_only => false} %>
       <li id="no-delivery-left">
         <label class="special">
-          Sorry, no delivery options left today
+          Sorry, no delivery options left for today
         </label>
       </li>
     </ul>
@@ -71,22 +41,7 @@ last_pickup:    <%= last_pickup %>
           <h3>Lunch Pick Up</h3>
           <div class="line short"></div>
       </li>
-      <% @order.rate_hash.each do |shipping_method| %>
-      <% disable_row = ((@current_time > Chronic.parse("#{shipping_method[:cutoff]}",:now => @delivery_date)) && @delivery_today) ? true : nil %>
-        <% if shipping_method[:pickup_only] %>
-          <li class="slot <%= disable_row.nil? ? '' : 'disabled' %>">
-            <label class="special">
-              <%= radio_button(:order, :shipping_method_id, shipping_method[:id], :disabled => disable_row ) %>
-              <%= shipping_method[:time] %> @ <%= shipping_method[:name] %>
-              <%= (" + " + number_to_currency(shipping_method[:cost]) + " taxes") if shipping_method[:cost] > 0 %>
-            </label>
-            <ul class="location explanation">
-              <li><%== shipping_method[:location] %></li>
-              <li>(please order by <%= shipping_method[:deadline] %>)</li>
-            </ul>
-          </li>
-        <% end %>
-      <% end %>
+      <%= render :partial => "shipping_method", :collection => @order.rate_hash, :as => :shipping_method, :locals => {:pickup_only => true} %>
     </ul>
 
     <% if Spree::Config[:shipping_instructions] && @order.rate_hash.present? %>
@@ -107,7 +62,7 @@ last_pickup:    <%= last_pickup %>
   <script type="text/javascript">
   $(document).ready(function() {
     $('#choose_pickup').tabs();
-    $("li.disabled").fadeTo(800,.3).slideUp(1000);
+    $("li.disabled").fadeTo(800,.3); //.slideUp(1000);
     // if we're hidden every delivery option then show them a sorry msg
     if($("#delivered_to>li.disabled").size() == ($("#delivered_to>li").size() - 2)) {
       $("#no-delivery-left").show('fast');

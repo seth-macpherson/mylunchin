@@ -20,11 +20,6 @@
   <h3>Taxes <%= number_to_currency adjustment.amount %></h3>
   <% end %>
   <hr>
-  <h3><%= "Total Charges: #{number_to_currency @order.total}" %></h3>
-</div>
-<div class="links" id="empty-cart" data-hook="cart_buttons">
-  <%= link_to root_path, :class => 'button classy' do %>
-    <span>Lunch?</span>
-  <% end %>
+  <h3><%= "Total Charges: #{number_to_currency @order.total}" %></h3> 
 </div>
 <div class="clear"></div>

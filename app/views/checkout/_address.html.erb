@@ -31,9 +31,9 @@
           <%= bill_form.label :city, "Billing City" %><span class="req">*</span><br />
           <%= bill_form.text_field :city, :class => 'required' %>
         </p>
-        <p class="field" id="bstate">
+        <p class="field" id="xstate">
           <%= bill_form.label :state_id, "Billing State" %><span class="req">*</span><br />
-          <%= bill_form.collection_select :state_id, @order.bill_address.country.states.sort, :id, :name, :selected => '298914262' %>
+          <%= bill_form.collection_select :state_id, @order.bill_address.country.states.sort, :id, :name, {:selected => '298914262'} %>
           <%#= bill_form.collection_select :country_id, available_countries, :id, :name, {}, {:class => 'required'} %>
         </p>  
       </li>

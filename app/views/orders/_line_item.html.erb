@@ -7,7 +7,7 @@
       <%= image_tag variant.images.first.attachment.url(:small) %>
     <% end %>
   </td>
-  <td data-hook="cart_item_description">
+  <td class="cart_item_description" data-hook="cart_item_description">
     <h4><%= link_to variant.product.name, root_url %></h4>
     <%= variant.options_text %>
     <% unless read_only %>

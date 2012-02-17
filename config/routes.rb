@@ -1,7 +1,5 @@
 Mylunchin::Application.routes.draw do
 
-  resources :slots
-
   namespace :admin do
     resources :slots
   end
@@ -12,6 +10,9 @@ Mylunchin::Application.routes.draw do
   match "/pending" => "home#pending", :as => "pending"
   match "/seasonal" => "home#seasonal", :as => "seasonal"
   match "/blog" => redirect("http://norastable.wordpress.com/"), :as => "blog"
+
+  #Last route in routes.rb
+  # match '*a', :to => 'errors#routing'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

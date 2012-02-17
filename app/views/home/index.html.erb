@@ -1,24 +1,7 @@
-<%
-  require 'chronic'
-  Chronic.time_class = Time.zone
-  last_pickup = ShippingMethod.maximum('deadline')
-  last_pickup += last_pickup.downcase.include?("pm") ? '' : 'PM'
-  @current_time  = Chronic.parse('now')
-  @cutoff_time   = Chronic.parse(last_pickup,:now => @current_time)
-  @delivery_date = case 
-                    when [6,0].include?(@current_time.wday) || (@current_time.wday == 5 && @current_time > @cutoff_time)
-                      then Chronic.parse('monday') 
-                    when @current_time > @cutoff_time
-                      then @current_time + 1.day
-                    else @current_time
-                  end
-  weekend       = [6,0].include?(@current_time.wday)                    
-  @delivery_today = @delivery_date.wday == @current_time.wday
-  @delivery_day  = @delivery_today ? 'Today' : Date::DAYNAMES[@delivery_date.wday]
-%>
+<% delivery_options('now') %>
 
 <!-- 
-last_pickup:    <%= last_pickup %>
+@last_pickup:   <%= @last_pickup %>
 @current_time   <%= @current_time %>
 @cutoff_time    <%= @cutoff_time %>
 @delivery_date  <%= @delivery_date %>
@@ -34,10 +17,10 @@ last_pickup:    <%= last_pickup %>
     </h1>
   <% else %>
     <h1>
-      <% if weekend %>
+      <% if @weekend %>
       <span>My Lunch In</span> doesn't offer lunch service over the weekend.
       <% else %>
-      <span>My Lunch In</span> cannot accept orders for <span title="today is <%= @current_time.strftime('%F') %>">today after <%= last_pickup + (last_pickup.downcase.include?("pm") ? '' : 'PM') %></span>
+      <span>My Lunch In</span> cannot accept orders for <span title="today is <%= @current_time.strftime('%F') %>">today after <%= @last_pickup %></span>
       <% end%><br />
       But you are welcome to place your order for <a href="#" onclick="return false;" title="<%= @delivery_day %> is our next day of lunch service"><%= @delivery_day %></a>
     </h1>
