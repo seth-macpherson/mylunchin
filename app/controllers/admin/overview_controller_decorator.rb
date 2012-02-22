@@ -24,7 +24,7 @@ Admin::OverviewController.class_eval do
 
 
   def top_grossing_variants
-    LineItem.includes(:order).where("orders.state IN ('complete')").sum(:price, :group => :variant_id, :order => 'sum(price) desc', :limit => 5)
+    LineItem.includes(:order).where("orders.state IN ('complete','fulfilled')").sum(:price, :group => :variant_id, :order => 'sum(price) desc', :limit => 5)
     # puts "prices:", prices.inspect
     # 
     # variants = prices.map do |v|
