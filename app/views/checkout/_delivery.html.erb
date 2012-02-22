@@ -12,7 +12,7 @@
  -->
   
   <div class="tabs" id="choose_pickup" data-hook="shipping_method_inner">
-    <%= form.hidden_field :special_instructions, :value => @delivery_date.to_s + '<hr />'.html_safe + @order.special_instructions %>
+    <%= form.hidden_field :special_instructions, :value => @delivery_date.to_s.html_safe + '<hr />'.html_safe + @order.special_instructions %>
     <div class="box">
       <% if @delivery_today %>
         <h3>Pick Up and Delivery options available for <a href="#" title="Next delivery date" onclick="return false"><%= @delivery_day %>:</a></h3>
