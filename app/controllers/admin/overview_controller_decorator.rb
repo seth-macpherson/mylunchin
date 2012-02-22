@@ -22,4 +22,19 @@ Admin::OverviewController.class_eval do
     @pie_colors = [ "#0093DA", "#FF3500", "#92DB00", "#1AB3FF", "#FFB800"]
   end
 
+
+  def top_grossing_variants
+    LineItem.includes(:order).where("orders.state IN ('complete')").sum(:price, :group => :variant_id, :order => 'sum(price) desc', :limit => 5)
+    # puts "prices:", prices.inspect
+    # 
+    # variants = prices.map do |v|
+    #   puts "v:",number_to_currency(v[1])
+    #   variant = Variant.find(v[0])
+    #   [variant.name, v[1] * prices[v[0]]]
+    # end
+    # 
+    # variants.sort { |x,y| y[1] <=> x[1] }
+  end
+
+
 end

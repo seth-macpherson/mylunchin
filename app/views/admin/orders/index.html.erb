@@ -4,10 +4,12 @@
 
 <%= render :partial => 'admin/shared/order_sub_menu' %>
 
-<h1>Open Orders:
-  <%# if !@search.created_at_less_than %>
-  <%#= Date::DAYNAMES[@search.created_at_greater_than.wday] %>
-  <%# end %>
+<h1>
+  <% if @search.state_equals == 'complete' %>
+  New Orders
+  <% else %>
+  Orders with status: <%= @search.state_equals.downcase %>
+  <% end %>
 </h1>
 <% content_for :head do %>
   <style type="text/css" media="all">
@@ -116,8 +118,8 @@
   <% @orders.each do |order| %>
     <% address = order.bill_address %>
     <% shipping = order.shipping_method %>
-    <% shipment = order.shipments.first %>
     <% items = order.line_items %>
+    <% ship_date,instructions = order.special_instructions.split('<hr />')%>
     <tr class="row_order" data-hook="admin_orders_index_rows">
       <td>
         <ul>
@@ -157,7 +159,11 @@
               <%= link_to order.number, admin_order_path(order) %>
             </p>
           </li>
+          <li>
+            <%= button_link_to "Fulfilled", fire_admin_order_url(order.number, {:e => "fulfilled"}) %>
+          </li>
         </ul>
+      </td>
       <td>  
         <table width="100%">
           <% items.each do |item| %>
@@ -170,27 +176,33 @@
           <% end %>
         </table>
       </td>
-      <td style="padding-top: 6px">
+      <td style="padding-top: 6px" colspan="2">
         <% begin %>
         <h3 style="float:left;">
-          <%= Date::DAYNAMES[Date.parse(order.special_instructions).wday] + ' ' + shipping.time %></h3>
+          <%= Date::DAYNAMES[Date.parse(ship_date).wday] + ' ' + shipping.time %>
+        </h3>
         <h3 style="float:right;width:auto;clear:left">
           <%= shipping.name %>
           </h3>
         <% rescue %>
         <h3>Not specified</h3>
         <% end %>
-        <p class="clear">Special Instructions:</p>
+        <% unless instructions.blank? %>
+          <p class="clear">
+            <h5>Special Instructions:</h5>
+            <%= instructions %>
+          </p>
+        <% end %>
       </td>
     </tr>
-    <tr class="page-break">
-      <td colspan="3" style="border-top:1px solid #999; height:30px"></td>
+    <tr>
+      <td colspan="3" style="border-top:1px solid #999;height:1px"></td>
     </tr>
   <% end %>
   </tbody>
 </table>
-<%= paginate @orders %>
 
+<%= paginate @orders %>
 
 <% content_for :sidebar do %>
   <div id="search_sidebar" class="box" data-hook="admin_orders_index_search">

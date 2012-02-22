@@ -12,7 +12,7 @@
  -->
   
   <div class="tabs" id="choose_pickup" data-hook="shipping_method_inner">
-    <%= form.hidden_field :special_instructions, :value => @delivery_date %>
+    <%= form.hidden_field :special_instructions, :value => @delivery_date.to_s + '<hr />'.html_safe + @order.special_instructions %>
     <div class="box">
       <% if @delivery_today %>
         <h3>Pick Up and Delivery options available for <a href="#" title="Next delivery date" onclick="return false"><%= @delivery_day %>:</a></h3>
@@ -43,25 +43,17 @@
       </li>
       <%= render :partial => "shipping_method", :collection => @order.rate_hash, :as => :shipping_method, :locals => {:pickup_only => true} %>
     </ul>
-
-    <% if Spree::Config[:shipping_instructions] && @order.rate_hash.present? %>
-      <p id="minstrs" data-hook>
-        <%= form.label :special_instructions, t(:shipping_instructions) %><br />
-        <%= form.text_area :special_instructions, :cols => 40, :rows => 7 %>
-      </p>
-    <% end %>
   </div>
   <div class="clearfix"></div>
   <div class="divider line"></div>
   <div id="cart-buttons" data-hook="buttons">
-    <button type="submit" name="save_and_" class="button classy primary">
+    <button type="submit" class="button classy primary">
       <span>Save and Continue</span>
     </button>
   </div>
   
   <script type="text/javascript">
   $(document).ready(function() {
-    $('#choose_pickup').tabs();
     $("li.disabled").fadeTo(800,.3); //.slideUp(1000);
     // if we're hidden every delivery option then show them a sorry msg
     if($("#delivered_to>li.disabled").size() == ($("#delivered_to>li").size() - 2)) {

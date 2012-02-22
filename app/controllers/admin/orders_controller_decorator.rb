@@ -6,7 +6,8 @@ Admin::OrdersController.class_eval do
     @show_only_completed = params[:search][:completed_at_is_not_null].present?
     params[:search][:meta_sort] ||= @show_only_completed ? 'completed_at.desc' : 'created_at.desc'
 
-    params[:search][:created_at_greater_than] = Date.today if !params[:search][:created_at_greater_than]
+    params[:search][:state_equals] ||= "complete"
+    # params[:search][:created_at_greater_than] = Date.today if !params[:search][:created_at_greater_than]
 
     @search = Order.metasearch(params[:search])
 
@@ -27,4 +28,5 @@ Admin::OrdersController.class_eval do
     @orders = Order.metasearch(params[:search]).includes([:user, :shipments, :payments]).page(params[:page]).per(Spree::Config[:orders_per_page])
     respond_with(@orders)
   end
+  
 end

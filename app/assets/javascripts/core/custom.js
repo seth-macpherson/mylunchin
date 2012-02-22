@@ -93,6 +93,8 @@ jQuery(document).ready(function () {
 			}, 250);
 		});
 	}
+  
+  
 
 	// over();
 	// Firefox fix
@@ -267,6 +269,8 @@ jQuery(document).ready(function () {
 	 *  Hide flash messages when notice, or info
 	 * ----------------------------------------------------------------  
 	 */
+   $('.flash.info, .flash.notice').wrapInner('<h3/>');
+   
    setTimeout(function(){
      $('.info, .notice').hide('slow');
    },4000);

@@ -1,7 +1,9 @@
 Mylunchin::Application.routes.draw do
 
   namespace :admin do
-    resources :slots
+    resources :orders do
+      put "fulfilled"
+    end
   end
 
 
