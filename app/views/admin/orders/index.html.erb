@@ -160,7 +160,9 @@
             </p>
           </li>
           <li>
+            <% if order.state != 'fulfilled' %>
             <%= button_link_to "Fulfilled", fire_admin_order_url(order.number, {:e => "fulfilled"}) %>
+            <% end %>
           </li>
         </ul>
       </td>
@@ -187,7 +189,7 @@
         <% rescue %>
         <h3>Not specified</h3>
         <% end %>
-        <% unless instructions.blank? %>
+        <% if !instructions.blank? %>
           <p class="clear">
             <h5>Special Instructions:</h5>
             <%= instructions %>
@@ -221,7 +223,10 @@
       </div>
 
       <p><%= label_tag nil, t(:status) %><br />
-      <%= f.select :state_equals, Order.state_machines[:state].states.collect {|s| [t("order_state.#{s.name}"), s.value]}, {:include_blank => true} %></p>
+        <%  valid_states = Order.state_machines[:state].states.collect {|s| [t("order_state.#{s.name}"), s.value]}
+            valid_states << ["fulfilled","fulfilled"]
+        %>
+        <%= f.select :state_equals, valid_states, {:include_blank => true} %></p>
 
       <p>
         <%= label_tag nil, t(:order_number) %><br />
