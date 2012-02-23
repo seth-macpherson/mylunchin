@@ -23,7 +23,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @shipping_methods.sort_by(&:deadline).each do |shipping_method|%>
+    <% @shipping_methods.order(:deadline).each do |shipping_method|%>
       <tr id="<%= dom_id shipping_method %>" data-hook="admin_shipping_methods_index_rows">
         <td><%= shipping_method.deadline %></td>
         <td><%= shipping_method.name %></td>

@@ -21,12 +21,8 @@
         </div>
         <div class="divider line short"></div>
         <div id="subtotal" data-hook>
-          <% if @order.special_instructions && !@order.special_instructions.blank? %>
-          <div><h5>Special Instructions:</h5><%= (@order.special_instructions.split('<hr />').length > 1) ? @order.special_instructions.split('<hr />')[1] : @order.special_instructions %></div>
-          <% end %>
           <h3><%= "#{t(:subtotal)}: #{order_price(@order)}" %></h3>
         </div>
-        <div class="clear"></div>
       </div>
       <div class="links" id="cart-buttons" data-hook="cart_buttons">
         <!--
@@ -36,14 +32,11 @@
           <span>Checkout</span>
         <% end %>
         <button type="submit" name="button" id="update-button" class="large button classy">
-          <span>Update qty</span>
+          <span>Update quantity</span>
         </button>
         <%= link_to root_path, :class => 'button classy' do %>
-          <span>Add another item</span>
+          <span>Add another lunch</span>
         <% end %>
-        <a href="#" id="special-instructions-button" class="button classy">
-          <span>Special instructions?</span>
-        </a>
       </div>
       <div class="clear"></div>
     <% end %>
@@ -56,49 +49,5 @@
       </p>
     <% end %>
     </div>
-    <div id="special-instructions-dialog" title="Need something special?">
-      <%= form_for @order, :url => update_cart_path do |order_form| %>
-  		<label for="name">Let us know how to make your lunch perfect.</label>
-      <%= order_form.text_area :special_instructions, :class => 'full-width' %>
-      <% end %>
-    </div>
   </div>
 <% end %>
-
-<script type="text/javascript">
-	$(function() {
-		$( "#dialog:ui-dialog" ).dialog( "destroy" );
-			
-		$( "#special-instructions-dialog" ).dialog({
-			autoOpen: false,
-			height: 300,
-			width: 400,
-			modal: true,
-			buttons: {
-        "cancel":{
-          text: "Cancel",
-          class:'button classy',
-          click: function() {
-					  $( this ).dialog( "close" );
-				  }
-        },
-        "save":{
-          text:'Save Instructions',
-          class:'button classy primary',
-          name: 'button',
-  				click: function() {
-  					$('#special-instructions-dialog form').submit();
-            $('.ui-dialog-buttonpane button').addClass('disabled');
-  				}
-        }
-			}
-		}).dialog("widget")
-    .find(".ui-dialog-buttonpane button").wrapInner('<span/>')
-
-
-		$("#special-instructions-button").click(function(e) {
-      e.preventDefault();
-			$( "#special-instructions-dialog" ).dialog( "open" );
-		});
-	});
-</script>

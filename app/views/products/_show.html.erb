@@ -8,14 +8,14 @@
     product_img_path = "http://s3.amazonaws.com/mylunchin-com/assets/placeholder-image.jpg"
   end
   @product_properties = ProductProperty.includes(:property).where(:product_id => @product.id)
-  day_of_week = Date::DAYNAMES[@delivery_date.wday].downcase
+  day_of_week = Date::DAYNAMES[Date.today.wday].downcase
 
   # by default include all items
   include_item = true
   
   if @product.name.downcase.include?("special") && !@product.name.downcase.include?(day_of_week)
     # exclude Thursday's menu items on Friday, Monday, etc.
-    include_item = false
+    # include_item = false
   end
 %>
 <% if include_item %>
@@ -26,7 +26,7 @@
      -->
     <div class="post-image gallery clearfix">
       <%= link_to product_img_path, :rel => "gallery[gallery#{product.id}]" do %>
-      <%= image_tag(product_img_path, :height => 120, :alt => @product.name) %>
+        <%= image_tag(product_img_path, :height => 120) %>
       <% end %>
       <!-- 
       <span class="date">
@@ -41,7 +41,7 @@
           <span class="bold">
             <%= number_to_currency(product.price, :unit => "$") %>
           </span>
-          (includes delivery)
+          lunch
         <% end %>
       </span>
     </div>

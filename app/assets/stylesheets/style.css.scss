@@ -252,12 +252,12 @@ h6 {
   float: left;
   font-size: 40px;
   line-height: 40px;
-  margin: 0 15px 0 11px; }
+  margin: 0 8px 0 0; }
 
 .dropcap2 {
   width: 40px;
   height: 40px;
-  background: url(asset-path('dropcap.png','image')) no-repeat;
+  background: url(../img/dropcap.png) no-repeat;
   color: #fff;
   font-size: 30px;
   text-align: center;
@@ -359,8 +359,8 @@ blockquote {
     margin-bottom: 0;} }
 
 .flash {
-  font-size: 20px;
-  line-height: 18px; }
+  font-size: 26px;
+  line-height: 26px; }
 
 .box-grey {
   border-color: #ddd;
@@ -385,9 +385,6 @@ blockquote {
   border: 1px solid #CD0A0A;
 	line-height: 1.5em;
 	padding: 5px;
-}
-.error {
-  color: #CD0A0A;
 }
 /*========================*/
 /*===  5. Header       ===*/

@@ -1,25 +1,40 @@
   <%#= javascript_include_tag '/javascripts/jquery-ui-1.8.17.custom.min.js' %>
   <% 
-  delivery_options('now') 
+    require 'chronic'
+    # Chronic.time_class = Time.zone
+    @current_time  = Chronic.parse('now')
+    @cutoff_time   = Chronic.parse("today #{@order.rate_hash.last[:shipping_method][:deadline]}")
+    @delivery_date = case 
+                      when [6,0].include?(@current_time.wday) || (@current_time.wday == 5 && @current_time > @cutoff_time)
+                        then Chronic.parse('monday') 
+                      when @current_time.to_i > @cutoff_time.to_i
+                        then Chronic.parse('tomorrow midnight')
+                      else @current_time
+                    end
+    weekend       = [6,0].include?(@current_time.wday)                    
+    @delivery_today = @delivery_date.wday == @current_time.wday
+    @delivery_day  = @delivery_today ? 'Today' : Date::DAYNAMES[@delivery_date.wday]
   %>
-
-<!-- 
-@last_pickup:   <%= @last_pickup %>
-@current_time   <%= @current_time %>
-@cutoff_time    <%= @cutoff_time %>
-@delivery_date  <%= @delivery_date %>
-@delivery_day   <%= @delivery_day %>
- -->
+  <% content_for :debug do %>
+    weekday:<%= @current_time.wday %><br />
+    weekend:<%= [6,0].include?(@current_time.wday) %><br />
+    @cutoff_time: <%= @cutoff_time %><br />
+    delivery date:<%= @delivery_date %><br />
+  <% end %>
   
   <div class="tabs" id="choose_pickup" data-hook="shipping_method_inner">
-    <%= form.hidden_field :special_instructions, :value => @delivery_date.to_s.html_safe + '<hr />'.html_safe + @order.special_instructions %>
+    <%= form.hidden_field :special_instructions, :value => @delivery_date %>
     <div class="box">
       <% if @delivery_today %>
         <h3>Pick Up and Delivery options available for <a href="#" title="Next delivery date" onclick="return false"><%= @delivery_day %>:</a></h3>
       <% else %>
         <h3>
-          Your lunch order is <span class="error">unavailable</span> for pickup or delivery <a href="#" onclick="return false" class="error">Today</a>.<br />
-          But you are welcome to place your order for <%= @delivery_day %>
+          Your lunch order will be available for pickup or delivery <a href="#" onclick="return false"><%= @delivery_day %></a>.<br />
+          <% if weekend %>
+          We don't currently offer lunch service over the weekend.
+          <% else %>
+          Ordering from today's menu ended at <%= @order.rate_hash.last[:shipping_method][:deadline] %>. 
+          <% end%>
         </h3>
       <% end %>
     </div>
@@ -29,10 +44,25 @@
           <h3>Lunch Delivery</h3>
           <div class="line short"></div>
       </li>
-      <%= render :partial => "shipping_method", :collection => @order.rate_hash, :as => :shipping_method, :locals => {:pickup_only => false} %>
+      <% @order.rate_hash.each do |shipping_method| %>
+      <% disable_row = ((@current_time > Chronic.parse("#{shipping_method[:cutoff]}",:now => @delivery_date)) && @delivery_today) ? true : nil %>
+        <% if shipping_method[:pickup_only] == false %>
+          <li class="slot <%= disable_row.nil? ? '' : 'disabled' %>">
+            <label class="special">
+              <%= radio_button(:order, :shipping_method_id, shipping_method[:id], :disabled => disable_row ) %>
+              <%= shipping_method[:time] %> @ <%= shipping_method[:name] %>
+              <%= (" + " + number_to_currency(shipping_method[:cost]) + " taxes") if shipping_method[:cost] > 0 %>
+            </label>
+            <ul class="location explanation">
+              <li><%== shipping_method[:location] %></li>
+              <li>(must order by <%= shipping_method[:deadline] %>)</li>
+            </ul>
+          </li>
+        <% end %>
+      <% end %>
       <li id="no-delivery-left">
         <label class="special">
-          Sorry, no delivery options left for today
+          Sorry, no delivery options left today
         </label>
       </li>
     </ul>
@@ -41,20 +71,43 @@
           <h3>Lunch Pick Up</h3>
           <div class="line short"></div>
       </li>
-      <%= render :partial => "shipping_method", :collection => @order.rate_hash, :as => :shipping_method, :locals => {:pickup_only => true} %>
+      <% @order.rate_hash.each do |shipping_method| %>
+      <% disable_row = ((@current_time > Chronic.parse("#{shipping_method[:cutoff]}",:now => @delivery_date)) && @delivery_today) ? true : nil %>
+        <% if shipping_method[:pickup_only] %>
+          <li class="slot <%= disable_row.nil? ? '' : 'disabled' %>">
+            <label class="special">
+              <%= radio_button(:order, :shipping_method_id, shipping_method[:id], :disabled => disable_row ) %>
+              <%= shipping_method[:time] %> @ <%= shipping_method[:name] %>
+              <%= (" + " + number_to_currency(shipping_method[:cost]) + " taxes") if shipping_method[:cost] > 0 %>
+            </label>
+            <ul class="location explanation">
+              <li><%== shipping_method[:location] %></li>
+              <li>(please order by <%= shipping_method[:deadline] %>)</li>
+            </ul>
+          </li>
+        <% end %>
+      <% end %>
     </ul>
+
+    <% if Spree::Config[:shipping_instructions] && @order.rate_hash.present? %>
+      <p id="minstrs" data-hook>
+        <%= form.label :special_instructions, t(:shipping_instructions) %><br />
+        <%= form.text_area :special_instructions, :cols => 40, :rows => 7 %>
+      </p>
+    <% end %>
   </div>
   <div class="clearfix"></div>
   <div class="divider line"></div>
   <div id="cart-buttons" data-hook="buttons">
-    <button type="submit" class="button classy primary">
+    <button type="submit" name="save_and_" class="button classy primary">
       <span>Save and Continue</span>
     </button>
   </div>
   
   <script type="text/javascript">
   $(document).ready(function() {
-    $("li.disabled").fadeTo(800,.3); //.slideUp(1000);
+    $('#choose_pickup').tabs();
+    $("li.disabled").fadeTo(800,.3).slideUp(1000);
     // if we're hidden every delivery option then show them a sorry msg
     if($("#delivered_to>li.disabled").size() == ($("#delivered_to>li").size() - 2)) {
       $("#no-delivery-left").show('fast');
