@@ -116,10 +116,22 @@
   </tr>
   
   <% @orders.each do |order| %>
-    <% address = order.bill_address %>
-    <% shipping = order.shipping_method %>
-    <% items = order.line_items %>
-    <% ship_date,instructions = order.special_instructions.split('<hr />')%>
+    <% address   = order.bill_address %>
+    <% shipping  = order.shipping_method %>
+    <% items     = order.line_items %>
+    <% extras    = order.special_instructions.split('<hr />')%>
+    <% ship_date = extras.first %>
+    <% 
+      special_instructions = extras.last
+      begin
+        special_instructions = Date.parse(extras.last)
+        special_instructions = ""
+      rescue
+        special_instructions = extras.last
+      end  
+     %>
+    
+    <% instructions = Date.parse(instructions) unless instructions.blank? %>
     <tr class="row_order" data-hook="admin_orders_index_rows">
       <td>
         <ul>
@@ -189,10 +201,10 @@
         <% rescue %>
         <h3>Not specified</h3>
         <% end %>
-        <% if !instructions.blank? %>
+        <% if !special_instructions.blank? %>
           <p class="clear">
             <h5>Special Instructions:</h5>
-            <%= instructions %>
+            <%= special_instructions %>
           </p>
         <% end %>
       </td>
