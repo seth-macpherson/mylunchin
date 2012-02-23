@@ -664,6 +664,7 @@ ActiveRecord::Schema.define(:version => 20120209091038) do
 
   create_table "variants", :force => true do |t|
     t.integer  "product_id"
+    t.string   "sku",                                         :default => "",    :null => false
     t.decimal  "price",         :precision => 8, :scale => 2,                    :null => false
     t.decimal  "weight",        :precision => 8, :scale => 2
     t.decimal  "height",        :precision => 8, :scale => 2
@@ -674,7 +675,6 @@ ActiveRecord::Schema.define(:version => 20120209091038) do
     t.integer  "count_on_hand",                               :default => 0,     :null => false
     t.decimal  "cost_price",    :precision => 8, :scale => 2, :default => 0.0
     t.integer  "position"
-    t.string   "sku"
   end
 
   add_index "variants", ["product_id"], :name => "index_variants_on_product_id"
