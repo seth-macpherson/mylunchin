@@ -119,7 +119,7 @@
     <% address   = order.bill_address %>
     <% shipping  = order.shipping_method %>
     <% items     = order.line_items %>
-    <% extras    = order.special_instructions.split('<hr />')%>
+    <% extras    = order.special_instructions.to_s.split('<hr />')%>
     <% ship_date = extras.first %>
     <% 
       special_instructions = extras.last
