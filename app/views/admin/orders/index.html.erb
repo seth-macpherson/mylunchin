@@ -26,7 +26,7 @@
       page-break-inside:avoid;
       border: none;
     }
-    
+
     p.field, p.field_value {
       float: left;
       clear: none;
@@ -48,7 +48,7 @@
     }
     .order_info{
       width: 40%;
-    } 
+    }
     .delivery_info{
       width: 35%;
     }
@@ -56,9 +56,9 @@
   </style>
   <style type="text/css" media="print">
   @page { margin: 0; padding:0; }
-  .page-break  { 
-    display:block; 
-    page-break-before:auto; 
+  .page-break  {
+    display:block;
+    page-break-before:auto;
   }
   html { margin: 0; padding: 0; }
   body {
@@ -114,23 +114,23 @@
     <th class="order_info">Qty | Item Description</th>
     <th class="delivery_info">Delivery/Pickup</th>
   </tr>
-  
+
   <% @orders.each do |order| %>
     <% address   = order.bill_address %>
     <% shipping  = order.shipping_method %>
     <% items     = order.line_items %>
     <% extras    = order.special_instructions.to_s.split('<hr />')%>
     <% ship_date = extras.first %>
-    <% 
+    <%
       special_instructions = extras.last
       begin
         special_instructions = Date.parse(extras.last)
         special_instructions = ""
       rescue
         special_instructions = extras.last
-      end  
+      end
      %>
-    
+
     <% instructions = Date.parse(instructions) unless instructions.blank? %>
     <tr class="row_order" data-hook="admin_orders_index_rows">
       <td>
@@ -178,7 +178,7 @@
           </li>
         </ul>
       </td>
-      <td>  
+      <td>
         <table width="100%">
           <% items.each do |item| %>
             <tr>
@@ -192,12 +192,15 @@
       </td>
       <td style="padding-top: 6px" colspan="2">
         <% begin %>
-        <h3 style="float:left;">
+        <h3 style="float:left;width:60%">
           <%= Date::DAYNAMES[Date.parse(ship_date).wday] + ' ' + shipping.time %>
         </h3>
-        <h3 style="float:right;width:auto;clear:left">
+        <h3 style="float:right;width:40%;text-align:right">
+          <%= Date.parse(ship_date).strftime("%m/%d/%Y") %>
+        </h3>
+        <h3 style="float:right;clear:both">
           <%= shipping.name %>
-          </h3>
+        </h3>
         <% rescue %>
         <h3>Not specified</h3>
         <% end %>

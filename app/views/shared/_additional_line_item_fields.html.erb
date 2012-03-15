@@ -1,11 +1,16 @@
-
 <% options = item.ad_hoc_option_values.group_by { |opt| opt.option_value.option_type.presentation } %>
-
 <ul>
   <li class="comments">
     <% options.each do |option, values| %>
       <h5><%= option.split(/\b/)[0] %>:</h5>
       <%= values.collect {|val| val.presentation}.join(', ').capitalize %>
     <% end %>
+    <% item.product_customizations.each do |customization| %>
+      <% next if customization.customized_product_options.all? {|cpo| cpo.empty? } %>
+        <% customization.customized_product_options.each do |option| %>
+        <h5><%= option.customizable_product_option.presentation %>: <%= option.value %></h5>
+      <% end %> <%# each option %>
+    <% end %> <%# each customization %>
   </li>
 </ul>
+

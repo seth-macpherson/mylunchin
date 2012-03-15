@@ -15,7 +15,9 @@
 </table>
 <div class="divider line short"></div>
 <div id="subtotal" data-hook>
-  <div><h5>Special Instructions:</h5><%= @order.special_instructions.split('<hr />')[1] %></div>
+  <% unless @order.special_instructions.split('<hr />')[1].blank? %>
+    <div><h5>Special Instructions:</h5><%= @order.special_instructions.split('<hr />')[1] %></div>
+  <% end%>
   <h3><%= "#{t(:subtotal)}: #{order_price(@order)}" %></h3>
 </div>
 <div class="clear"></div>
@@ -24,6 +26,6 @@
   <h3>Taxes <%= number_to_currency adjustment.amount %></h3>
   <% end %>
   <hr>
-  <h3><%= "Total Charges: #{number_to_currency @order.total}" %></h3> 
+  <h3><%= "Total Charges: #{number_to_currency @order.total}" %></h3>
 </div>
 <div class="clear"></div>

@@ -1,0 +1,8 @@
+<% option_type.option_values.each do |ah_ov| %>
+  <li class="plate-selection">
+      <label>
+        <%= text_field_tag "ad_hoc_option_values[#{option_type.id}][]" %>
+        <%= ah_ov.option_value.presentation %></label>
+      <div class="clear"></div>
+  </li>
+<% end %>

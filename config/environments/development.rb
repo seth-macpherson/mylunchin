@@ -13,7 +13,7 @@ Mylunchin::Application.configure do
   config.serve_static_assets = true
 
   # See everything in the log (default is :info)
-  config.log_level = :info
+  config.log_level = :debug
 
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
