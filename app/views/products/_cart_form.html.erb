@@ -1,20 +1,19 @@
 <%= form_for :order, :url => populate_orders_url do |f| %>
   <div data-hook="inside_product_cart_form">
-
     <% if @product.price %>
-      <div data-hook="product_price">
-      </div>
+      <div data-hook="product_price"></div>
     <% end %>
 
     <% if @product.has_stock? || Spree::Config[:allow_backorders] %>
       <%= hidden_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"), 1 %>
-      <%= button_tag :class => 'button classy add-item', :id => 'update-button', :type => "submit" do %>
-        <span>Add to lunch box</span>
-      <% end %>
+      <div class="relative">
+        <%= button_tag :class => 'button classy add-item left', :type => "submit" do %>
+          <span>Add to lunch box</span>
+        <% end %>
+      </div>
     <% else %>
       <%= content_tag('strong', t(:out_of_stock)) %>
     <% end %>
-
   </div>
 <% end %>
 

@@ -2,7 +2,7 @@
   <% lookup=ActionView::LookupContext.new(ActionController::Base.view_paths, {:formats => [:html]}) %>
   <%= "<h4>*#{t(:not_all_combinations_available)}</h4>".html_safe if !@product.ad_hoc_variant_exclusions.empty? %>
 
-  <ul class="plate-variations">
+  <ul class="plate-variations" data-hook="customizations">
     <% @product.ad_hoc_option_types.each do |ahot| %>
       <!-- TODO: Convert to helper -->
       <% ot=ahot.option_type %>
@@ -11,7 +11,7 @@
       <% class_str += ' ad_hoc' if !@product.ad_hoc_variant_exclusions.empty? %>
       <% checked = true %>
       <% partial_name = "products/ad_hoc_options/#{ot.name}" %>
-      
+
       <li class="variation-label">
         <span><%= ot.presentation %>:</span>
         <ul>

@@ -8,7 +8,8 @@
     <% item.product_customizations.each do |customization| %>
       <% next if customization.customized_product_options.all? {|cpo| cpo.empty? } %>
         <% customization.customized_product_options.each do |option| %>
-        <h5><%= option.customizable_product_option.presentation %>: <%= option.value %></h5>
+        <h5><%= option.customizable_product_option.presentation %></h5>
+        <%= option.value %>
       <% end %> <%# each option %>
     <% end %> <%# each customization %>
   </li>

@@ -1,5 +1,4 @@
 <% if product.has_stock? %>
-
   <% # put this in a helper method
     @body_id = 'product-details'
     @product = product
@@ -24,20 +23,12 @@
     <div class="post relative">
       <!--
         The use of data-hooks to define where content goes is both powerful(?) and maddening.
-        If you look at the hook "product_images", it has the ability to somehow
+        If you look at the hook "product_images", it has the ability to somehow... aw screw it
        -->
       <div class="post-image gallery clearfix">
         <%= link_to product_img_path, :rel => "gallery[gallery#{product.id}]" do %>
         <%= image_tag(product_img_path, :height => 120, :alt => @product.name) %>
         <% end %>
-        <!--
-        <span class="date">
-          <span class="bold">
-            <%= product.created_at.strftime("%b %d") %>
-          </span>
-          <%= product.created_at.year %>
-        </span>
-         -->
         <span class="comments-nr wide">
           <%= link_to product_img_path, :rel => "gallery_trigger[gallery#{product.id}]" do %>
             <span class="bold">
@@ -50,9 +41,9 @@
       <div class="post-entry">
         <h1 class="title line"><%= product.name %></h1>
         <div class="divider line short"></div>
-        <p class="plate-description" data-hook="product_description">
+        <div class="plate-description" data-hook="product_description">
           <%= product_description(@product) rescue t("product_has_no_description") %>
-        </p>
+        </div>
         <%= render 'products/properties' %>
         <%= render 'products/cart_form' %>
       </div>
