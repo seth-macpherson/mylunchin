@@ -90,10 +90,13 @@ a.button.classy.minibtn, a.button.classy.minibtn span {
 	box-shadow: $shadow-props;
 	border: 1px solid #ccc;
   width: 80%;
+  height: 20px;
+	padding-left: 4px;
+	margin-left: 4px;
 }
 
 $field-width: 320px;
-.edit_order {
+.edit_order, .post-entry {
   li {
     clear: both;
   }

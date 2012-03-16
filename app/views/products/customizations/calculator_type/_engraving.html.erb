@@ -11,7 +11,7 @@
 
     <%= text_field_tag "#{param_prefix}[#{product_customization_type.customizable_product_options.first.id}]",
                        "",
-                       :id => cust_dom_id ,:style=>"", :class=>"customizable_product_field" %>
+                       :id => cust_dom_id ,:style=>"", :class=>"customizable_product_field", :placeholder => "optional" %>
 
     <% # the price is stored here on change, and later collected by the product-wide updatePrice() %>
     <%= hidden_field_tag "customization_price", "0", :class => "customization_price" %>
