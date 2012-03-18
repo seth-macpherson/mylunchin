@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \#*
 **/*.db
 **/*.log
@@ -54,3 +55,13 @@ test_app
 .rvmrc
 **/coverage
 */.sass-cache
+=======
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+.sass-cache/
+public/examples/
+vendor/ruby
+vendor/ruby
+>>>>>>> 1.1
