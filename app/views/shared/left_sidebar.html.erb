@@ -1,0 +1,42 @@
+<div class="sidebar sidebar_left">
+  <% if @order && !["confirm", "cart"].include?(@order.state) %>
+    <div class="sidebar_item">
+      <div id="checkout-summary" data-hook="checkout_summary_box">
+        <%= render 'checkout/summary', :order => @order %>
+      </div>
+    </div>
+  <% end %>
+<!--
+  <div class="sidebar_item">
+    <div class="search">
+      <input class="search_submit" type="submit" value="" />
+      <input class="search_box" onblur = "if (this.value == '') {this.value = 'Sign';}" />
+    </div>
+  </div>
+-->
+  <div class="sidebar_item recent-posts">
+    <h5>On the blog</h5>
+    <ul>
+      <% cache do %>
+        <% blog_feed = Feedzirra::Feed.fetch_and_parse("http://norastable.wordpress.com/feed/") %>
+        <% blog_feed.entries[0..3].each do |entry| %>
+          <li>
+            <%= link_to entry.url, :target => "_blank" do %>
+              <%= image_tag("icons/pages.png") %>
+              <span>
+                <strong><%= entry.title %></strong>
+                by <%= entry.author %> on <%= entry.published.strftime("%b %d, %Y") %>
+              </span>
+            <% end %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <div class="sidebar_item">
+    <h5>&nbsp;</h5>
+    <!-- 
+    <p>You can put any text content here or, if you prefer, another list containing your recent posts, works or useful links.</p>
+     -->
+  </div>
+</div>

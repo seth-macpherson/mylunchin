@@ -1,0 +1,6 @@
+# pack-refs with: peeled 
+48e66ca1bdb56bcd5ea0f2cf73f6f93333df931b refs/tags/v0.7
+f31112ff703da3dcd0270291d59fbc6ab7e2c072 refs/heads/v2
+3cdd160626418c9a6fe9c108e2618df23ef384e0 refs/heads/spree-0-60-stable
+5a57e67f59c385e0aa7c5f0ece4402204914fcda refs/heads/pre-deface-stable
+728a2bf0e5c34237a8ca1dd647d9d41ce918d48c refs/heads/master

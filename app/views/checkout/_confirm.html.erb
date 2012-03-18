@@ -1,0 +1,7 @@
+<%= render :partial => 'shared/order_details', :locals => {:order => @order} %>
+
+<hr />
+
+<div class="form-buttons" data-hook="buttons">
+  <%= submit_tag t(:place_order), :class => 'continue button primary' %>
+</div>

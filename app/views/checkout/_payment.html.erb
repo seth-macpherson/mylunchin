@@ -1,0 +1,51 @@
+
+<div data-hook="checkout_payment_step">
+  <% unless @errors_exist %>
+    <div class="box">
+      <h3>
+      Please provide your credit card information
+      </h3>
+    </div>
+  <% end %>
+  <% if @order.available_payment_methods.length == 0 %>
+    <div class="box warning">
+      No payment methods have been setup.  Please contact the administrator.
+    </div>    
+  <% elsif @order.available_payment_methods.length == 1 %>
+    <%= hidden_field_tag "order[payments_attributes][][payment_method_id]", @order.available_payment_methods.first.id %>
+  <% else %>
+    <% @order.available_payment_methods.each do |method| %>
+    <div class="box">
+      <label>
+        <%= radio_button_tag "order[payments_attributes][][payment_method_id]", method.id, method == @order.payment_method %>
+        <%= t(method.name, :scope => :payment_methods, :default => method.name) %>
+      </label>
+    </div>
+    <% end %>
+  <% end %>
+  
+  <ul id="payment-methods" class="relative" data-hook >
+    <% @order.available_payment_methods.each do |method| %>
+      <li id="payment_method_<%= method.id %>" class="<%= 'last' if method == @order.available_payment_methods.last %>" data-hook>
+          <%= render "checkout/payment/#{method.method_type}", :payment_method => method %>
+      </li>
+    <% end %>
+  </ul>
+  <div class="divider line"></div>
+  <div id="cart-buttons" data-hook="buttons">
+    <button type="submit" name="save_and_" class="button classy primary">
+      <span>Order Lunch</span>
+    </button>
+    <script>disableSaveOnClick();</script>
+  </div>
+  <% if Rails.env == "development" %>
+  <br />
+  TEST_VISA = 4111111111111111
+  <br />
+  CVS = 123
+  <% end %>
+  
+
+  <div data-hook="coupon_code_field" data-hook></div>
+</div>
+<div class="clearfix"></div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require 'rake'
 require 'rubygems/package_task'
 require 'thor/group'
@@ -118,3 +119,12 @@ task :sandbox do
 
   cmd = "bundle exec rake assets:precompile:nondigest"; puts cmd; system cmd
 end
+=======
+#!/usr/bin/env rake
+# Add your own tasks in files placed in lib/tasks ending in .rake,
+# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+
+require File.expand_path('../config/application', __FILE__)
+
+Mylunchin::Application.load_tasks
+>>>>>>> 1.1

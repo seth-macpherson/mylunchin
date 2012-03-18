@@ -1,0 +1,14 @@
+<% disable_row = ((@current_time > Chronic.parse("#{shipping_method[:cutoff]}",:now => @delivery_date)) && @delivery_today) ? true : nil %>
+<% if shipping_method[:pickup_only] == pickup_only %>
+  <li class="slot <%= disable_row.nil? ? '' : 'disabled' %>">
+    <label class="special">
+      <%= radio_button(:order, :shipping_method_id, shipping_method[:id], :disabled => disable_row ) %>
+      <%= shipping_method[:time] %> @ <%= shipping_method[:name] %>
+      <%= (" + " + number_to_currency(shipping_method[:cost]) + " taxes") if shipping_method[:cost] > 0 %>
+    </label>
+    <ul class="location explanation">
+      <li><%== shipping_method[:location] %></li>
+      <li>(please order by <%= shipping_method[:deadline] %>)</li>
+    </ul>
+  </li>
+<% end %>

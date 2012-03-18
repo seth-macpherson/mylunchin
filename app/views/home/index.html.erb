@@ -1,0 +1,31 @@
+<% delivery_options('now') %>
+
+<!-- 
+@last_pickup:   <%= @last_pickup %>
+@current_time   <%= @current_time %>
+@cutoff_time    <%= @cutoff_time %>
+@delivery_date  <%= @delivery_date %>
+@delivery_day   <%= @delivery_day %>
+ -->
+
+<% content_for :tagline do %>
+
+  <% if @delivery_today %>
+    <h1>Hello and Welcome to My Lunch In
+      <br>Order today's lunch from 
+      <%= link_to "Nora's Table", about_url %>
+    </h1>
+  <% else %>
+    <h1>
+      <% if @weekend %>
+      <span>My Lunch In</span> doesn't offer lunch service over the weekend.
+      <% else %>
+      <span>My Lunch In</span> cannot accept orders for <span title="today is <%= @current_time.strftime('%F') %>">today after <%= @last_pickup %></span>
+      <% end%><br />
+      But you are welcome to place your order for <a href="#" onclick="return false;" title="<%= @delivery_day %> is our next day of lunch service"><%= @delivery_day %></a>
+    </h1>
+  <% end %>
+
+<% end %>
+<% @products = @products.sort_by(&:sku) %>
+<%= render :partial => "products/show", :collection => @products, :as => :product %>

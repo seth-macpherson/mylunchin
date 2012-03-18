@@ -1,0 +1,75 @@
+  <%#= javascript_include_tag '/javascripts/jquery-ui-1.8.17.custom.min.js' %>
+  <% 
+  delivery_options('now') 
+  %>
+
+<!-- 
+@last_pickup:   <%= @last_pickup %>
+@current_time   <%= @current_time %>
+@cutoff_time    <%= @cutoff_time %>
+@delivery_date  <%= @delivery_date %>
+@delivery_day   <%= @delivery_day %>
+ -->
+  
+  <div class="tabs" id="choose_pickup" data-hook="shipping_method_inner">
+    <%= form.hidden_field :special_instructions, :value => @delivery_date.to_s.html_safe + '<hr />'.html_safe + @order.special_instructions %>
+    <div class="box">
+      <% if @delivery_today %>
+        <h3>Pick Up and Delivery options available for <a href="#" title="Next delivery date" onclick="return false"><%= @delivery_day %>:</a></h3>
+      <% else %>
+        <h3>
+          Your lunch order is <span class="error">unavailable</span> for pickup or delivery <a href="#" onclick="return false" class="error">Today</a>.<br />
+          But you are welcome to place your order for <%= @delivery_day %>
+        </h3>
+      <% end %>
+    </div>
+
+    <ul id="delivered_to">
+      <li>
+          <h3>Lunch Delivery</h3>
+          <div class="line short"></div>
+      </li>
+      <%= render :partial => "shipping_method", :collection => @order.rate_hash, :as => :shipping_method, :locals => {:pickup_only => false} %>
+      <li id="no-delivery-left">
+        <label class="special">
+          Sorry, no delivery options left for today
+        </label>
+      </li>
+    </ul>
+    <ul id="pickup_from">
+      <li>
+          <h3>Lunch Pick Up</h3>
+          <div class="line short"></div>
+      </li>
+      <%= render :partial => "shipping_method", :collection => @order.rate_hash, :as => :shipping_method, :locals => {:pickup_only => true} %>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+  <div class="divider line"></div>
+  <div id="cart-buttons" data-hook="buttons">
+    <button type="submit" class="button classy primary">
+      <span>Save and Continue</span>
+    </button>
+  </div>
+  
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $("li.disabled").fadeTo(800,.3); //.slideUp(1000);
+    // if we're hidden every delivery option then show them a sorry msg
+    if($("#delivered_to>li.disabled").size() == ($("#delivered_to>li").size() - 2)) {
+      $("#no-delivery-left").show('fast');
+    }
+  });
+  </script>
+  <!--
+      
+  <select id="pickup_date" style="float:left">
+    <%# (@delivery_date..end_date).to_a.each do |slot| %>
+      <%# case slot.wday when 0, 6 then next end  %>
+      <option><%#= slot.to_formatted_s(:long_ordinal) %></option>
+    <%# end%>
+  </select>
+  <div class="clear"></div>
+  -->
+  <!-- <h5>Choose pick-up from Nora's Table or delivery at one of the locations below</h5> -->
+  

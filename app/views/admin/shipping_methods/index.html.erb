@@ -1,0 +1,41 @@
+<%= render :partial => 'admin/shared/configuration_menu' %>
+
+<div class="toolbar" data-hook="toolbar">
+  <ul class="actions">
+    <li>
+      <%= button_link_to t(:new_shipping_method), new_object_url,  :icon => 'add', :id => 'admin_new_shipping_method_link' %>
+    </li>
+  </ul>
+  <br class="clear" />
+</div>
+
+<h1>Delivery &amp; Pick-up Schedule</h1>
+
+<table class="index" id='listing_shipping_methods'>
+  <thead>
+    <tr data-hook="admin_shipping_methods_index_headers">
+      <th>Order Deadline</th>
+      <th><%= t(:name) %></th>
+      <th><%= t(:location) %></th>
+      <th><%= t(:calculator) %></th>
+      <th><%= t(:display) %></th>
+      <th data-hook="admin_shipping_methods_index_header_actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @shipping_methods.sort_by(&:deadline).each do |shipping_method|%>
+      <tr id="<%= dom_id shipping_method %>" data-hook="admin_shipping_methods_index_rows">
+        <td><%= shipping_method.deadline %></td>
+        <td><%= shipping_method.name %></td>
+        <td><%== shipping_method.location %></td>
+        <td><%= shipping_method.calculator.description %></td>
+        <td><%= shipping_method.display_on.blank? ? t(:both) : t(shipping_method.display_on) %></td>
+        <td style="width:140px;" data-hook="admin_shipping_methods_index_row_actions">
+          <%= link_to_edit shipping_method %> &nbsp;
+          <%= link_to_delete shipping_method %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

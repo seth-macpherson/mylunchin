@@ -1,0 +1,8 @@
+== Welcome to MyLunchIn.com
+
+My Lunch In is application that allows local businesses to provide a lunch delivery (or pickup) service easily and affordably.  
+
+The platform is built on Spree Commerce and will be open sourced as a themed extension and a "delivery" extension compatible with Spree v.70+.  
+
+Plans are underway to provide subdomains - mysubshop.mylunchin.com and have the site load the appropriate content (but you didn't hear that from me).
+

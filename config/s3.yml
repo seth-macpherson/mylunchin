@@ -1,0 +1,13 @@
+login: &login
+  bucket: mylunchin-com
+  access_key_id: AKIAIIAHBGCHRK2DXVXA
+  secret_access_key: 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
+
+development:
+  <<: *login
+
+test:
+  <<: *login
+
+production:
+  <<: *login

@@ -1,0 +1,50 @@
+<div id="footer">
+  <div class="inner">
+    <div class="one_fourth logo">
+      <p>&nbsp;</p>
+
+      <%#= image_tag "logo_footer.png", :title => "Purity", :class => "table", :width => 100 %>
+      <!-- <h1>My Lunch In Logo</h1>  -->
+    </div>
+    <div class="one_fourth">
+      <h5>Recent tweets</h5>
+      <div id="tweet">
+        <p>Please wait while tweets load..</p>
+      </div>
+    </div>
+    <div class="one_fourth">
+      <h5>Restaurant Location</h5>
+      <p>
+        Nora's Table
+        <br>
+        110 Fifth Street
+        <br>
+        Hood River, OR 97031
+      </p>
+      <p>
+        Phone: 541-387-4000
+      </p>
+    </div>
+    <div class="one_fourth last">
+      <h5>Contact by Mail</h5>
+      <p>
+        My Lunch In
+        <br>
+        Box 29
+        <br>
+        Hood River, OR 97031
+      </p>
+      <p>
+        E-Mail:
+        <a href="mailto:kathy@norastable.com">kathy@norastable.com</a>
+      </p>
+    </div>
+  </div>
+  <div class="footer_small">
+    <div class="copyright">
+      &copy; <%= Date.today.year %>
+      <%= link_to "Nora's Table", blog_url %>
+      - All rights reserved.
+    </div>
+  </div>
+</div>

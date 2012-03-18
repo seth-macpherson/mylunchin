@@ -1,0 +1,20 @@
+<ul class="plate-variations">
+  <li class="variation-label">
+  <% # render the (possibly shared) calculator %>
+
+  <% cust_dom_id = "engraving_input_#{product_customization_type.customizable_product_options.first.id}" %>
+    <% option = product_customization_type.customizable_product_options.first %>
+    <span class="<%= product_customization_type.calculator.to_s.downcase %>"><%= option.presentation %></span>
+    <ul>
+      <li>
+    <% # create a slightly shorter dom_id field below.  I wish I could make use of dom_id for all strings that had [ && ] %>
+
+    <%= text_field_tag "#{param_prefix}[#{product_customization_type.customizable_product_options.first.id}]",
+                       "",
+                       :id => cust_dom_id ,:style=>"", :class=>"customizable_product_field", :placeholder => "optional" %>
+
+    <% # the price is stored here on change, and later collected by the product-wide updatePrice() %>
+    <%= hidden_field_tag "customization_price", "0", :class => "customization_price" %>
+    </li></ul>
+  </li>
+</ul>

@@ -1,0 +1,10 @@
+<h1><%= accurate_title %></h1>
+<div class="divider line short"></div>
+
+<div id="order" class="edit_order relative" data-hook>
+  <% if params.has_key? :checkout_complete %>
+    <h4><%= t(:thank_you_for_your_order) %></h4>
+    <div class="divider line short"></div>
+  <% end %>
+  <%= render :partial => 'shared/order_details', :locals => {:order => @order} %>
+</div>

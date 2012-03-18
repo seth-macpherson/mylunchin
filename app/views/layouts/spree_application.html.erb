@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Lunch In : Brought to you by Nora's Table</title>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <div class="inner">
+          <div class="logo">
+            <%= link_to root_url, :class=>"table" do %><img src="/assets/table.png" alt="My Lunch In"><% end %>
+            <h1>My Lunch In</h1>
+            <h5>Today @ Nora's Table</h5>
+          </div>
+          <%= render :partial => "layouts/navigation" %>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div id="main">
+        <div class="home_tagline">
+          <br>
+          <%= yield :tagline %>
+          <div class="clear"></div>
+          <div class="divider line"></div>
+        </div>
+        <div class="inner">
+          <%= render :template => "shared/left_sidebar" %>
+          <div class="content content_right primary">
+            <%= breadcrumbs(@taxon) %>
+            <%= flash_messages %>
+            <%= yield %>
+          </div>
+          <div class="clear"></div>
+        </div>      
+      <%= render :template => "layouts/footer" %>
+    </div>
+  </body>
+</html>

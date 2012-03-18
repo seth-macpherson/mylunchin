@@ -1,0 +1,31 @@
+<table class="index" id="cart-detail">
+  <thead>
+    <tr data-hook="cart_items_headers">
+      <th colspan="2"><%= t(:item) %></th>
+      <th><%= t(:price) %></th>
+      <th><%= t(:qty) %></th>
+      <th><%= t(:total) %></th>
+    </tr>
+  </thead>
+  <tbody id="line_items" data-hook>
+    <% @order.line_items.each do |line_item| %>
+      <%= render 'orders/line_item', :variant => line_item.variant, :line_item => line_item, :read_only => true %>
+    <% end %>
+  </tbody>
+</table>
+<div class="divider line short"></div>
+<div id="subtotal" data-hook>
+  <% unless @order.special_instructions.split('<hr />')[1].blank? %>
+    <div><h5>Special Instructions:</h5><%= @order.special_instructions.split('<hr />')[1] %></div>
+  <% end%>
+  <h3><%= "#{t(:subtotal)}: #{order_price(@order)}" %></h3>
+</div>
+<div class="clear"></div>
+<div id="order-total" data-hook>
+  <% @order.adjustments.each do |adjustment| %>
+  <h3>Taxes <%= number_to_currency adjustment.amount %></h3>
+  <% end %>
+  <hr>
+  <h3><%= "Total Charges: #{number_to_currency @order.total}" %></h3>
+</div>
+<div class="clear"></div>
