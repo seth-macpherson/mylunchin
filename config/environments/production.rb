@@ -16,7 +16,7 @@ Mylunchin::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed (defaults: false)
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs (defaults: true)
   config.assets.digest = true
