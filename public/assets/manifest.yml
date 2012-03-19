@@ -1,4 +1,4 @@
----
+--- 
 avatar_unknown.png: avatar_unknown-8d18c1afd955be6da957f8b57e2601f6.png
 button.png: button-f0d19aa397405f6327c6ddb3329fe3cb.png
 checklist.png: checklist-b1720278731d46a3c6427a0e2e206b69.png
@@ -139,7 +139,7 @@ jquery.validate/localization/methods_nl.js: jquery.validate/localization/methods
 jquery.validate/localization/methods_pt.js: jquery.validate/localization/methods_pt-64df7bc0302a9ea6c86418a0d7928e54.js
 store/all.js: store/all-78dc0081b8b2c417aed7471475b942f8.js
 admin/all.css: admin/all-b73e7c07f64e3253e8f852014f4cde21.css
-application.css: application-851a2a3cf6c8df364acd9af0359ec186.css
+application.css: application-e656643cd125f12636510ad6041d90ce.css
 store/all.css: store/all-7a1e102f4af0ff3c42a3edf935aa4d93.css
 store/flexi-variants.css: store/flexi-variants-21f78ace3ae478cc577ceb1037fa01cb.css
 ajax-loader.gif: ajax-loader-48243fc99108c178bbf6507f66e85207.gif
