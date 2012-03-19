@@ -1,4 +1,4 @@
-CreditCard.class_eval do
+Creditcard.class_eval do
 
   def gateway_error(error)
     if error.is_a? ActiveMerchant::Billing::Response

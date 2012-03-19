@@ -4,7 +4,7 @@ Order.class_eval do
                   :ship_address, :line_items_attributes,
                   :shipping_method_id, :email, :use_billing, :special_instructions, :state
 
-  
+
   def rate_hash
     @rate_hash ||= available_shipping_methods(:front_end).collect do |ship_method|
       next unless cost = ship_method.calculator.compute(self)
