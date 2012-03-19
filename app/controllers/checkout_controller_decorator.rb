@@ -1,7 +1,7 @@
 CheckoutController.class_eval do
 
   before_filter :load_order
-  rescue_from Spree::GatewayError, :with => :rescue_from_spree_gateway_error_x
+  rescue_from Spree::GatewayError, :with => :rescue_from_spree_gateway_error
 
   def update
     if @order.update_attributes(object_params)
