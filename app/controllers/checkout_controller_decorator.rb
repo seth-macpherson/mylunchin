@@ -1,7 +1,7 @@
 CheckoutController.class_eval do
 
-  before_filter :load_order
-  rescue_from Spree::GatewayError, :with => :rescue_from_spree_gateway_error
+  # before_filter :amend_state_machine
+  # rescue_from Spree::GatewayError, :with => :rescue_from_spree_gateway_error
 
   def update
     if @order.update_attributes(object_params)
@@ -14,7 +14,8 @@ CheckoutController.class_eval do
       if @order.next
         state_callback(:after)
       else
-        flash[:error] = @payment_error || I18n.t(:payment_processing_failed)
+        @order.payment.log_entries.create(:details => @order.gateway_response)
+        flash[:error] = @order.gateway_response
         respond_with(@order, :location => checkout_state_path('payment'))
         return
       end
@@ -30,5 +31,51 @@ CheckoutController.class_eval do
       respond_with(@order) { |format| format.html { render :edit } }
     end
   end
+
+  #
+  # def amend_state_machine
+  #   before_transition :to => 'complete' do |order|
+  #     begin
+  #       order.process_payments!
+  #     rescue Spree::GatewayError => ge
+  #       # puts "ZAP:#{ge.message}"
+  #       if Spree::Config[:allow_checkout_on_gateway_error]
+  #         true
+  #       else
+  #         false
+  #       end
+  #     end
+  #   end
+  #
+  #   self.state_events.create({
+  #     :previous_state => "payment",
+  #     :next_state     => "complete",
+  #     :name           => "order",
+  #     :user_id        => (User.respond_to?(:current) && User.current.try(:id)) || self.user_id
+  #   })
+  #
+  #
+  # end
+  #
+  # # Finalizes an in progress order after checkout is complete.
+  # # Called after transition to complete state when payments will have been processed
+  # def finalize!
+  #   update_attribute(:completed_at, Time.now)
+  #   InventoryUnit.assign_opening_inventory(self)
+  #   # lock any optional adjustments (coupon promotions, etc.)
+  #   adjustments.optional.each { |adjustment| adjustment.update_attribute("locked", true) }
+  #   OrderMailer.confirm_email(self).deliver
+  #
+  #   self.state_events.create({
+  #     :previous_state => "cart",
+  #     :next_state     => "complete",
+  #     :name           => "order" ,
+  #     :user_id        => (User.respond_to?(:current) && User.current.try(:id)) || self.user_id
+  #   })
+  # end
+  #
+  #
+  #
+
 
 end

@@ -1,16 +1,17 @@
-
 <div data-hook="checkout_payment_step">
-  <% unless @errors_exist %>
     <div class="box">
       <h3>
+      <% if flash.empty? %>
       Please provide your credit card information
+      <% else%>
+      Having trouble? Give us a call, we'll help you out (541) 387-4000
+      <% end %>
       </h3>
     </div>
-  <% end %>
   <% if @order.available_payment_methods.length == 0 %>
     <div class="box warning">
       No payment methods have been setup.  Please contact the administrator.
-    </div>    
+    </div>
   <% elsif @order.available_payment_methods.length == 1 %>
     <%= hidden_field_tag "order[payments_attributes][][payment_method_id]", @order.available_payment_methods.first.id %>
   <% else %>
@@ -23,7 +24,7 @@
     </div>
     <% end %>
   <% end %>
-  
+
   <ul id="payment-methods" class="relative" data-hook >
     <% @order.available_payment_methods.each do |method| %>
       <li id="payment_method_<%= method.id %>" class="<%= 'last' if method == @order.available_payment_methods.last %>" data-hook>
@@ -44,7 +45,7 @@
   <br />
   CVS = 123
   <% end %>
-  
+
 
   <div data-hook="coupon_code_field" data-hook></div>
 </div>

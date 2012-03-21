@@ -154,7 +154,14 @@
               <% end %>
             </p>
           </li>
-          <li><%= order.state != 'complete' ? "Order Status: #{order.state}": ''%></li>
+          <li>
+            <p class="field">
+            Status:
+            </p>
+            <p class="field_value">
+              <%= order.state %>
+            </p>
+          </li>
           <li class="no-print">
             <p class="field">
               Email:
@@ -172,8 +179,22 @@
             </p>
           </li>
           <li>
-            <% if order.state != 'fulfilled' %>
-            <%= button_link_to "Fulfilled", fire_admin_order_url(order.number, {:e => "fulfilled"}) %>
+          <% begin %>
+            <h5>Transaction Result</h5>
+            <% payment = order.payment %>
+            <% if payment.state == 'checkout' %>
+              <%= LogEntry.find_by_source_id(order.payments[0].source_id).details %>
+            <% else %>
+              Success
+            <% end %>
+          <% rescue %>
+            No data
+          <% end %>
+
+          </li>
+          <li>
+            <% if order.state == 'complete' %>
+            <%= button_link_to "Mark fulfilled", fire_admin_order_url(order.number, {:e => "fulfilled"}) %>
             <% end %>
           </li>
         </ul>
