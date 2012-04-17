@@ -21,6 +21,7 @@
         <% blog_feed = Feedzirra::Feed.fetch_and_parse("http://norastable.wordpress.com/feed/") %>
         <% blog_feed.entries[0..3].each do |entry| %>
           <li>
+            <% entry.url = entry.url.gsub('http:','https:') if request.ssl? %>
             <%= link_to entry.url, :target => "_blank" do %>
               <%= image_tag("icons/pages.png") %>
               <span>
@@ -35,7 +36,7 @@
   </div>
   <div class="sidebar_item">
     <h5>&nbsp;</h5>
-    <!-- 
+    <!--
     <p>You can put any text content here or, if you prefer, another list containing your recent posts, works or useful links.</p>
      -->
   </div>
