@@ -6,9 +6,6 @@ Order.class_eval do
   def self.sf_ensure_only_once
   end
 
-  # scope :fulfilling, where(:state => 'fulfilling')
-  # scope :fulfill_failed, where(:state => 'fulfill_fail')
-
   state_machines[:state] = nil    # reset original state machine to start from scratch.
 
   # We know that there will be preexisting methods from the original Spree state machine.
@@ -69,38 +66,9 @@ Order.class_eval do
 
     after_transition :to => 'complete', :do => :finalize!
     after_transition :to => 'schedule', :do => :create_tax_charge!
-    after_transition :to => 'payment', :do => :create_shipment!
+    after_transition :to => 'payment', :do => :create_delivery!
     after_transition :to => 'canceled', :do => :after_cancel
 
   end
-
-  # def valid_tracking?
-  #   tracking && tracking['::']
-  # end
-
-  # If there's an error submitting to the fulfillment service, we should halt
-  # the transition to 'fulfill' and stay in 'ready'.  That way transient errors
-  # will get rehandled.  If there are persistent errors, that should be treated
-  # as a bug.
-
-
-  # def before_fulfilling
-  #   Fulfillment.log "before_fulfilling start"
-  #   if valid_tracking?
-  #     Fulfillment.log "skipping warehouse fulfillment - existing tracking code #{tracking}"
-  #   else
-  #     Fulfillment.fulfill(self)     # throws :halt on error, which aborts transition
-  #   end
-  #   Fulfillment.log "before_fulfilling end"
-  # end
-
-  # Know about our new state - do not erase it accidentally.
-  # alias_method :orig_determine_state, :determine_state
-  # def determine_state(order)
-  #   return state if ['fulfilling', 'fulfill_fail', 'shipped'].include?(state)
-  #   return 'shipped' if valid_tracking?
-  #   orig_determine_state(order)
-  # end
-
 
 end
