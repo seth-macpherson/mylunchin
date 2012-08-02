@@ -4,6 +4,9 @@ module ApplicationHelper
   def delivery_options(time_to_parse)
     require 'chronic'
     Chronic.time_class = Time.zone
+    
+    time_to_parse = '2012-08-04 12:00:00' if (Time.zone.now.to_date == Date.parse('2012-08-2') || Time.zone.now.to_date == Date.parse('2012-08-3')) 
+    
     @last_pickup   = ShippingMethod.maximum('deadline')
     @last_pickup   += @last_pickup.downcase.include?("pm") ? '' : 'PM'
     @current_time = Chronic.parse(time_to_parse)

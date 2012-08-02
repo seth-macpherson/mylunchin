@@ -17,7 +17,9 @@
     </h1>
   <% else %>
     <h1>
-      <% if @weekend %>
+      <% if (Time.zone.now.to_date == Date.parse('2012-08-2') || Time.zone.now.to_date == Date.parse('2012-08-3')) %>
+        <span>My Lunch In</span> is not taking orders today
+      <% elsif @weekend %>
       <span>My Lunch In</span> doesn't offer lunch service over the weekend.
       <% else %>
       <span>My Lunch In</span> cannot accept orders for <span title="today is <%= @current_time.strftime('%F') %>">today after <%= @last_pickup %></span>
